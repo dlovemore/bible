@@ -1,0 +1,2 @@
+>>> from mene import *
+>>> 

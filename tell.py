@@ -7,11 +7,11 @@
 # Revelation 13:18 Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six.
 # >>> 
 # >>> tell('counting')
-# c  o  u  n  t i  n g
-# 3+15+21+14+20+9+14+7 = 103
+# c o  u  n  t  i n  g
+# 3+15+21+14+20+9+14+7=103
 # >>> tell('Solomon')
-#  S  o  l  o  m  o  n
-# 19+15+12+15+13+15+14 = 103
+# S  o  l  o  m  o  n
+# 19+15+12+15+13+15+14=103
 # >>> b.midv()
 # Psalms 103:1 Bless the LORD, O my soul: and all that is within me, bless his holy name.
 # Psalms 103:2 Bless the LORD, O my soul, and forget not all his benefits:
@@ -19,32 +19,32 @@
 # 31102
 # >>> 
 # >>> tell('Solomon',ssum)
-#   S  o  l  o  m  o  n
-# 100+60+30+60+40+60+50 = 400
+#  S  o  l  o  m  o  n
+# 100+60+30+60+40+60+50=400
 # >>> IKings/'half'/'told'
 # 1 Kings 10:7 Howbeit I believed not the words, until I came, and mine eyes had seen it: and, behold, the half was not told me: thy wisdom and prosperity exceedeth the fame which I heard.
 # >>> 400//2
 # 200
 # >>> tell('Lord Jesus Christ')
 # Lord Jesus Christ
-#   49+   74+    77 = 200
+#  49 +  74 +  77  =200
 # >>> tell('the water, and the blood')
 # the water, and the blood
-#  33+    67+ 19+ 33+   48 = 200
+#  33+  67  + 19+ 33+  48 =200
 # >>> tell('the water'),tell('and the blood')
 # the water
-#  33+   67 = 100
+#  33+  67 =100
 # and the blood
-#  19+ 33+   48 = 100
+#  19+ 33+  48 =100
 # (None, None)
 # >>> tell('the Spirit, and the water, and the blood')
 # the Spirit, and the water, and the blood
-#  33+     91+ 19+ 33+    67+ 19+ 33+   48 = 343
+#  33+   91  + 19+ 33+  67  + 19+ 33+  48 =343
 # >>> 7*7*7
 # 343
 # >>> tell('the Father, the Word, the Holy Ghost')
 # the Father, the Word, the Holy Ghost
-#  33+     58+ 33+   60+ 33+  60+   69 = 346
+#  33+   58  + 33+  60 + 33+ 60 +  69 =346
 # >>> 343+3
 # 346
 # >>> IJohn[5:7]-8
@@ -52,43 +52,43 @@
 # 1 John 5:8 And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.
 # >>> tell('the Father, the Word and the Holy Ghost',lsum)
 # the Father, the Word and the Holy Ghost
-#   3+      6+  3+   4+  3+  3+   4+    5 = 31
+#  3 +   6   + 3 + 4  + 3 + 3 + 4  +  5  =31
 # >>> tell('the Spirit, and the water, and the blood',lsum)
 # the Spirit, and the water, and the blood
-#   3+      6+  3+  3+     5+  3+  3+    5 = 31
+#  3 +   6   + 3 + 3 +  5   + 3 + 3 +  5  =31
 # >>> tell('the Father, the Word and the Holy Ghost')
 # the Father, the Word and the Holy Ghost
-#  33+     58+ 33+  60+ 19+ 33+  60+   69 = 365
+#  33+   58  + 33+ 60 + 19+ 33+ 60 +  69 =365
 # >>> tell('the Father, the Word + the Holy Ghost')
 # the Father, the Word + the Holy Ghost
-#  33+     58+ 33+  60+0+ 33+  60+   69 = 346
+#  33+   58  + 33+ 60 +0+ 33+ 60 +  69 =346
 # >>> tell('the Spirit, and the water, and the blood')
 # the Spirit, and the water, and the blood
-#  33+     91+ 19+ 33+    67+ 19+ 33+   48 = 343
+#  33+   91  + 19+ 33+  67  + 19+ 33+  48 =343
 # >>> tell('the Spirit,and the-water, and-the-blood')
 # the Spirit,and the-water, and-the-blood
-#  33+       110+       100+          100 = 343
+#  33+   110    +   100    +     100     =343
 # >>> 7*7*7
 # 343
 # >>> _+3
 # 346
 # >>> tell('Lord')
-#  L  o  r d
-# 12+15+18+4 = 49
+# L  o  r  d
+# 12+15+18+4=49
 # >>> 7*7
 # 49
 # >>> tell('Christ')
-# C h  r i  s  t
-# 3+8+18+9+19+20 = 77
+# C h r  i s  t
+# 3+8+18+9+19+20=77
 # >>> 
 # >>> 
 # >>> 
 # >>> tell('the Father, the Word and the Holy Ghost',ssum)
 # the Father, the Word and the Holy Ghost
-# 213+    310+213+ 654+ 55+213+ 798+  375 = 2831
+# 213+  310  +213+654 + 55+213+798 + 375 =2831
 # >>> tell('the Spirit, and the water, and the blood',ssum)
 # the Spirit, and the water, and the blood
-# 213+    478+ 55+213+   796+ 55+213+  156 = 2179
+# 213+  478  + 55+213+ 796  + 55+213+ 156 =2179
 # >>> 2831+3
 # 2834
 # >>> pf(2831+3)
@@ -109,10 +109,10 @@
 # >>> 
 # >>> 
 # >>> (IJohn[5:7]-8).tell(ssum)
-# 5:7 For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
-#   0+156+  308+ 96+  308+ 409+  98+   252+59+    469+213+    310+213+  654+ 55+213+ 798+   375+ 55+  318+  308+ 96+ 115 = 5878
-# 5:8 And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.
-#   0+ 55+  308+ 96+  308+ 409+  98+    964+59+   304+213+    478+ 55+213+   796+ 55+213+   156+ 55+  318+  308+  108+59+ 115 = 5743
+# For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
+# 156+ 308 + 96+ 308 +409 + 98 + 252  +59+  469  +213+  310  +213+ 654 + 55+213+798 + 375  + 55+ 318 + 308 + 96+115 =5878
+# And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.
+#  55+ 308 + 96+ 308 +409 + 98 +  964  +59+ 304  +213+  478  + 55+213+ 796  + 55+213+ 156  + 55+ 318 + 308 + 108 +59+115 =5743
 # >>> 5878-5743
 # 135
 # >>> 
@@ -121,62 +121,63 @@
 # >>> tells.vi(1)
 # Genesis 12:18 And Pharaoh called Abram and said, What is this that thou hast done unto me? why didst thou not tell me that she was thy wife?
 # >>> tell('me')
-#  m e
-# 13+5 = 18
+# m  e
+# 13+5=18
 # >>> tell('me that she was thy wife')
 # me that she was thy wife
-# 18+  49+ 32+ 43+ 53+  43 = 238
+# 18+ 49 + 32+ 43+ 53+ 43 =238
 # >>> tells.vi(2)
 # Genesis 15:5 And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.
 # >>> tell('the stars')
 # the stars
-#  33+   77 = 110
+#  33+  77 =110
 # >>> tell('Christ')
-# C h  r i  s  t
-# 3+8+18+9+19+20 = 77
+# C h r  i s  t
+# 3+8+18+9+19+20=77
 # >>> Luke[3:].count('son of')
 # 77
 # >>> tell('Jesus',ssum)
-#  J e   s   u   s
-# 10+5+100+300+100 = 515
+# J  e  s   u   s
+# 10+5+100+300+100=515
 # >>> 
 # >>> tells.vi(3)
 # Genesis 21:26 And Abimelech said, I wot not who hath done this thing; neither didst thou tell me, neither yet heard I of it, but to day.
 # >>> _.tell()
-# 21:26 And Abimelech said, I wot not who hath done this thing; neither didst thou tell me, neither yet heard I of it, but to day.
-#     0+ 19+       58+   33+9+ 58+ 49+ 46+  37+  38+  56+    58+     79+   56+  64+  49+ 18+     79+ 50+   36+9+21+ 29+ 43+35+  30 = 1059
+# And Abimelech said, I wot not who hath done this thing; neither didst thou tell me, neither yet heard I of it, but to day.
+#  19+    58   +  33 +9+ 58+ 49+ 46+ 37 + 38 + 56 +  58  +   79  +  56 + 64 + 49 + 18+   79  + 50+  36 +9+21+ 29+ 43+35+ 30 =1059
 # >>> 
 # >>> tells.vi(4)
 # Genesis 22:2 And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.
 # >>> _.tell()
-# 22:2 And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.
-#    0+ 19+13+   33+  37+ 52+ 53+  48+   56+  66+ 48+    33+  59+  64+     93+ 19+ 32+  38+  58+ 33+  31+21+     64+ 19+   50+ 30+   56+ 39+1+   75+      80+  66+ 34+21+ 33+      126+   51+9+  56+  49+  38+ 21 = 1824
+# And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.
+#  19+13+  33 + 37 + 52+ 53+ 48 +  56 + 66 + 48+  33  + 59 + 64 +   93  + 19+ 32+ 38 + 58 + 33+ 31 +21+   64  + 19+  50 + 30+  56 + 39+1+  75 +   80   + 66 + 34+21+ 33+   126   +  51 +9+ 56 + 49 + 38 + 21=1824
 # >>> 
 # >>> tells.vi(5)
 # Genesis 24:23 And said, Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?
 # >>> tell('me I pray thee')
 # me I pray thee
-# 18+9+  60+  38 = 125
+# 18+9+ 60 + 38 =125
 # >>> 5*5*5
 # 125
 # >>> tell('Bethlehem Ephratah')
 # Bethlehem Ephratah
-#        78+      77 = 155
+#     78   +   77   =155
 # >>> 
 # >>> tells.vi(6)
 # Genesis 24:49 And now if ye will deal kindly and truly with my master, tell me: and if not, tell me; that I may turn to the right hand, or to the left.
 # >>> 
 # >>> tells.vi(7)
 # Genesis 26:2 And the LORD appeared unto him, and said, Go not down into Egypt; dwell in the land which I shall tell thee of:
-# >>> tell('thee of')
+# >>> tell('thee of',osum,ssum)
 # thee of
-#   38+21 = 59
+#  38 +21= 59
+# 218 +66=284
 # >>> 
 # >>> tells.vi(8)
 # Genesis 29:15 And Laban said unto Jacob, Because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be?
 # >>> tell('what shall thy wages be?')
 # what shall thy wages be?
-#   52+   52+ 53+   55+  7 = 219
+#  52 +  52 + 53+  55 + 7 =219
 # >>> 
 # >>> tells.vi(9)
 # Genesis 31:27 Wherefore didst thou flee away secretly, and steal away from me; and didst not tell me, that I might have sent thee away with mirth, and with songs, with tabret, and with harp?
@@ -184,33 +185,33 @@
 # Genesis 32:5 And I have oxen, and asses, flocks, and menservants, and womenservants: and I have sent to tell my lord, that I may find grace in thy sight.
 # >>> tell('my lord')
 # my lord
-# 38+  49 = 87
+# 38+ 49 =87
 # >>> tells.vi(11)
 # Genesis 32:29 And Jacob asked him, and said, Tell me, I pray thee, thy name. And he said, Wherefore is it that thou dost ask after my name? And he blessed him there.
 # >>> tell('me, I-pray-thee, thy name')
 # me, I-pray-thee, thy name
-#  18+         107+ 53+  33 = 211
+#  18+    107     + 53+ 33 =211
 # >>> tell('thy name',ssum)
 # thy name
-# 908+  96 = 1004
+# 908+ 96 =1004
 # >>> tells.vi(12)
 # Genesis 37:16 And he said, I seek my brethren: tell me, I pray thee, where they feed their flocks.
 # >>> tell('me I pray thee')
 # me I pray thee
-# 18+9+  60+  38 = 125
+# 18+9+ 60 + 38 =125
 # >>> tells.vi(13)
 # Genesis 40:8 And they said unto him, We have dreamed a dream, and there is no interpreter of it. And Joseph said unto them, Do not interpretations belong to God? tell me them, I pray you.
 # >>> tell('me them, I pray you')
 # me them, I pray you
-# 18+   46+9+  60+ 61 = 194
+# 18+  46 +9+ 60 + 61=194
 # >>> tells.vi(14)
 # Genesis 43:6 And Israel said, Wherefore dealt ye so ill with me, as to tell the man whether ye had yet a brother?
 # >>> tell('the man')
 # the man
-#  33+ 28 = 61
+#  33+ 28=61
 # >>> tell('whether ye had yet a brother')
 # whether ye had yet a brother
-#      87+30+ 13+ 50+1+     86 = 267
+#    87  +30+ 13+ 50+1+   86  =267
 # >>> 61+267
 # 328
 # >>> 
@@ -218,7 +219,7 @@
 # Genesis 43:22 And other money have we brought down in our hands to buy food: we cannot tell who put our money in our sacks.
 # >>> tell('who put our money in our sacks')
 # who put our money in our sacks
-#  46+ 57+ 54+   72+23+ 54+   53 = 359
+#  46+ 57+ 54+  72 +23+ 54+  53 =359
 # >>> tell('In the beginning God created the heaven and the')
 # In the beginning God created the heaven and the
 # 23+ 33+       81+ 26+     56+ 33+    55+ 19+ 33 = 359

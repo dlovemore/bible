@@ -1,6 +1,9 @@
 # >>> from bible import *
 # >>> from math import *
 # >>> from primes import *
+# Traceback (most recent call last):
+#   File "<console>", line 1, in <module>
+# ModuleNotFoundError: No module named 'primes'
 # >>> b.Gen[5:].wc()
 # 505
 # >>> b.Gen[5:].wcs()
@@ -52,8 +55,8 @@
 # >>> 
 # >>> 
 # >>> tell('wo')
-#  w  o
-# 23+15 = 38
+# w  o
+# 23+15=38
 # >>> ssum('adam')
 # 46
 # >>> 
@@ -90,29 +93,33 @@
 # >>> Psalm[59].words()[188-1:190]
 # ['thy', 'power;', 'and']
 # >>> print(Psalm[59])
-# Psalms 59:1 Deliver me from mine enemies, O my God: defend me from them that rise up against me.
-# Psalms 59:2 Deliver me from the workers of iniquity, and save me from bloody men.
-# Psalms 59:3 For, lo, they lie in wait for my soul: the mighty are gathered against me; not for my transgression, nor for my sin, O LORD.
-# Psalms 59:4 They run and prepare themselves without my fault: awake to help me, and behold.
-# Psalms 59:5 Thou therefore, O LORD God of hosts, the God of Israel, awake to visit all the heathen: be not merciful to any wicked transgressors.  Selah.
-# Psalms 59:6 They return at evening: they make a noise like a dog, and go round about the city.
-# Psalms 59:7 Behold, they belch out with their mouth: swords are in their lips: for who, say they, doth hear?
-# Psalms 59:8 But thou, O LORD, shalt laugh at them; thou shalt have all the heathen in derision.
-# Psalms 59:9 Because of his strength will I wait upon thee: for God is my defence.
-# Psalms 59:10 The God of my mercy shall prevent me: God shall let me see my desire upon mine enemies.
-# Psalms 59:11 Slay them not, lest my people forget: scatter them by thy power; and bring them down, O Lord our shield.
-# Psalms 59:12 For the sin of their mouth and the words of their lips let them even be taken in their pride: and for cursing and lying which they speak.
-# Psalms 59:13 Consume them in wrath, consume them, that they may not be: and let them know that God ruleth in Jacob unto the ends of the earth.  Selah.
-# Psalms 59:14 And at evening let them return; and let them make a noise like a dog, and go round about the city.
-# Psalms 59:15 Let them wander up and down for meat, and grudge if they be not satisfied.
-# Psalms 59:16 But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble.
-# Psalms 59:17 Unto thee, O my strength, will I sing: for God is my defence, and the God of my mercy.
+# Psalms 59
+# 1 Deliver me from mine enemies, O my God: defend me from them that rise up against me.
+# 2 Deliver me from the workers of iniquity, and save me from bloody men.
+# 3 For, lo, they lie in wait for my soul: the mighty are gathered against me; not for my transgression, nor for my sin, O LORD.
+# 4 They run and prepare themselves without my fault: awake to help me, and behold.
+# 5 Thou therefore, O LORD God of hosts, the God of Israel, awake to visit all the heathen: be not merciful to any wicked transgressors. Selah.
+# 6 They return at evening: they make a noise like a dog, and go round about the city.
+# 7 Behold, they belch out with their mouth: swords are in their lips: for who, say they, doth hear?
+# 8 But thou, O LORD, shalt laugh at them; thou shalt have all the heathen in derision.
+# 9 Because of his strength will I wait upon thee: for God is my defence.
+# 10 The God of my mercy shall prevent me: God shall let me see my desire upon mine enemies.
+# 11 Slay them not, lest my people forget: scatter them by thy power; and bring them down, O Lord our shield.
+# 12 For the sin of their mouth and the words of their lips let them even be taken in their pride: and for cursing and lying which they speak.
+# 13 Consume them in wrath, consume them, that they may not be: and let them know that God ruleth in Jacob unto the ends of the earth. Selah.
+# 14 And at evening let them return; and let them make a noise like a dog, and go round about the city.
+# 15 Let them wander up and down for meat, and grudge if they be not satisfied.
+# 16 But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble.
+# 17 Unto thee, O my strength, will I sing: for God is my defence, and the God of my mercy.
 # >>> 59*3
 # 177
+# >>> np(59)
+# 17
+# >>> 
 # >>> _*11
-# 1947
+# 187
 # >>> 595
-# 295
+# 595
 # >>> 
 # >>> 
 # >>> b.count('Selah')
@@ -120,25 +127,24 @@
 # >>> factors(_)
 # [2, 2, 19]
 # >>> tell('selah')
-#  s e  l a h
-# 19+5+12+1+8 = 45
+# s  e l  a h
+# 19+5+12+1+8=45
 # >>> 
-# 177
 # >>> 
 # >>> 17+11
 # 28
 # >>> 94-28
 # 66
 # >>> chi.index(659)
-# 20
+# Traceback (most recent call last):
+#   File "<console>", line 1, in <module>
+# NameError: name 'chi' is not defined
 # >>> sqrt(15551)
 # 124.70364870363657
 # >>> sqrt(31102)
 # 176.35759127409287
 # >>> base(16,31102)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'base' is not defined
+# [7, 9, 7, 14]
 # >>> exp(3.1102)
 # 22.425529058077274
 # >>> exp(1.5551)
@@ -162,13 +168,9 @@
 # >>> 
 # >>> 
 # >>> b.Pro[1:1].ix[0]+1
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'b' is not defined
+# 16402
 # >>> b.Job[42:17].ix[0]+1
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'b' is not defined
+# 13940
 # >>> factors(13940)
 # [2, 2, 5, 17, 41]
 # >>> factors(16402)
@@ -178,7 +180,15 @@
 # >>> factors(16403)
 # [47, 349]
 # >>> chi
-# [0, 50, 90, 117, 153, 187, 211, 232, 236, 267, 291, 313, 338, 367, 403, 413, 426, 436, 478, 628, 659, 671, 679, 745, 797, 802, 850, 862, 876, 879, 888, 889, 893, 900, 903, 906, 909, 911, 925, 929, 957, 973, 997, 1018, 1046, 1062, 1078, 1091, 1097, 1103, 1107, 1111, 1116, 1119, 1125, 1129, 1132, 1133, 1146, 1151, 1156, 1159, 1164, 1165, 1166, 1167, 1189]
+# Traceback (most recent call last):
+#   File "<console>", line 1, in <module>
+# NameError: name 'chi' is not defined
+# >>> James.chn()
+# 1147
+# >>> 
+# >>> 
+# >>> 
+# >>> 
 # >>> 789629/pi
 # 251346.71711742046
 # >>> b/"five thousand"

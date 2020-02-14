@@ -1,6 +1,7 @@
 # >>> from math import *
 # >>> from bible import *
 # >>> phi=(sqrt(5)+1)/2
+# >>> phi=(sqrt(5)+1)/2
 # >>> 35*35
 # 1225
 # >>> 22*22

@@ -20,8 +20,12 @@
 (123, 1059)
 >>> sums('Authorized Version')
 (229, 2191)
->>> sums('Authorised Version')
-(222, 1491)
+>>> tell(lsum,osum,ssum,'Authorised Version')
+Authorised Version
+    10    +   7   = 17
+   120    +  102  =222
+   777    +  714  =1491
+>>> 
 >>> sums('Authorised')
 (120, 777)
 >>> pf(777)
@@ -52,4 +56,46 @@ I AM THAT I AM
 (43, 142)
 >>> sums('version')
 (102, 714)
+>>> tell('ESV')
+E S  V
+5+19+22=46
+>>> tell('NIV')
+N  I V
+14+9+22=45
+>>> tell('New International Version',osum,ssum)
+New International Version
+ 42+     152     +  102  =296
+555+     755     +  714  =2024
+>>> tell('new things',osum,ssum)
+new things
+ 42+  77  =119
+555+ 374  =929
+>>> b/'new things'
+Isaiah 42:9 Behold, the former things are come to pass, and new things do I declare: before they spring forth I tell you of them.
+Isaiah 48:6 Thou hast heard, see all this; and will not ye declare it? I have shewed thee new things from this time, even hidden things, and thou didst not know them.
+>>> _.tell(lsum,osum,ssum)
+Behold, the former things are come  to pass, and new things do I declare: before they spring forth I tell you  of them.
+   6   + 3 +  6   +  6   + 3 + 4  + 2 +  4  + 3 + 3 +  6   +2 +1+   7    +  6   + 4  +  6   +  5  +1+ 4  + 3  +2 +  4  = 91
+   46  + 33+  75  +  77  + 24+ 36 + 35+  55 + 19+ 42+  77  +19+9+   48   +  51  + 58 +  83  +  67 +9+ 49 + 61 +21+  46 =1040
+  109  +213+ 291  + 374  + 96+108 +260+ 271 + 55+555+ 374  +64+9+  138   + 168  +913 + 326  + 364 +9+265 +1060+66+ 253 =6341
+Thou hast heard, see all this; and will not  ye declare it? I have shewed thee new things from this time, even hidden things, and thou didst not know them.
+ 4  + 4  +  5   + 3 + 3 +  4  + 3 + 4  + 3 + 2 +   7   + 2 +1+ 4  +  6   + 4  + 3 +  6   + 4  + 4  +  4  + 4  +  6   +   6   + 3 + 4  +  5  + 3 + 4  +  4  =119
+ 64 + 48 +  36  + 29+ 25+  56 + 19+ 56 + 49+ 30+   48  + 29+9+ 36 +  64  + 38 + 42+  77  + 52 + 56 +  47 + 46 +  44  +   77  + 19+ 64 +  56 + 49+ 63 +  46 =1374
+568 +309 + 108  +110+ 61+ 317 + 55+569 +310+705+  138  +209+9+414 + 622  +218 +555+ 374  +196 +317 + 254 +460 +  80  +  374  + 55+568 + 317 +310+630 + 253 =9465
+>>> tell('you of them',osum,ssum)
+you  of them
+ 61 +21+ 46 =128
+1060+66+253 =1379
+>>> tell('and new',osum,ssum)
+and new
+ 19+ 42= 61
+ 55+555=610
+>>> tell('new things',osum,ssum)
+new things
+ 42+  77  =119
+555+ 374  =929
+>>> 555+555
+1110
+>>> 2*555
+1110
 >>> 

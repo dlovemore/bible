@@ -1,1 +1,1 @@
-from parle.func import *
+from parle import *

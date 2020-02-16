@@ -35,7 +35,7 @@ def psum(s): return sum([pdigits[k] for k in ovals(s)])
 def sums(s): return osum(s),psum(s)
 
 # >>> from mean1 import *
-# >>> from primes import *
+# >>> from search import *
 # >>> from math import *
 # >>> dir(re)
 # ['A', 'ASCII', 'DEBUG', 'DOTALL', 'I', 'IGNORECASE', 'L', 'LOCALE', 'M', 'MULTILINE', 'Match', 'Pattern', 'RegexFlag', 'S', 'Scanner', 'T', 'TEMPLATE', 'U', 'UNICODE', 'VERBOSE', 'X', '_MAXCACHE', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__version__', '_cache', '_compile', '_compile_repl', '_expand', '_locale', '_pickle', '_special_chars_map', '_subx', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools', 'match', 'purge', 'search', 'split', 'sre_compile', 'sre_parse', 'sub', 'subn', 'template']
@@ -97,14 +97,18 @@ def sums(s): return osum(s),psum(s)
 # 25
 # >>> j11='ἐν ἀρχῇ ἦν ὁ λόγος καὶ ὁ λόγος ἦν πρὸς τὸν θεόν καὶ θεὸς ἦν ὁ λόγος'
 # >>> osum(j11),psum(j11)
-# (587, 2657)
+# (657, 3627)
 # >>> factors(_[1])
-# [2657]
+# [3, 3, 13, 31]
 # >>> 2701-_[0]
-# 44
+# 2698
 # >>> 
-# >>> psum('Κυριος'),psum('Ιησους'),psum('Χρηστος')
-# (606, 694, 1284)
+# >>> tell('Κυριος Ιησους Χρηστος',lsum,osum,ssum)
+# Κυριος Ιησους Χρηστος
+#   6   +  6   +   7   = 19
+#   98  +  96  +  128  =322
+#  800  + 888  +  1478 =3166
+# >>> 
 # >>> sum(_)
 # 2584
 # >>> osum('Κυριος'),osum('Ιησους'),osum('Χρηστος')

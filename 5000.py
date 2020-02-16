@@ -85,6 +85,10 @@
     Matthew 15:36 And he took the seven loaves and the fishes, and gave thanks, and brake them, and gave to his disciples, and the disciples to the multitude.
     Matthew 16:10 Neither the seven loaves of the four thousand, and how many baskets ye took up?
     Mark 8:6 And he commanded the people to sit down on the ground: and he took the seven loaves, and gave thanks, and brake, and gave to his disciples to set before them; and they did set them before the people.
+    >>> b.verse(4000)
+    Numbers 10:11 And it came to pass on the twentieth day of the second month, in the second year, that the cloud was taken up from off the tabernacle of the testimony.
+    >>> b.verse(4012)
+    Numbers 10:23 And over the host of the tribe of the children of Manasseh was Gamaliel the son of Pedahzur.
     >>> b.verse(4048)
     Numbers 11:23 And the LORD said unto Moses, Is the LORD's hand waxed short? thou shalt see now whether my word shall come to pass unto thee or not.
     >>> nt.verse(4048)

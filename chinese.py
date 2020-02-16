@@ -84,7 +84,8 @@ def lookup(s):
 # '㑘㑤㓛㘬㙉㚃㚒㚥㛦㜴㜺㝖㤛㦝㫑㭋㰬㱅㱡㳤㹏㹛㽥㾎㿲䃽䄈䄉䄐䄙䋬䌖䌝䌤䌧䌳䏂䐌䐚䑞䒁䒏䒐䙤䚱䚷䚸䜴䝕䝨䢇䣨䣩䤒䩂䩇䩊䫑䫢䮐䯭䱼䴆佳佼功吉咊善塡填好姤姽娥宓昌淑祉祥祦祯祺禎福禔禨羑羭腆臧良貨賍賢贒贓贜贤货赃邲醇頔顓颛餱良祥𠿭'
 
 # >>> lu('ashamed')
-# '㒩䡀倮袒襢鶖鹙𨊛'
+# '㗤㗳㘂㤰㥏㥴㥾㦦㦬䀣䎵䚼䣯䩄䩅䩆䩋䪾僯嘁媿忝忸怍怩恥惭愧慙慚懅瞢羞耻覥觍'
+# >>> 
 
 # >>> lookup('sin')
 # 㐰 xìn - (ancient form of 信) to believe in; to trust, truth, sincerity, confidence, a pledge or token

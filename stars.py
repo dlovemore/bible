@@ -1,6 +1,6 @@
     >>> from bible import *
     >>> b/'number'/'seed'|b/'seed'/'stars'/'heaven'
-    Genesis 13:16...Jeremiah 33:22 (8 verses)
+    Genesis 13:16;15:5;16:10;22:17;26:4;32:12;Exodus 32:13;Jeremiah 33:22 (8 verses)
     >>> p(_)
     Genesis 13:16 And I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth, then shall thy seed also be numbered.
     Genesis 15:5 And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.
@@ -60,11 +60,11 @@
     >>> Deuteronomy.chc()
     34
     >>> tell('זַרְעֶֽךָ׃')
-    ז ַ ר  ְ ע  ֶ ֽ ך  ָ ׃
-    7+0+20+0+16+0+0+11+0+0=54
+    זַ  רְ עֶֽ  ךָ׃
+    7+20+16+11=54
     >>> tell('צְדָקָה')
-    צ  ְ ד ָ ק  ָ ה
-    18+0+4+0+19+0+5=46
+     צְ דָ  קָ ה
+    18+4+19+5=46
     >>> np(53)
     16
     >>> sof(53)
@@ -73,4 +73,40 @@
     [66, 70, 94, 115, 119]
     >>> sof(70)
     144
-    >>> 
+    >>> Job/'Arcturus'
+    Job 9:9 Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south.
+    Job 38:32 Canst thou bring forth Mazzaroth in his season? or canst thou guide Arcturus with his sons?
+    >>> Job[38:31:32].tell(osum,ssum)
+    Canst thou bind the sweet influences of Pleiades,  or loose the bands of Orion?
+      57 + 64 + 29 + 33+  72 +   108    +21+    71   + 33+  66 + 33+  40 +21+  71  =719
+     354 +568 + 65 +213+ 810 +   558    +66+   224   +150+ 255 +213+ 157 +66+ 269  =3968
+    Canst thou bring forth Mazzaroth in his season?  or canst thou guide Arcturus with his sons?
+      57 + 64 +  50 +  67 +   128   +23+ 36+   73  + 33+  57 + 64 +  46 +  121   + 60 + 36+  67 =982
+     354 +568 + 158 + 364 +   2000  +59+117+  316  +150+ 354 +568 + 325 +  1084  +717 +117+ 310 =7561
+    >>> tell('his sons')
+    his sons
+     36+ 67 =103
+    >>> 789629/math.pi
+    251346.71711742046
+    >>> sums('the sweet influences')
+    (213, 1581)
+    >>> sums('sweet influences')
+    (180, 1368)
+    >>> tell(osum,ssum,'loose the bands')
+    loose the bands
+      66 + 33+  40 =139
+     255 +213+ 157 =625
+    >>> tell('his sons')
+    his sons
+     36+ 67 =103
+    >>> tell('thou guide')
+    thou guide
+     64 +  46 =110
+    >>> sums('sheep')
+    (53, 188)
+    >>> sums('the stars')
+    (110, 704)
+    >>> sums('stars')
+    (77, 491)
+    >>> sums('star')
+    (58, 391)

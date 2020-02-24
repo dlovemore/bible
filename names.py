@@ -44,12 +44,20 @@ Counter({3: 1, 7: 1, 37: 1})
 >>> tell('יְהוֹשֻׁ֣עַ',ssum)
  יְ ה וֹ  שֻׁ֣   עַ
 10+5+6+300+70=391
->>> tell('jehoshuah')
-j  e h o  s  h u  a h
-10+5+8+15+19+8+21+1+8=95
->>> tell('I AM THAT I AM')
+>>> tell('jehoshuah',osum,ssum)
+j  e h o   s  h  u  a h
+10+5+8+15+ 19+8+ 21+1+8= 95
+10+5+8+60+100+8+300+1+8=500
+>>> sum(sums('Jehoshuah'))
+595
+>>> sums('light')
+(56, 254)
+>>> 
+>>> tell('I AM THAT I AM',osum,ssum)
 I AM THAT I AM
-9+14+ 49 +9+14=95
+9+14+ 49 +9+14= 95
+9+41+409 +9+41=509
+>>> 
 >>> sums('bible')
 (30, 48)
 >>> sums('book')

@@ -29,4 +29,8 @@ Psalms 83:13 O my God, make them like a wheel; as the stubble before the wind.
 Psalms 102:24 I said, O my God, take me not away in the midst of my days: thy years are throughout all generations.
 Daniel 9:18 O my God, incline thine ear, and hear; open thine eyes, and behold our desolations, and the city which is called by thy name: for we do not present our supplications before thee for our righteousnesses, but for thy great mercies.
 Daniel 9:19 O Lord, hear; O Lord, forgive; O Lord, hearken and do; defer not, for thine own sake, O my God: for thy city and thy people are called by thy name.
+>>> tell('O my God',osum,ssum)
+O   my God
+15+ 38+ 26= 79
+60+740+ 71=871
 >>> 

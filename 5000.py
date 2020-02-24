@@ -93,4 +93,12 @@
     Numbers 11:23 And the LORD said unto Moses, Is the LORD's hand waxed short? thou shalt see now whether my word shall come to pass unto thee or not.
     >>> nt.verse(4048)
     Acts 8:16 (For as yet he was fallen upon none of them: only they were baptized in the name of the Lord Jesus.)
+    >>> Exodus[20:2].vn()
+    2054
+    >>> 
+    >>> 
+    >>> Exodus[20:1]-(20,2)
+    Exodus 20:1 And God spake all these words, saying,
+    Exodus 20:2 I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.
+    >>> 
     >>> 

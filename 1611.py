@@ -111,6 +111,12 @@
 # >>> factors(1611)
 # [3, 3, 179]
 # >>> 
+# >>> 5060/math.pi
+# 1610.648024089981
+# >>> 5060/1611
+# 3.1409062693978895
+# >>> b.vi(1611)
+# Exodus 4:9 And it shall come to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour it upon the dry land: and the water which thou takest out of the river shall become blood upon the dry land.
 # >>> 
 # >>> 
 # >>> 

@@ -177,18 +177,26 @@ def bp(i):
 # >>> pp(47)
 # 30103
 # >>> 
+# >>> tell('adenine cytosine uracil anr guanine')
+# adenine cytosine uracil anr guanine
+#    52  +  110   +  64  + 33+   71  =330
 # >>> tell('adenine cytosine thymine and guanine')
 # adenine cytosine thymine and guanine
 #    52  +  110   +   94  + 19+   71  =346
+# >>> tell('adenine cytosine thy mine and guanine')
+# adenine cytosine thy mine and guanine
+#    52  +  110   + 53+ 41 + 19+   71  =346
 # >>> tell('the Father the Word the Holy Ghost')
 # the Father the Word the Holy Ghost
 #  33+  58  + 33+ 60 + 33+ 60 +  69 =346
 # >>> ssum('God')
 # 71
 # >>> 
-# >>> tell('ACT of God')
+# >>> tell('ACT of God',osum,ssum)
 # ACT of God
-#  24+21+ 26=71
+#  24+21+ 26= 71
+# 204+66+ 71=341
+# >>> 
 # >>> tell('one')
 # o  n  e
 # 15+14+5=34

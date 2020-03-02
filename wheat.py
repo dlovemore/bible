@@ -6,34 +6,31 @@ class AD(dict):
         self[k]=v
 
 wheat=AD({'bps':14547261565,'name':'triticum aestivum'})
-barley=AD({bps:4834432680, name:'hordeum vulgare'})
+barley=AD({'bps':4834432680, 'name':'hordeum vulgare'})
 
 # >>> from bible import *
 # >>> from wheat import *
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-#   File "/home/pi/python/bible/wheat.py", line 9, in <module>
-#     barley=AD({bps:4834432680, name:'hordeum vulgare'})
-# NameError: name 'bps' is not defined
+# >>> from dna import *
 # >>> wheat.bps
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'wheat' is not defined
+# 14547261565
 # >>> AY
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'AY' is not defined
+# 3088286401
 # >>> wheat.bps/(AY)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'wheat' is not defined
+# 4.710463887121847
 # >>> math.pi*3/2
 # 4.71238898038469
+# >>> wheat.bps/(AY)*2/3
+# 3.1403092580812313
+# >>> 
+# >>> 
+# >>> 
+# >>> 
 # >>> 
 # >>> tell(wheat.name,lsum,osum,ssum)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'wheat' is not defined
+# triticum aestivum
+#    8    +   8    = 16
+#   113   +  110   =223
+#   851   +  1055  =1906
 # >>> 22*3
 # 66
 # >>> 1906,osum('dna'),6

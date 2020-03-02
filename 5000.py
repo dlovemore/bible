@@ -70,6 +70,18 @@
     >>> 
     >>> b.verse(5060)
     Deuteronomy 5:6 I am the LORD thy God, which brought thee out of the land of Egypt, from the house of bondage.
+    >>> base(49,5060)
+    [2, 5, 13]
+    >>> 5060//49,5060%49
+    (103, 13)
+    >>> divmod(5060,49)
+    (103, 13)
+    >>> divmod(5060,50)
+    (101, 10)
+    >>> 
+    >>> 
+    >>> 
+    >>> 
     >>> 5060-5
     5055
     >>> bible[5][5]

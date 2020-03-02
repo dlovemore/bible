@@ -74,11 +74,14 @@ def tell(*ss):
     ss = [s for s in ss if s is not None and not callable(s)]
     if not fs: fs = [count]
     for s in ss:
-        words=s.split()
-        if len(words)==1:
-            word=words[0]
-            words=splitat(positions([c in characters for c in word]),word)
-        vv=[join('',list(words))]
+        if isinstance(s,str):
+            words=s.split()
+            if len(words)==1:
+                word=words[0]
+                words=splitat(positions([c in characters for c in word]),word)
+        else:
+            words=list(s)
+        vv=[join('',list(map(str,words)))]
         for f in fs:
             vals=[f(w) for w in words]
             vv.append(join('+',vals)+['=',sum(vals)])

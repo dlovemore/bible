@@ -75,5 +75,4 @@ OT=ot=Genesis-Malachi
 NT=nt=Matthew-Revelation
 
 def show(s):
-    assert False
     print(f'{s} = {eval(s, globals())}')

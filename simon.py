@@ -1,0 +1,2 @@
+    >>> from bible import *
+    >>> 

@@ -1,13 +1,13 @@
 # >>> from search import *
 # >>> from math import *
 # >>> b/r"old\b"
-# 346 verses
+# <console>:1: NameError: name 'b' is not defined
 # >>> b/r'new\b'
-# 131 verses
+# <console>:1: NameError: name 'b' is not defined
 # >>> b.Matt[1:1]
-# 1 verses
+# <console>:1: NameError: name 'b' is not defined
 # >>> _.ix
-# [23145]
+# <console>:1: NameError: name '_' is not defined
 # >>> 31102-23145
 # 7957
 # >>> 7957/31102
@@ -17,11 +17,11 @@
 # >>> 150/530
 # 0.2830188679245283
 # >>> Sel(b.doc,range(23145)).wc()
-# 609248
+# <console>:1: NameError: name 'b' is not defined
 # >>> Sel(b.doc,range(23145,31102)).wc()
-# 180381
+# <console>:1: NameError: name 'b' is not defined
 # >>> b.wc()
-# 789629
+# <console>:1: NameError: name 'b' is not defined
 # >>> 311*2539
 # 789629
 # >>> 311/2539
@@ -31,13 +31,13 @@
 # >>> 2539%311
 # 51
 # >>> b.John[11:35].ix
-# [26558]
+# <console>:1: NameError: name 'b' is not defined
 # >>> 26559-23144
 # 3415
 # >>> 26559/31102
 # 0.8539322230081666
 # >>> b.Psalm[119:].wc()
-# 2423
+# <console>:1: NameError: name 'b' is not defined
 # >>> 364499*2
 # 728998
 # >>> phi=(1+sqrt(5))/2
@@ -47,6 +47,9 @@
 # 97709.81471194974
 # >>> 789629/pi
 # 251346.71711742046
+# >>> Fibonacci(22)
+# 17711
+# >>> 
 # >>> 
 # >>> 
 # >>> 

@@ -122,6 +122,9 @@
 # >>> 
 # >>> Genesis[28:12].vn()
 # 786
+# >>> Genesis.vi(797)
+# Genesis 29:1 Then Jacob went on his journey, and came into the land of the people of the east.
+# >>> 
 # >>> base(23,1611)
 # [3, 1, 1]
 # >>> base(19,1611)

@@ -1,6 +1,6 @@
 >>> from bible import *
 >>> b/'Jehovah'
-Genesis 22:14...Isaiah 26:4 (7 verses)
+Genesis 22:14;Exodus 6:3;17:15;Judges 6:24;Psalms 83:18;Isaiah 12:2;26:4 (7 verses)
 >>> p(_)
 Genesis 22:14 And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen.
 Exodus 6:3 And I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them.
@@ -19,10 +19,13 @@ Isaiah 26:4 Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlastin
 676
 >>> tell('Jehovahjireh Jehovahnissi Jehovahshalom')
 Jehovahjireh Jehovahnissi Jehovahshalom
-         119+         139+          137 = 395
+    119     +    139     +     137     =395
 >>> tell('Jehovahjireh Jehovahnissi Jehovahshalom',ssum)
 Jehovahjireh Jehovahnissi Jehovahshalom
-         614+         760+          731 = 2105
+    614     +    760     +     731     =2105
+>>> 
+>>> lmap=F(list)@F(map)
+<console>:1: TypeError: unsupported operand type(s) for @: 'F' and 'F'
 >>> 
 >>> 
 >>> 

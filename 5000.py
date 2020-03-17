@@ -107,6 +107,8 @@
     Acts 8:16 (For as yet he was fallen upon none of them: only they were baptized in the name of the Lord Jesus.)
     >>> Exodus[20:2].vn()
     2054
+    >>> b.verse(5060+4048)
+    1 Kings 10:28 And Solomon had horses brought out of Egypt, and linen yarn: the king's merchants received the linen yarn at a price.
     >>> 
     >>> 
     >>> Exodus[20:1]-(20,2)

@@ -1,4 +1,5 @@
-from func import *
+from parle import *
+from table import *
 import re
 import itertools
 import functools
@@ -67,8 +68,13 @@ def join(sep,l):
     r[::2]=l
     return r
 
-from table import *
 def tell(*ss):
+    print(texttable(telltable(*ss),sep=''))
+
+def tellmd(*ss):
+    print(mdtable(telltable(*ss)))
+
+def telltable(*ss):
     if not ss: return
     fs = [f for f in ss if callable(f)]
     ss = [s for s in ss if s is not None and not callable(s)]
@@ -85,41 +91,68 @@ def tell(*ss):
         for f in fs:
             vals=[f(w) for w in words]
             vv.append(join('+',vals)+['=',sum(vals)])
-        print(texttable(justify(vv),sep=''))
+        return Table(vv)
 
 def texttable(vv,sep=' '):
-    return '\n'.join([sep.join(v).rstrip() for v in vv])
+    return '\n'.join([sep.join(v).rstrip() for v in justify(vv)])
 
-def tt(vv,sep=' '):
-    return texttable(justify(vv))
+def mdtable(vv):
+    vv=fill(vv@str,'')
+    def j(s,l): return s+s.join(l)+s
+    return j('\n',[j('|',vv[0]),j('|','-'*len(vv[0]))]+[j('|',v) for v in vv[1:]])
 
 # >>> from mene import *
 # >>> from auto import *
-# >>> dir(functools)
-# ['RLock', 'WRAPPER_ASSIGNMENTS', 'WRAPPER_UPDATES', '_CacheInfo', '_HashedSeq', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_c3_merge', '_c3_mro', '_compose_mro', '_convert', '_find_impl', '_ge_from_gt', '_ge_from_le', '_ge_from_lt', '_gt_from_ge', '_gt_from_le', '_gt_from_lt', '_le_from_ge', '_le_from_gt', '_le_from_lt', '_lru_cache_wrapper', '_lt_from_ge', '_lt_from_gt', '_lt_from_le', '_make_key', 'cmp_to_key', 'get_cache_token', 'lru_cache', 'namedtuple', 'partial', 'partialmethod', 'recursive_repr', 'reduce', 'singledispatch', 'total_ordering', 'update_wrapper', 'wraps']
-# >>> dir(functools)
-# ['RLock', 'WRAPPER_ASSIGNMENTS', 'WRAPPER_UPDATES', '_CacheInfo', '_HashedSeq', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_c3_merge', '_c3_mro', '_compose_mro', '_convert', '_find_impl', '_ge_from_gt', '_ge_from_le', '_ge_from_lt', '_gt_from_ge', '_gt_from_le', '_gt_from_lt', '_le_from_ge', '_le_from_gt', '_le_from_lt', '_lru_cache_wrapper', '_lt_from_ge', '_lt_from_gt', '_lt_from_le', '_make_key', 'cmp_to_key', 'get_cache_token', 'lru_cache', 'namedtuple', 'partial', 'partialmethod', 'recursive_repr', 'reduce', 'singledispatch', 'total_ordering', 'update_wrapper', 'wraps']
-# >>> help(functools.lru_cache)
-# Help on function lru_cache in module functools:
+# >>> p=print
+# >>> telltable('God')
+# Table(['G', '', 'o', '', 'd', 7, '+', 15, '+', 4, '=', 26],[Index([5,7])])
+# >>> _[:]
+# Table(['G', '', 'o', '', 'd', 7, '+', 15, '+', 4, '=', 26],[Index([5,7])])
+# >>> print(_.values())
+# [['G', '', 'o', '', 'd'], [7, '+', 15, '+', 4, '=', 26]]
+# >>> method.join('|',Table([1,2,3])@str)
+# '1|2|3'
+# >>> 
+# >>> mdtable(telltable('AZ',ssum))
+# '\n|A||Z|||\n|-|-|-|-|-|\n|1|+|800|=|801|\n'
+# >>> tellmd('AV')
 # 
-# lru_cache(maxsize=128, typed=False)
-#     Least-recently-used cache decorator.
-#     
-#     If *maxsize* is set to None, the LRU features are disabled and the cache
-#     can grow without bound.
-#     
-#     If *typed* is True, arguments of different types will be cached separately.
-#     For example, f(3.0) and f(3) will be treated as distinct calls with
-#     distinct results.
-#     
-#     Arguments to the cached function must be hashable.
-#     
-#     View the cache statistics named tuple (hits, misses, maxsize, currsize)
-#     with f.cache_info().  Clear the cache and statistics with f.cache_clear().
-#     Access the underlying function with f.__wrapped__.
-#     
-#     See:  http://en.wikipedia.org/wiki/Cache_algorithms#Least_Recently_Used
+# |A||V|||
+# |-|-|-|-|-|
+# |1|+|22|=|23|
 # 
+# >>> 
+# >>> 
+# >>> fill(_)
+# Table(['G', '', 'o', '', 'd', '', '', 7, '+', 15, '+', 4, '=', 26],[Index([7,7])])
+# >>> texttable(_)
+# 'G   o    d\n7 + 15 + 4 = 26'
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> fill([[1,2],[3]])
+# [[1, 2], [3, '']]
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> mdtable(_)
+# <console>:1: IndexError: list index out of range
+# /home/pi/python/bible/mene.py:102: IndexError: list index out of range
+#     vv=[]
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
 # >>> 
 # >>> tale([1,2,3])
 # [1, 3, 6]
@@ -141,9 +174,7 @@ def tt(vv,sep=' '):
 # >>> 5055*55
 # 278025
 # >>> b.chapter(789)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'b' is not defined
+# <console>:1: NameError: name 'b' is not defined
 # >>> 
 # >>> osum('God')
 # 26
@@ -168,9 +199,7 @@ def tt(vv,sep=' '):
 # >>> ssum('את')
 # 401
 # >>> np(401)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'np' is not defined
+# <console>:1: NameError: name 'np' is not defined
 # >>> osum('יהוה')
 # 26
 # >>> psum('יהוה')

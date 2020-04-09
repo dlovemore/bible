@@ -46,11 +46,11 @@ def bp(i):
 # >>> from bible import *
 # >>> 
 # >>> tell('Lord Jesus Christ')
-# Lord Jesus Christ
-#  49 +  74 +  77  =200
+# Lord Jesus Christ  =
+#  49    74    77   200
 # >>> tell('Jesus')
-# J  e s  u  s
-# 10+5+19+21+19=74
+# J  e s  u  s  =
+# 10 5 19 21 19 74
 # >>> factors(c)
 # [2, 7, 73, 293339]
 # >>> [bp/293339 for bp in chron]
@@ -88,38 +88,38 @@ def bp(i):
 # >>> Isaiah[41:4]
 # Isaiah 41:4 Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.
 # >>> _.tell(lsum, osum, ssum)
-# Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.
-#  3 + 4  +   7   + 3 + 4  + 2 +   7   + 3 +     11    + 4  + 3 +    9     +1+ 3 +  4  + 3 +  5   + 3 + 4  + 3 +  4  +1+2 + 2 = 95
-#  46+ 37 +  112  + 19+ 38 + 29+   58  + 33+    127    + 52 + 33+    81    +9+ 33+  49 + 33+  72  + 19+ 60 + 33+  52 +9+14+ 13=1061
-# 568+217 +  1165 + 55+119 +209+  130  +213+    577    +196 +213+   189    +9+213+ 184 +213+ 405  + 55+717 +213+ 331 +9+41+ 13=6254
+# Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.  =
+#  3   4      7     3   4    2     7     3       11      4    3      9      1  3    4    3    5     3   4    3    4   1 2   2   95
+#  46  37    112    19  38   29    58    33     127      52   33     81     9  33   49   33   72    19  60   33   52  9 14  13 1061
+# 568 217    1165   55 119  209   130   213     577     196  213    189     9 213  184  213  405    55 717  213  331  9 41  13 6254
 # >>> is414="מִי -פָעַל וְעָשָׂה, קֹרֵא הַדֹּרוֹת מֵרֹאשׁ:  אֲנִי יְהוָה רִאשׁוֹן, וְאֶת -אַחֲרֹנִים אֲנִי -הוּא"
 # >>> tell(lsum,osum,ssum,is414)
-# מִי -פָעַל וְעָשָׂה, קֹרֵא הַדֹּרוֹת מֵרֹאשׁ: אֲנִי יְהוָה רִאשׁוֹן, וְאֶת -אַחֲרֹנִים אֲנִי -הוּא
-# 2 + 3  +  4  + 3 +  5  +  4  + 3 + 4  +  5   + 3 +   6   + 3 + 3  = 48
-# 23+ 45 +  48 + 40+  57 +  55 + 25+ 26 +  62  + 29+   66  + 25+ 12 =513
-# 50+180 + 381 +301+ 615 + 541 + 61+ 26 + 557  +407+  309  + 61+ 12 =3501
+# מִי -פָעַל וְעָשָׂה, קֹרֵא הַדֹּרוֹת מֵרֹאשׁ: אֲנִי יְהוָה רִאשׁוֹן, וְאֶת -אַחֲרֹנִים אֲנִי -הוּא  =
+# 2   3     4    3    5     4    3   4     5     3     6     3   3    48
+# 23  45    48   40   57    55   25  26    62    29    66    25  12  513
+# 50 180   381  301  615   541   61  26   557   407   309    61  12  3501
 # >>> tell('אֲנִי הוּא',lsum,osum,ssum)
-# אֲנִי הוּא
-#  3 + 3 =6
-#  25+ 12=37
-#  61+ 12=73
+# אֲנִי הוּא =
+#  3   3  6
+#  25  12 37
+#  61  12 73
 # >>> 
 # >>> 
 # >>> tell('In the beginning')
-# In the beginning
-# 23+ 33+    81   =137
+# In the beginning  =
+# 23  33     81    137
 # >>> tell('Who')
-# W  h o
-# 23+8+15=46
+# W  h o  =
+# 23 8 15 46
 # >>> tell('it')
-# i t
-# 9+20=29
+# i t  =
+# 9 20 29
 # >>> tell('rib')
-# r  i b
-# 18+9+2=29
+# r  i b =
+# 18 9 2 29
 # >>> tell('the first')
-# the first
-#  33+  72 =105
+# the first  =
+#  33   72  105
 # >>> (AV*2+X+Y)/mc
 # 19891.332136180692
 # >>> npp(19891)
@@ -178,32 +178,32 @@ def bp(i):
 # 30103
 # >>> 
 # >>> tell('adenine cytosine uracil anr guanine')
-# adenine cytosine uracil anr guanine
-#    52  +  110   +  64  + 33+   71  =330
+# adenine cytosine uracil anr guanine  =
+#    52     110      64    33    71   330
 # >>> tell('adenine cytosine thymine and guanine')
-# adenine cytosine thymine and guanine
-#    52  +  110   +   94  + 19+   71  =346
+# adenine cytosine thymine and guanine  =
+#    52     110       94    19    71   346
 # >>> tell('adenine cytosine thy mine and guanine')
-# adenine cytosine thy mine and guanine
-#    52  +  110   + 53+ 41 + 19+   71  =346
+# adenine cytosine thy mine and guanine  =
+#    52     110     53  41   19    71   346
 # >>> tell('the Father the Word the Holy Ghost')
-# the Father the Word the Holy Ghost
-#  33+  58  + 33+ 60 + 33+ 60 +  69 =346
+# the Father the Word the Holy Ghost  =
+#  33   58    33  60   33  60    69  346
 # >>> ssum('God')
 # 71
 # >>> 
 # >>> tell('ACT of God',osum,ssum)
-# ACT of God
-#  24+21+ 26= 71
-# 204+66+ 71=341
+# ACT of God  =
+#  24 21  26  71
+# 204 66  71 341
 # >>> 
 # >>> tell('one')
-# o  n  e
-# 15+14+5=34
+# o  n  e =
+# 15 14 5 34
 # >>> 
 # >>> tell('adenine cytosine thymine and guanine',ssum)
-# adenine cytosine thymine and guanine
-#   124  +  1127  +  1012 + 55+  422  =2740
+# adenine cytosine thymine and guanine  =
+#   124     1127     1012   55   422   2740
 # >>> sums('DNA')
 # (19, 55)
 # >>> 
@@ -212,23 +212,23 @@ def bp(i):
 # >>> np(137)
 # 33
 # >>> Genesis[1:1].tell(ssum)
-# In the beginning God created the heaven and the earth.
-# 59+213+   189   + 71+  308  +213+ 469  + 55+213+ 304  =2094
+# In the beginning God created the heaven and the earth.  =
+# 59 213    189     71   308   213  469    55 213  304   2094
 # >>> Genesis[1:1:2].tell(ssum)
-# In the beginning God created the heaven and the earth.
-# 59+213+   189   + 71+  308  +213+ 469  + 55+213+ 304  =2094
-# And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.
-#  55+213+ 304 +601+  1277 + 196 + 55+ 473 + 55+  370   +601+480 +213+ 15 +66+213+  84 + 55+213+ 478  +66+ 71+ 509 +480 +213+ 15 +66+213+  896  =8546
+# In the beginning God created the heaven and the earth.  =
+# 59 213    189     71   308   213  469    55 213  304   2094
+# And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.  =
+#  55 213  304  601   1277   196   55  473   55   370    601 480  213  15  66 213   84   55 213  478   66  71  509  480  213  15  66 213   896   8546
 # >>> 
 # >>> (Genesis[2:22]-3).tell()
-# And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.
-#  19+ 33+ 29 +  51 + 33+ 49 + 26+ 13+  51 + 52 + 28 + 23 +13+1+  66  + 19+   91  + 31+ 70 + 33+ 28 =759
-# And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.
-#  19+ 19 +  33 + 56 +28+ 52+ 36 +21+38+  55  + 19+  50 +21+38+  50  + 32+  52 +7 +  37  +  66  +   56  + 32+ 43+  51 + 56+21+ 28 =1016
-# Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.
-#    100   +  52 +1+ 28+  45 + 36+  58  + 19+ 36+   79  + 19+  52 +  48  + 70 + 36+  43 + 19+ 58 +  52 +7 + 34+  50  =942
-# And they were both naked, the man and his wife, and were not ashamed.
-#  19+ 58 + 51 + 45 +  35  + 33+ 28+ 19+ 36+  43 + 19+ 51 + 49+   51   =537
+# And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.  =
+#  19  33  29    51   33  49   26  13   51   52   28   23  13 1   66    19    91    31  70   33  28  759
+# And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.  =
+#  19  19    33   56  28  52  36  21 38   55    19   50  21 38   50    32   52  7    37     66      56    32  43   51   56 21  28  1016
+# Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.  =
+#    100      52  1  28   45   36   58    19  36    79    19   52    48    70   36   43   19  58    52  7   34   50   942
+# And they were both naked, the man and his wife, and were not ashamed.  =
+#  19  58   51   45    35    33  28  19  36   43   19  51   49    51    537
 # >>> 
 # >>> 
 # >>> 
@@ -280,9 +280,7 @@ def bp(i):
 # >>> 5**26
 # 1490116119384765625
 # >>> exp(89)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'exp' is not defined
+# <console>:1: NameError: name 'exp' is not defined
 # >>> 2**128.0
 # 3.402823669209385e+38
 # >>> sums('π')
@@ -295,9 +293,7 @@ def bp(i):
 # (31, 211)
 # >>> 
 # >>> exp(17)/pi
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'exp' is not defined
+# <console>:1: NameError: name 'exp' is not defined
 # >>> 
 # >>> 
 # >>> 
@@ -385,14 +381,14 @@ def bp(i):
 # >>> Isaiah[41:4]
 # Isaiah 41:4 Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.
 # >>> _.tell()
-# Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.
-#  46+ 37 +  112  + 19+ 38 + 29+   58  + 33+    127    + 52 + 33+    81    +9+ 33+  49 + 33+  72  + 19+ 60 + 33+  52 +9+14+ 13=1061
+# Who hath wrought and done it, calling the generations from the beginning? I the LORD, the first, and with the last; I am he.  =
+#  46  37    112    19  38   29    58    33     127      52   33     81     9  33   49   33   72    19  60   33   52  9 14  13 1061
 # >>> tell('In the beginning')
-# In the beginning
-# 23+ 33+    81   =137
+# In the beginning  =
+# 23  33     81    137
 # >>> tell('the first and with the last')
-# the first and with the last
-#  33+  72 + 19+ 60 + 33+ 52 =269
+# the first and with the last  =
+#  33   72   19  60   33  52  269
 # >>> (Genesis[1:1]-(2,3)).count("And God")
 # 29
 # >>> Genesis[1:30]
@@ -476,6 +472,8 @@ def bp(i):
 # >>> (AV+W+X+Y)/mc
 # 10301.414590623224
 # >>> 
+# >>> (AV+W+X+Y)
+# 3088286401
 # >>> 
 # >>> 
 # >>> 
@@ -533,8 +531,8 @@ def bp(i):
 # >>> _/('And God said.*let')
 # Genesis 21:12 And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called.
 # >>> tell('And God said unto Abraham')
-# And God said unto Abraham
-#  19+ 26+ 33 + 70 +   44  =192
+# And God said unto Abraham  =
+#  19  26  33   70     44   192
 # >>> 
 # >>> 
 # >>> 
@@ -552,14 +550,14 @@ def bp(i):
 # >>> b.count("And God")
 # 137
 # >>> tell('In the beginning')
-# In the beginning
-# 23+ 33+    81   =137
+# In the beginning  =
+# 23  33     81    137
 # >>> tell('In the beginning God')
-# In the beginning God
-# 23+ 33+    81   + 26=163
+# In the beginning God  =
+# 23  33     81     26 163
 # >>> Genesis[1:1].tell(ssum)
-# In the beginning God created the heaven and the earth.
-# 59+213+   189   + 71+  308  +213+ 469  + 55+213+ 304  =2094
+# In the beginning God created the heaven and the earth.  =
+# 59 213    189     71   308   213  469    55 213  304   2094
 # >>> sums('eve')
 # (32, 410)
 # >>> sums('even')
@@ -577,19 +575,19 @@ def bp(i):
 # >>> 
 # >>> 
 # >>> tell('God')
-# G o  d
-# 7+15+4=26
+# G o  d =
+# 7 15 4 26
 # >>> 26*2*2
 # 104
 # >>> tell("DNA")
-# D N  A
-# 4+14+1=19
+# D N  A =
+# 4 14 1 19
 # >>> tell("and")
-# a n  d
-# 1+14+4=19
+# a n  d =
+# 1 14 4 19
 # >>> tell("And God")
-# And God
-#  19+ 26=45
+# And God =
+#  19  26 45
 # >>> 
 # >>> 26
 # 26
@@ -601,45 +599,45 @@ def bp(i):
 # Genesis 1:17 And God set them in the firmament of the heaven to give light upon the earth,
 # Genesis 1:18 And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.
 # >>> tell(chae.midv().v(1))
-# And God set them in the firmament of the heaven to give light upon the earth,
-#  19+ 26+ 44+ 46 +23+ 33+    99   +21+ 33+  55  +35+ 43 +  56 + 66 + 33+  52  =684
+# And God set them in the firmament of the heaven to give light upon the earth,  =
+#  19  26  44  46  23  33     99    21  33   55   35  43    56   66   33   52   684
 # >>> tell(chae.midv().v(2))
-# And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.
-#  19+35+ 56 + 60 + 33+ 30+ 19+ 60 + 33+  58  + 19+35+  53  + 33+  56 + 52 + 33+    91   + 19+ 26+ 43+ 49 +29+ 43+  41 =1025
+# And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.  =
+#  19 35  56   60   33  30  19  60   33   58    19 35   53    33   56   52   33     91     19  26  43  49  29  43   41  1025
 # >>> chae.midv().wcs()
 # [16, 25]
 # >>> sum(_)
 # 41
 # >>> tell('good')
-# g o  o  d
-# 7+15+15+4=41
+# g o  o  d =
+# 7 15 15 4 41
 # >>> tell('sol sun son')
-# sol sun son
-#  46+ 54+ 48=148
+# sol sun son  =
+#  46  54  48 148
 # >>> tell('sol om on')
-# sol om on
-#  46+28+29=103
+# sol om on  =
+#  46 28 29 103
 # >>> tell('Who man rib')
-# Who man rib
-#  46+ 28+ 29=103
+# Who man rib  =
+#  46  28  29 103
 # >>> tell('In ... made.')
-# In ... made.
-# 23+ 0 +  23 =46
+# In ... made. =
+# 23  0    23  46
 # >>> tell(' '.join([chae.words()[0],chae.words()[-1]]))
-# In made.
-# 23+  23 =46
+# In made. =
+# 23   23  46
 # >>> tell('made he him')
-# made he him
-#  23 +13+ 30=66
+# made he him =
+#  23  13  30 66
 # >>> tell('lord XY')
-# lord XY
-#  49 +49=98
+# lord XY =
+#  49  49 98
 # >>> tell('woman')
-# w  o  m  a n
-# 23+15+13+1+14=66
+# w  o  m  a n  =
+# 23 15 13 1 14 66
 # >>> tell('dna dna man')
-# dna dna man
-#  19+ 19+ 28=66
+# dna dna man =
+#  19  19  28 66
 # >>> 
 # >>> chae.wc()
 # 864
@@ -661,50 +659,50 @@ def bp(i):
 # Genesis 2:22 And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.
 # Genesis 2:23 And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.
 # >>> tell(adam.midv().v(1))
-# And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.
-#  19+ 33+ 29 +  51 + 33+ 49 + 26+ 13+  51 + 52 + 28 + 23 +13+1+  66  + 19+   91  + 31+ 70 + 33+ 28 =759
+# And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.  =
+#  19  33  29    51   33  49   26  13   51   52   28   23  13 1   66    19    91    31  70   33  28  759
 # >>> tell(adam.midv().v(2))
-# And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.
-#  19+ 19 +  33 + 56 +28+ 52+ 36 +21+38+  55  + 19+  50 +21+38+  50  + 32+  52 +7 +  37  +  66  +   56  + 32+ 43+  51 + 56+21+ 28 =1016
+# And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.  =
+#  19  19    33   56  28  52  36  21 38   55    19   50  21 38   50    32   52  7    37     66      56    32  43   51   56 21  28  1016
 # >>> tell('wo man')
-# wo man
-# 38+ 28=66
+# wo man =
+# 38  28 66
 # >>> 66-19
 # 47
 # >>> tell('son'),tell('rib dna')
-# s  o  n
-# 19+15+14=48
-# rib dna
-#  29+ 19=48
+# s  o  n  =
+# 19 15 14 48
+# rib dna =
+#  29  19 48
 # (None, None)
 # >>> tell('blood')
-# b l  o  o  d
-# 2+12+15+15+4=48
+# b l  o  o  d =
+# 2 12 15 15 4 48
 # >>> 38//2
 # 19
 # >>> tell('saith')
-# s  a i t  h
-# 19+1+9+20+8=57
+# s  a i t  h =
+# 19 1 9 20 8 57
 # >>> b.Genesis[1:]-b.Genesis[4:]
 # Genesis 1:1-4:26 (106 verses)
 # >>> 4*26
 # 104
 # >>> tell('DNA')
-# D N  A
-# 4+14+1=19
+# D N  A =
+# 4 14 1 19
 # >>> tell('deoxyribonucleic acid')
-# deoxyribonucleic acid
-#       184       + 17 =201
+# deoxyribonucleic acid  =
+#       184         17  201
 # >>> tell('ribo nucleic')
-# ribo nucleic
-#  44 +   67  =111
+# ribo nucleic  =
+#  44     67   111
 # >>> tell('ribosome')
-# r  i b o  s  o  m  e
-# 18+9+2+15+19+15+13+5=96
+# r  i b o  s  o  m  e =
+# 18 9 2 15 19 15 13 5 96
 # >>> 
 # >>> tell('deoxy acid')
-# deoxy acid
-#   73 + 17 =90
+# deoxy acid =
+#   73   17  90
 # >>> adam.count("God")
 # 60
 # >>> adam.count(r"\band\b")
@@ -722,21 +720,21 @@ def bp(i):
 # >>> 
 # >>> 
 # >>> tell('Genes is')
-# Genes is
-#   50 +28=78
+# Genes is =
+#   50  28 78
 # >>> tell('genes man')
-# genes man
-#   50 + 28=78
+# genes man =
+#   50   28 78
 # >>> sums('adam')
 # (19, 46)
 # >>> tell('ge ne s is')
-# ge ne s  is
-# 12+19+19+28=78
+# ge ne s  is =
+# 12 19 19 28 78
 # >>> (b['1 John'][5:7]-8).tell()
-# For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
-#  39+  56 + 24+  56 + 49 + 26 +  63  +23+   55  + 33+   58  + 33+  60 + 19+ 33+ 60 +  69  + 19+  57 +  56 + 24+ 34 =946
-# And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.
-#  19+  56 + 24+  56 + 49 + 26 +  109  +23+  52  + 33+   91  + 19+ 33+  67  + 19+ 33+  48  + 19+  57 +  56 +  36 +23+ 34 =982
+# For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.  =
+#  39   56   24   56   49   26    63   23    55    33    58    33   60   19  33  60    69    19   57    56   24  34  946
+# And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.  =
+#  19   56   24   56   49   26    109   23   52    33    91    19  33   67    19  33   48    19   57    56    36  23  34  982
 # >>> 
 # >>> osum('dna')*104
 # 1976
@@ -763,18 +761,14 @@ def bp(i):
 # (114, 402)
 # >>> 
 # >>> tell('And God made the beast of')
-# And God made the beast of
-#  19+ 26+ 23 + 33+  47 +21=169
+# And God made the beast of  =
+#  19  26  23   33   47  21 169
 # >>> pn(39)
 # 167
 # >>> 2445000000/pi
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'pi' is not defined
+# <console>:1: NameError: name 'pi' is not defined
 # >>> 78/pi
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'pi' is not defined
+# <console>:1: NameError: name 'pi' is not defined
 # >>> 
 # >>> 
 # >>> 
@@ -785,11 +779,11 @@ def bp(i):
 # >>> 
 # >>> 
 # >>> tell('what why when where who')
-# what why when where who
-#  52 + 56+ 50 +  59 + 46=263
+# what why when where who  =
+#  52   56  50    59   46 263
 # >>> tell('how')
-# h o  w
-# 8+15+23=46
+# h o  w  =
+# 8 15 23 46
 # >>> sums('eden')
 # (28, 64)
 # >>> sums('live')
@@ -803,11 +797,11 @@ def bp(i):
 # <bound method Sel.midv of Genesis 1:1-Revelation 22:21 (31102 verses)>
 # >>> 
 # >>> tell('dog dna')
-# dog dna
-#  26+ 19=45
+# dog dna =
+#  26  19 45
 # >>> tell('and god')
-# and god
-#  19+ 26=45
+# and god =
+#  19  26 45
 # >>> 2445/c
 # 8.155642127594817e-06
 # >>> b.verse(8155)
@@ -816,10 +810,10 @@ def bp(i):
 # 1 Samuel 17:43 And the Philistine said unto David, Am I a dog, that thou comest to me with staves? And the Philistine cursed David by his gods.
 # 2 Samuel 3:8 Then was Abner very wroth for the words of Ishbosheth, and said, Am I a dog's head, which against Judah do shew kindness this day unto the house of Saul thy father, to his brethren, and to his friends, and have not delivered thee into the hand of David, that thou chargest me to day with a fault concerning this woman?
 # >>> _.wcs(),_.tell()
-# And the Philistine said unto David, Am I a dog, that thou comest to me with staves? And the Philistine cursed David by his gods.
-#  19+ 33+   121    + 33 + 70 +  40  +14+9+1+ 26 + 49 + 64 +  75  +35+18+ 60 +   86  + 19+ 33+   121    +  70  +  40 +27+ 36+  45 =1144
-# Then was Abner very wroth for the words of Ishbosheth, and said, Am I a dog's head, which against Judah do shew kindness this day unto the house of Saul thy father, to his brethren, and to his friends, and have not delivered thee into the hand of David, that thou chargest me to day with a fault concerning this woman?
-#  47 + 43+  40 + 70 +  84 + 39+ 33+  79 +21+    113    + 19+  33 +14+9+1+  45 +  18 +  51 +   71  +  44 +19+ 55 +   95   + 56 + 30+ 70 + 33+  68 +21+ 53 + 53+   58  +35+ 36+    90   + 19+35+ 36+   75   + 19+ 36 + 49+    84   + 38 + 58 + 33+ 27 +21+  40  + 49 + 64 +   81   +18+35+ 30+ 60 +1+  60 +   102    + 56 +  66  =2838
+# And the Philistine said unto David, Am I a dog, that thou comest to me with staves? And the Philistine cursed David by his gods.  =
+#  19  33    121      33   70    40   14 9 1  26   49   64    75   35 18  60     86    19  33    121       70     40  27  36   45  1144
+# Then was Abner very wroth for the words of Ishbosheth, and said, Am I a dog's head, which against Judah do shew kindness this day unto the house of Saul thy father, to his brethren, and to his friends, and have not delivered thee into the hand of David, that thou chargest me to day with a fault concerning this woman?  =
+#  47   43   40   70    84   39  33   79  21     113      19   33  14 9 1   45    18    51     71     44  19  55     95     56   30  70   33   68  21  53   53    58   35  36     90     19 35  36    75     19  36   49     84     38   58   33  27  21   40    49   64     81    18 35  30  60  1   60     102      56    66   2838
 # ([25, 61], None)
 # >>> b/"dog"
 # Exodus 11:7;22:31;Deuteronomy 23:18;Judges 7:5;1 Samuel 17:43;24:14;2 Samuel 3:8;9:8;16:9;1 Kings 14:11;16:4;21:19,23-24;22:38;2 Kings 8:13;9:10,36;Job 30:1;Psalms 22:16,20;59:6,14;68:23;Proverbs 26:11,17;Ecclesiastes 9:4;Isaiah 56:10-11;66:3;Jeremiah 15:3;Matthew 7:6;15:26-27;Mark 7:27-28;Luke 16:21;Philippians 3:2;2 Peter 2:22;Revelation 22:15 (40 verses)
@@ -831,9 +825,7 @@ def bp(i):
 # >>> 
 # >>> 
 # >>> 8090*pi
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'pi' is not defined
+# <console>:1: NameError: name 'pi' is not defined
 # >>> 
 # >>> 
 # >>> p(Genesis[1:])
@@ -871,23 +863,23 @@ def bp(i):
 # 31 And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.
 # >>> 
 # >>> tell('And God made the beast')
-# And God made the beast
-#  19+ 26+ 23 + 33+  47 =148
+# And God made the beast  =
+#  19  26  23   33   47  148
 # >>> 39*2
 # 78
 # >>> Genesis[1:].wcs()
 # [10, 29, 11, 17, 22, 23, 26, 16, 25, 24, 34, 33, 10, 34, 22, 26, 16, 25, 10, 29, 34, 23, 10, 30, 34, 50, 22, 46, 42, 39, 25]
 # >>> Genesis[1:26].tell()
-# And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.
-#  19+ 26+  33 + 37+40+ 30 + 28+23+ 54+  35  +  50 + 54+    94   + 19+ 37+ 46 + 36 +   93   + 60 + 33+ 42 +21+ 33+ 25 + 19+ 60 + 33+ 56 +21+ 33+ 28 + 19+ 60 + 33+   61  + 19+ 60 + 25+ 33+  52  + 19+ 60 +  75 +   77   +  58 + 49 +   80   + 66 + 33+  52  =2149
+# And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.  =
+#  19  26   33   37 40  30   28 23  54   35     50   54     94     19  37  46   36     93     60   33  42  21  33  25   19  60   33  56  21  33  28   19  60   33    61    19  60   25  33   52    19  60    75     77      58   49     80     66   33   52   2149
 # >>> sof(28)
 # 56
 # >>> tell('genesis')
-# g e n  e s  i s
-# 7+5+14+5+19+9+19=78
+# g e n  e s  i s  =
+# 7 5 14 5 19 9 19 78
 # >>> tell('genesis',ssum)
-# g e n  e  s  i  s
-# 7+5+50+5+100+9+100=276
+# g e n  e  s  i  s   =
+# 7 5 50 5 100 9 100 276
 # >>> pf(276)
 # Counter({2: 2, 3: 1, 23: 1})
 # >>> sums('genes')

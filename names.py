@@ -21,10 +21,10 @@
 >>> sums('Authorized Version')
 (229, 2191)
 >>> tell(lsum,osum,ssum,'Authorised Version')
-Authorised Version
-    10    +   7   = 17
-   120    +  102  =222
-   777    +  714  =1491
+Authorised Version  =
+    10        7     17
+   120       102   222
+   777       714   1491
 >>> 
 >>> sums('Authorised')
 (120, 777)
@@ -39,19 +39,21 @@ Counter({3: 1, 7: 1, 37: 1})
 >>> sums('seventy')
 (110, 1460)
 >>> tell('יְהוֹשֻׁ֣עַ')
- יְ ה וֹ  שֻׁ֣  עַ
-10+5+6+21+16=58
+ יְ ה וֹ  שֻׁ֣  עַ =
+10 5 6 21 16 58
 >>> tell('יְהוֹשֻׁ֣עַ',ssum)
- יְ ה וֹ  שֻׁ֣   עַ
-10+5+6+300+70=391
+ יְ ה וֹ  שֻׁ֣   עַ  =
+10 5 6 300 70 391
 >>> tell('jehoshuah',osum,ssum)
-j  e h o   s  h  u  a h
-10+5+8+15+ 19+8+ 21+1+8= 95
-10+5+8+60+100+8+300+1+8=500
+j  e h o   s  h  u  a h  =
+10 5 8 15  19 8  21 1 8  95
+10 5 8 60 100 8 300 1 8 500
 >>> sum(sums('Jehoshuah'))
 595
 >>> sums('light')
 (56, 254)
+>>> sums('sun of righteousness')
+(254, 1550)
 >>> 
 >>> tell('I AM THAT I AM',osum,ssum)
 I AM THAT I AM

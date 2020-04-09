@@ -69,7 +69,7 @@ def join(sep,l):
     return r
 
 def tell(*ss):
-    print(texttable(telltable(*ss),sep=''))
+    print(texttable(telltable(*ss)))
 
 def tellmd(*ss):
     print(mdtable(telltable(*ss)))
@@ -87,10 +87,10 @@ def telltable(*ss):
                 words=splitat(positions([c in characters for c in word]),word)
         else:
             words=list(s)
-        vv=[join('',list(map(str,words)))]
+        vv=[words+['=']]
         for f in fs:
             vals=[f(w) for w in words]
-            vv.append(join('+',vals)+['=',sum(vals)])
+            vv.append(vals+[sum(vals)])
         return Table(vv)
 
 def texttable(vv,sep=' '):
@@ -98,8 +98,8 @@ def texttable(vv,sep=' '):
 
 def mdtable(vv):
     vv=fill(vv@str,'')
-    def j(s,l): return s+s.join(l)+s
-    return j('\n',[j('|',vv[0]),j('|','-'*len(vv[0]))]+[j('|',v) for v in vv[1:]])
+    def j(s,l): return s+s.join(l)
+    return '\n'.join([j('|',vv[0]),j('|','-'*len(vv[0]))]+[j('|',v) for v in vv[1:]])
 
 # >>> from mene import *
 # >>> from auto import *
@@ -124,9 +124,9 @@ def mdtable(vv):
 # >>> 
 # >>> 
 # >>> fill(_)
-# Table(['G', '', 'o', '', 'd', '', '', 7, '+', 15, '+', 4, '=', 26],[Index([7,7])])
+# Table(['\n', '|', 'A', '|', '|', 'Z', '|', '|', '|', '\n', '|', '-', '|', '-', '|', '-', '|', '-', '|', '-', '|', '\n', '|', '1', '|', '+', '|', '8', '0', '0', '|', '=', '|', '8', '0', '1', '|', '\n'],[])
 # >>> texttable(_)
-# 'G   o    d\n7 + 15 + 4 = 26'
+# '\n|\nA\n|\n|\nZ\n|\n|\n|\n\n|\n-\n|\n-\n|\n-\n|\n-\n|\n-\n|\n\n|\n1\n|\n+\n|\n8\n0\n0\n|\n=\n|\n8\n0\n1\n|\n'
 # >>> 
 # >>> 
 # >>> 
@@ -137,15 +137,13 @@ def mdtable(vv):
 # >>> 
 # >>> 
 # >>> fill([[1,2],[3]])
-# [[1, 2], [3, '']]
+# Table([1, 2, 3, ''],[Index([2,2])])
 # >>> 
 # >>> 
 # >>> 
 # >>> 
 # >>> mdtable(_)
-# <console>:1: IndexError: list index out of range
-# /home/pi/python/bible/mene.py:102: IndexError: list index out of range
-#     vv=[]
+# '\n|1|2|\n|-|-|\n|3||\n'
 # >>> 
 # >>> 
 # >>> 
@@ -553,34 +551,174 @@ def mdtable(vv):
 # >>> 
 # >>> 
 # >>> help(unicodedata)
-# Help on Importer in module auto.auto object:
+# Help on built-in module unicodedata:
 # 
-# unicodedata = class Importer(builtins.object)
-#  |  unicodedata(s, *subs)
-#  |  
-#  |  Methods defined here:
-#  |  
-#  |  __dir__(self)
-#  |      Default dir() implementation.
-#  |  
-#  |  __getattr__(self, a)
-#  |  
-#  |  __init__(self, s, *subs)
-#  |      Initialize self.  See help(type(self)) for accurate signature.
-#  |  
-#  |  __repr__(self)
-#  |      Return repr(self).
-#  |  
-#  |  module(self)
-#  |  
-#  |  ----------------------------------------------------------------------
-#  |  Data descriptors defined here:
-#  |  
-#  |  __dict__
-#  |      dictionary for instance variables (if defined)
-#  |  
-#  |  __weakref__
-#  |      list of weak references to the object (if defined)
+# NAME
+#     unicodedata
+# 
+# DESCRIPTION
+#     This module provides access to the Unicode Character Database which
+#     defines character properties for all Unicode characters. The data in
+#     this database is based on the UnicodeData.txt file version
+#     11.0.0 which is publicly available from ftp://ftp.unicode.org/.
+#     
+#     The module uses the same names and symbols as defined by the
+#     UnicodeData File Format 11.0.0.
+# 
+# CLASSES
+#     builtins.object
+#         UCD
+#     
+#     class UCD(builtins.object)
+#      |  Methods defined here:
+#      |  
+#      |  __getattribute__(self, name, /)
+#      |      Return getattr(self, name).
+#      |  
+#      |  bidirectional(self, chr, /)
+#      |      Returns the bidirectional class assigned to the character chr as string.
+#      |      
+#      |      If no such value is defined, an empty string is returned.
+#      |  
+#      |  category(self, chr, /)
+#      |      Returns the general category assigned to the character chr as string.
+#      |  
+#      |  combining(self, chr, /)
+#      |      Returns the canonical combining class assigned to the character chr as integer.
+#      |      
+#      |      Returns 0 if no combining class is defined.
+#      |  
+#      |  decimal(self, chr, default=None, /)
+#      |      Converts a Unicode character into its equivalent decimal value.
+#      |      
+#      |      Returns the decimal value assigned to the character chr as integer.
+#      |      If no such value is defined, default is returned, or, if not given,
+#      |      ValueError is raised.
+#      |  
+#      |  decomposition(self, chr, /)
+#      |      Returns the character decomposition mapping assigned to the character chr as string.
+#      |      
+#      |      An empty string is returned in case no such mapping is defined.
+#      |  
+#      |  digit(self, chr, default=None, /)
+#      |      Converts a Unicode character into its equivalent digit value.
+#      |      
+#      |      Returns the digit value assigned to the character chr as integer.
+#      |      If no such value is defined, default is returned, or, if not given,
+#      |      ValueError is raised.
+#      |  
+#      |  east_asian_width(self, chr, /)
+#      |      Returns the east asian width assigned to the character chr as string.
+#      |  
+#      |  lookup(self, name, /)
+#      |      Look up character by name.
+#      |      
+#      |      If a character with the given name is found, return the
+#      |      corresponding character.  If not found, KeyError is raised.
+#      |  
+#      |  mirrored(self, chr, /)
+#      |      Returns the mirrored property assigned to the character chr as integer.
+#      |      
+#      |      Returns 1 if the character has been identified as a "mirrored"
+#      |      character in bidirectional text, 0 otherwise.
+#      |  
+#      |  name(self, chr, default=None, /)
+#      |      Returns the name assigned to the character chr as a string.
+#      |      
+#      |      If no name is defined, default is returned, or, if not given,
+#      |      ValueError is raised.
+#      |  
+#      |  normalize(self, form, unistr, /)
+#      |      Return the normal form 'form' for the Unicode string unistr.
+#      |      
+#      |      Valid values for form are 'NFC', 'NFKC', 'NFD', and 'NFKD'.
+#      |  
+#      |  numeric(self, chr, default=None, /)
+#      |      Converts a Unicode character into its equivalent numeric value.
+#      |      
+#      |      Returns the numeric value assigned to the character chr as float.
+#      |      If no such value is defined, default is returned, or, if not given,
+#      |      ValueError is raised.
+#      |  
+#      |  ----------------------------------------------------------------------
+#      |  Data descriptors defined here:
+#      |  
+#      |  unidata_version
+# 
+# FUNCTIONS
+#     bidirectional(chr, /)
+#         Returns the bidirectional class assigned to the character chr as string.
+#         
+#         If no such value is defined, an empty string is returned.
+#     
+#     category(chr, /)
+#         Returns the general category assigned to the character chr as string.
+#     
+#     combining(chr, /)
+#         Returns the canonical combining class assigned to the character chr as integer.
+#         
+#         Returns 0 if no combining class is defined.
+#     
+#     decimal(chr, default=None, /)
+#         Converts a Unicode character into its equivalent decimal value.
+#         
+#         Returns the decimal value assigned to the character chr as integer.
+#         If no such value is defined, default is returned, or, if not given,
+#         ValueError is raised.
+#     
+#     decomposition(chr, /)
+#         Returns the character decomposition mapping assigned to the character chr as string.
+#         
+#         An empty string is returned in case no such mapping is defined.
+#     
+#     digit(chr, default=None, /)
+#         Converts a Unicode character into its equivalent digit value.
+#         
+#         Returns the digit value assigned to the character chr as integer.
+#         If no such value is defined, default is returned, or, if not given,
+#         ValueError is raised.
+#     
+#     east_asian_width(chr, /)
+#         Returns the east asian width assigned to the character chr as string.
+#     
+#     lookup(name, /)
+#         Look up character by name.
+#         
+#         If a character with the given name is found, return the
+#         corresponding character.  If not found, KeyError is raised.
+#     
+#     mirrored(chr, /)
+#         Returns the mirrored property assigned to the character chr as integer.
+#         
+#         Returns 1 if the character has been identified as a "mirrored"
+#         character in bidirectional text, 0 otherwise.
+#     
+#     name(chr, default=None, /)
+#         Returns the name assigned to the character chr as a string.
+#         
+#         If no name is defined, default is returned, or, if not given,
+#         ValueError is raised.
+#     
+#     normalize(form, unistr, /)
+#         Return the normal form 'form' for the Unicode string unistr.
+#         
+#         Valid values for form are 'NFC', 'NFKC', 'NFD', and 'NFKD'.
+#     
+#     numeric(chr, default=None, /)
+#         Converts a Unicode character into its equivalent numeric value.
+#         
+#         Returns the numeric value assigned to the character chr as float.
+#         If no such value is defined, default is returned, or, if not given,
+#         ValueError is raised.
+# 
+# DATA
+#     ucd_3_2_0 = <unicodedata.UCD object>
+#     ucnhash_CAPI = <capsule object "unicodedata.ucnhash_CAPI">
+#     unidata_version = '11.0.0'
+# 
+# FILE
+#     (built-in)
+# 
 # 
 # >>> dir(unicodedata)
 # ['UCD', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'bidirectional', 'category', 'combining', 'decimal', 'decomposition', 'digit', 'east_asian_width', 'lookup', 'mirrored', 'name', 'normalize', 'numeric', 'ucd_3_2_0', 'ucnhash_CAPI', 'unidata_version']
@@ -597,4 +735,23 @@ def mdtable(vv):
 # 'מְ'
 # >>> ssum('JEHOVAH')
 # 492
+# >>> 
+# >>> print(mdtable(Table([list(AB),Row(AB)@osum])))
+# <console>:1: NameError: name 'AB' is not defined
+# >>> tellmd('יְהֹוָה'[::-1])
+# 
+# |הָ||וֹ||הְ||י|||
+# |-|-|-|-|-|-|-|-|-|
+# |5|+|6|+|5|+|10|=|26|
+# 
+# >>> tellmd('God')
+# 
+# |G||o||d|||
+# |-|-|-|-|-|-|-|
+# |7|+|15|+|4|=|26|
+# 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
 # >>> 

@@ -7,6 +7,7 @@ wordnums={v:i for i,v in enumerate(one2nineteen.split(),start=1)}
 wordnums.update({v:i*10 for i,v in enumerate(ten2ninety.split(),start=1)})
 wordnums.update({"and":0, "hundred":100, "thousand":1000})
 wordnums.update({"score":20, "twoscore":40, "threescore":60, "fourscore":80})
+wordnums.update({w+'fold':i for w,i in wordnums.items()})
 
 @aslist
 def word2num(ws):
@@ -33,7 +34,7 @@ def word2num(ws):
 # >>> from bible import *
 # >>> from word2num import *
 # >>> wordnums
-# {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80, 'ninety': 90, 'and': 0, 'hundred': 100, 'thousand': 1000, 'score': 20, 'twoscore': 40, 'threescore': 60, 'fourscore': 80}
+# {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80, 'ninety': 90, 'and': 0, 'hundred': 100, 'thousand': 1000, 'score': 20, 'twoscore': 40, 'threescore': 60, 'fourscore': 80, 'onefold': 1, 'twofold': 2, 'threefold': 3, 'fourfold': 4, 'fivefold': 5, 'sixfold': 6, 'sevenfold': 7, 'eightfold': 8, 'ninefold': 9, 'tenfold': 10, 'elevenfold': 11, 'twelvefold': 12, 'thirteenfold': 13, 'fourteenfold': 14, 'fifteenfold': 15, 'sixteenfold': 16, 'seventeenfold': 17, 'eighteenfold': 18, 'nineteenfold': 19, 'twentyfold': 20, 'thirtyfold': 30, 'fortyfold': 40, 'fiftyfold': 50, 'sixtyfold': 60, 'seventyfold': 70, 'eightyfold': 80, 'ninetyfold': 90, 'andfold': 0, 'hundredfold': 100, 'thousandfold': 1000, 'scorefold': 20, 'twoscorefold': 40, 'threescorefold': 60, 'fourscorefold': 80}
 # >>> ns=word2num((Genesis[5:1]-31).text())
 # >>> ns
 # [130, 800, 930, 105, 807, 912, 90, 815, 905, 70, 840, 910, 65, 830, 895, 162, 800, 962, 65, 300, 365, 187, 782, 969, 182, 595, 777]
@@ -43,14 +44,14 @@ def word2num(ws):
 # Genesis 25:26 And after that came his brother out, and his hand took hold on Esau's heel; and his name was called Jacob: and Isaac was threescore years old when she bare them.
 # >>> 
 # >>> b/666
-# 1 Kings 10:14...Revelation 13:18 (4 verses)
+# 1 Kings 10:14;2 Chronicles 9:13;Ezra 2:13;Revelation 13:18 (4 verses)
 # >>> p(_)
 # 1 Kings 10:14 Now the weight of gold that came to Solomon in one year was six hundred threescore and six talents of gold,
 # 2 Chronicles 9:13 Now the weight of gold that came to Solomon in one year was six hundred and threescore and six talents of gold;
 # Ezra 2:13 The children of Adonikam, six hundred sixty and six.
 # Revelation 13:18 Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six.
 # >>> b/5000
-# Joshua 8:12...Acts 4:4 (15 verses)
+# Joshua 8:12;Judges 20:45;1 Samuel 17:5;1 Chronicles 29:7;2 Chronicles 35:9;Ezra 2:69;Ezekiel 45:6;48:15;Matthew 14:21;16:9;Mark 6:44;8:19;Luke 9:14;John 6:10;Acts 4:4 (15 verses)
 # >>> p(_)
 # Joshua 8:12 And he took about five thousand men, and set them to lie in ambush between Bethel and Ai, on the west side of the city.
 # Judges 20:45 And they turned and fled toward the wilderness unto the rock of Rimmon: and they gleaned of them in the highways five thousand men; and pursued hard after them unto Gidom, and slew two thousand men of them.
@@ -71,10 +72,9 @@ def word2num(ws):
 # Numbers 31:34 And threescore and one thousand asses,
 # Ezra 2:69 They gave after their ability unto the treasure of the work threescore and one thousand drams of gold, and five thousand pound of silver, and one hundred priests' garments.
 # >>> b/77
-# Judges 8:14 And caught a young man of the men of Succoth, and enquired of him: and he described unto him the princes of Succoth, and the elders thereof, even threescore and seventeen men.
-# Ezra 8:35 Also the children of those that had been carried away, which were come out of the captivity, offered burnt offerings unto the God of Israel, twelve bullocks for all Israel, ninety and six rams, seventy and seven lambs, twelve he goats for a sin offering: all this was a burnt offering unto the LORD.
+# Genesis 4:24;Judges 8:14;Ezra 8:35 (3 verses)
 # >>> b/60
-# Genesis 25:26...1 Timothy 5:9 (27 verses)
+# Genesis 25:26;Leviticus 27:3,7;Numbers 7:88;Deuteronomy 3:4;Joshua 13:30;1 Kings 4:13,22;6:2;2 Kings 25:19;1 Chronicles 2:21,23;2 Chronicles 3:3;11:21;Ezra 6:3;8:13;Psalms 90:10;Song of Solomon 3:7;6:8;Jeremiah 52:25;Ezekiel 40:14;Daniel 3:1;Matthew 13:8,23;Mark 4:8,20;Luke 24:13;1 Timothy 5:9 (28 verses)
 # >>> p(_)
 # Genesis 25:26 And after that came his brother out, and his hand took hold on Esau's heel; and his name was called Jacob: and Isaac was threescore years old when she bare them.
 # Leviticus 27:3 And thy estimation shall be of the male from twenty years old even unto sixty years old, even thy estimation shall be fifty shekels of silver, after the shekel of the sanctuary.
@@ -98,6 +98,7 @@ def word2num(ws):
 # Jeremiah 52:25 He took also out of the city an eunuch, which had the charge of the men of war; and seven men of them that were near the king's person, which were found in the city; and the principal scribe of the host, who mustered the people of the land; and threescore men of the people of the land, that were found in the midst of the city.
 # Ezekiel 40:14 He made also posts of threescore cubits, even unto the post of the court round about the gate.
 # Daniel 3:1 Nebuchadnezzar the king made an image of gold, whose height was threescore cubits, and the breadth thereof six cubits: he set it up in the plain of Dura, in the province of Babylon.
+# Matthew 13:8 But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold.
 # Matthew 13:23 But he that received seed into the good ground is he that heareth the word, and understandeth it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty.
 # Mark 4:8 And other fell on good ground, and did yield fruit that sprang up and increased; and brought forth, some thirty, and some sixty, and some an hundred.
 # Mark 4:20 And these are they which are sown on good ground; such as hear the word, and receive it, and bring forth fruit, some thirtyfold, some sixty, and some an hundred.

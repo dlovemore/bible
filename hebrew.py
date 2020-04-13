@@ -35,7 +35,7 @@ T+
 # >>> 
 # >>> 
 # >>> method.join
-# functools.partial(<function callmethod at 0xb653c150>, 'join')
+# functools.partial(<function callmethod at 0xb6439ed0>, 'join')
 # >>> method.join(',','abc')
 # 'a,b,c'
 # >>> 
@@ -45,7 +45,7 @@ T+
 # >>> p.abc
 # abc
 # >>> pairs('abcdefg')
-# <generator object windows at 0xb5d36f70>
+# <generator object windows at 0xb5b53f70>
 # >>> list(_)
 # [('a', 'b'), ('b', 'c'), ('c', 'd'), ('d', 'e'), ('e', 'f'), ('f', 'g')]
 # >>> 
@@ -61,11 +61,9 @@ T+
 # >>> from auto import *
 # >>> from func import *
 # >>> unicodedata.name(chr(0))
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# ValueError: no such name
+# <console>:1: ValueError: no such name
 # >>> failas(unicodedata.name,'')
-# functools.partial(<function failas.<locals>.failsafe2 at 0xb67717c8>, <built-in function name>, '')
+# functools.partial(<function failas.<locals>.failsafe2 at 0xb5872f60>, <built-in function name>, '')
 # >>> _(chr(0))
 # ''
 # >>> [(i,s) for i,s in enumerate([failas(unicodedata.name,'')(chr(i)) for i in range(90000)]) if s.find('HEBREW')>=0]

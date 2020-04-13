@@ -4,12 +4,8 @@
 55.569775957799216
 >>> sqrt(308800000000000000000000000000000000000000000000000000)
 5.556977595779922e+26
->>> decimal.decimal(3088)
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "/home/pi/python/auto/auto.py", line 25, in __getattr__
-    return getattr(mod,a)
-AttributeError: module 'decimal' has no attribute 'decimal'
+>>> decimal.Decimal(3088)
+Decimal('3088')
 >>> decimal.getcontext().prec=77
 >>> from decimal import *
 >>> Decimal(3088)
@@ -21,6 +17,13 @@ Decimal('55572.35284743664693057376300238350524875153947175904583365646988726744
 >>> from dna import *
 >>> Decimal(AX)**Decimal('0.5')
 Decimal('55055.054136745701687084105576456279580566624909748908903404358028585312998015')
+>>> AX-55055**2
+5961
+>>> 55055**2+5961
+3031058986
+>>> 
+>>> 
+>>> 
 >>> Decimal(AV*2+X+Y)**Decimal('0.5')
 Decimal('77222.220597442029269962853060873214681513625126817123420348660545690293931581')
 >>> Decimal(AV*2+X+X)**Decimal('0.5')

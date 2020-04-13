@@ -219,17 +219,17 @@ def mdtable(vv):
 # >>> psum('LORD OF LORDS')
 # 534
 # >>> sums('THE LORD')
-# (82, 397)
+# (7, 82, 397)
 # >>> sums('KING OF KINGS')
-# (122, 338)
+# (11, 122, 338)
 # >>> sums('Immanuel')
-# (88, 475)
+# (8, 88, 475)
 # >>> sums('Prince of Peace')
-# (116, 377)
+# (13, 116, 377)
 # >>> sums('eth')
-# (33, 213)
+# (3, 33, 213)
 # >>> sums('et')
-# (25, 205)
+# (2, 25, 205)
 # >>> from bible import *
 # >>> John[1:1].tell(lsum,osum,ssum)
 # In the beginning was the Word, and the Word was with God, and the Word was God.  =
@@ -264,20 +264,25 @@ def mdtable(vv):
 # Tom 2
 #  3  45
 # >>> tell("Lord Jesus",lsum,osum,ssum)
-# Lord Jesus
-#  4  +  5  = 9
-#  49 +  74 =123
-# 184 + 515 =699
+# Lord Jesus  =
+#  4     5    9
+#  49    74  123
+# 184   515  699
 # >>> tell("Jesus Christ",lsum,osum,ssum)
-# Jesus Christ
-#   5  +  6   = 11
-#   74 +  77  =151
-#  515 + 410  =925
+# Jesus Christ  =
+#   5     6     11
+#   74    77   151
+#  515   410   925
 # >>> tell("Lord Jesus Christ",lsum,osum,ssum)
-# Lord Jesus Christ
-#  4  +  5  +  6   = 15
-#  49 +  74 +  77  =200
-# 184 + 515 + 410  =1109
+# Lord Jesus Christ  =
+#  4     5     6     15
+#  49    74    77   200
+# 184   515   410   1109
+# >>> tell("Lord Jesus",lsum,osum,ssum)
+# Lord Jesus  =
+#  4     5    9
+#  49    74  123
+# 184   515  699
 # >>> 
 # >>> tell('Κυριος Ιησους Χρηστος',lsum,osum,ssum)
 # Κυριος Ιησους Χρηστος

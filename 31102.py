@@ -82,6 +82,8 @@
 # 119
 # >>> 17+18
 # 35
+# >>> 31102**.5
+# 176.35759127409287
 ## 15551 is 35th palindromic prime
 # >>> npp(15551)
 # 35
@@ -271,8 +273,8 @@
 # >>> osum('heaven')
 # 55
 # >>> tell(lsum,'Lord Jesus Christ')
-# Lord Jesus Christ
-#  4  +  5  +  6   =15
+# Lord Jesus Christ =
+#  4     5     6    15
 # >>> 
 # >>> b/'number of a man'
 # Revelation 13:18 Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six.
@@ -286,10 +288,8 @@
 # >>> Galatians[3:16]
 # Galatians 3:16 Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ.
 # >>> tell('Christ','stars')
-# C h r  i s  t
-# 3+8+18+9+19+20=77
-# s  t  a r  s
-# 19+20+1+18+19=77
+# C h r  i s  t  =
+# 3 8 18 9 19 20 77
 # >>> b/'stars'/'names'
 # Psalms 147:4 He telleth the number of the stars; he calleth them all by their names.
 # >>> b/'Orion'
@@ -299,19 +299,19 @@
 # Job 38:31 Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?
 # Amos 5:8 Seek him that maketh the seven stars and Orion, and turneth the shadow of death into the morning, and maketh the day dark with night: that calleth for the waters of the sea, and poureth them out upon the face of the earth: The LORD is his name:
 # >>> _.tell(osum,ssum)
-# Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south.
-#   51 +  58  +   121   +  71  + 19+    71   + 19+ 33+   69   +21+ 33+  83  =649
-#  528 + 274  +   1084  + 269  + 55+   224   + 55+213+  249   +66+213+ 668  =3898
-# Canst thou bind the sweet influences of Pleiades,  or loose the bands of Orion?
-#   57 + 64 + 29 + 33+  72 +   108    +21+    71   + 33+  66 + 33+  40 +21+  71  =719
-#  354 +568 + 65 +213+ 810 +   558    +66+   224   +150+ 255 +213+ 157 +66+ 269  =3968
-# Seek him that maketh the seven stars and Orion, and turneth the shadow of death into the morning, and maketh the day dark with night: that calleth for the waters of the sea, and poureth them out upon the face of the earth: The LORD  is his name:
-#  40 + 30+ 49 +  58  + 33+  65 +  77 + 19+  71  + 19+  106  + 33+  70  +21+  38 + 58 + 33+   90   + 19+  58  + 33+ 30+ 34 + 60 +  58  + 49 +   61  + 39+ 33+  86  +21+ 33+ 25 + 19+  103  + 46 + 56+ 66 + 33+ 15 +21+ 33+  52  + 33+ 49 + 28+ 36+  33 = 2172
-# 130 + 57+409 + 274  +213+ 560 + 491 + 55+ 269  + 55+  853  +213+ 673  +66+ 218 +319 +213+  306   + 55+ 274  +213+705+115 +717 + 274  +409 +  277  +156+213+ 896  +66+213+106 + 55+  733  +253 +560+480 +213+ 15 +66+213+ 304  +213+184 +109+117+  96 =13674
+# Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south.  =
+#   51    58      121      71    19     71     19  33    69    21  33   83   649
+#  528   274      1084    269    55    224     55 213   249    66 213  668   3898
+# Canst thou bind the sweet influences of Pleiades,  or loose the bands of Orion?  =
+#   57   64   29   33   72     108     21     71     33   66   33   40  21   71   719
+#  354  568   65  213  810     558     66    224    150  255  213  157  66  269   3968
+# Seek him that maketh the seven stars and Orion, and turneth the shadow of death into the morning, and maketh the day dark with night: that calleth for the waters of the sea, and poureth them out upon the face of the earth: The LORD  is his name:   =
+#  40   30  49    58    33   65    77   19   71    19   106    33   70   21   38   58   33    90     19   58    33  30  34   60    58    49     61    39  33   86   21  33  25   19   103    46   56  66   33  15  21  33   52    33  49   28  36   33   2172
+# 130   57 409   274   213  560   491   55  269    55   853   213  673   66  218  319  213   306     55  274   213 705 115  717   274   409    277   156 213  896   66 213 106   55   733   253  560 480  213  15  66 213  304   213 184  109 117   96  13674
 # >>> Job[38:32].tell(osum,ssum)
-# Canst thou bring forth Mazzaroth in his season?  or canst thou guide Arcturus with his sons?
-#   57 + 64 +  50 +  67 +   128   +23+ 36+   73  + 33+  57 + 64 +  46 +  121   + 60 + 36+  67 =982
-#  354 +568 + 158 + 364 +   2000  +59+117+  316  +150+ 354 +568 + 325 +  1084  +717 +117+ 310 =7561
+# Canst thou bring forth Mazzaroth in his season?  or canst thou guide Arcturus with his sons?  =
+#   57   64    50    67     128    23  36    73    33   57   64    46    121     60   36   67  982
+#  354  568   158   364     2000   59 117   316   150  354  568   325    1084   717  117  310  7561
 # >>> 
 # >>> Revelation/'wonder'
 # Revelation 12:1,3;13:3,13;17:6,8 (6 verses)
@@ -355,12 +355,12 @@
 # 29 From thence she seeketh the prey, and her eyes behold afar off.
 # 30 Her young ones also suck up blood: and where the slain are, there is she.
 # >>> Job[39:1].verse(1).tell(osum,ssum)
-# Knowest thou the time when the wild goats of the rock bring forth?  or canst thou mark when the hinds do calve?
-#   107  + 64 + 33+ 47 + 50 + 33+ 48 +  62 +21+ 33+ 47 +  50 +  67  + 33+  57 + 64 + 43 + 50 + 33+  54 +19+  43  =1058
-#   935  +568 +213+254 +563 +213+543 + 368 +66+213+173 + 158 + 364  +150+ 354 +568 +151 +563 +213+ 171 +64+ 439  =7304
+# Knowest thou the time when the wild goats of the rock bring forth?  or canst thou mark when the hinds do calve?  =
+#   107    64   33  47   50   33  48    62  21  33  47    50    67    33   57   64   43   50   33   54  19   43   1058
+#   935   568  213 254  563  213 543   368  66 213 173   158   364   150  354  568  151  563  213  171  64  439   7304
 # >>> tell('of the rock bring')
-# of the rock bring
-# 21+ 33+ 47 +  50 =151
+# of the rock bring  =
+# 21  33  47    50  151
 # >>> b/'some say'/'Elias'
 # Matthew 16:14;Mark 8:28;Luke 9:19 (3 verses)
 # >>> p(_)
@@ -368,46 +368,26 @@
 # Mark 8:28 And they answered, John the Baptist; but some say, Elias; and others, One of the prophets.
 # Luke 9:19 They answering said, John the Baptist; but some say, Elias; and others say, that one of the old prophets is risen again.
 # >>> import chapters
+# >>> add//Row(lmap(osum, Job[39:1].words()))
+# Row([107, 171, 204, 251, 301, 334, 382, 444, 465, 498, 545, 595, 662, 695, 752, 816, 859, 909, 942, 996, 1015, 1058])
+# >>> 
 # >>> p(tt(chapters.partialsums([osum(w) for w in Job[39:1].words()])))
-# 107 171 204 251 301 334 382 444 465 498 545 595 662 695 752 816 859 909 942 996 1015 1058
-#      64  97 144 194 227 275 337 358 391 438 488 555 588 645 709 752 802 835 889 908  951
-#          33  80 130 163 211 273 294 327 374 424 491 524 581 645 688 738 771 825 844  887
-#              47  97 130 178 240 261 294 341 391 458 491 548 612 655 705 738 792 811  854
-#                  50  83 131 193 214 247 294 344 411 444 501 565 608 658 691 745 764  807
-#                      33  81 143 164 197 244 294 361 394 451 515 558 608 641 695 714  757
-#                          48 110 131 164 211 261 328 361 418 482 525 575 608 662 681  724
-#                              62  83 116 163 213 280 313 370 434 477 527 560 614 633  676
-#                                  21  54 101 151 218 251 308 372 415 465 498 552 571  614
-#                                      33  80 130 197 230 287 351 394 444 477 531 550  593
-#                                          47  97 164 197 254 318 361 411 444 498 517  560
-#                                              50 117 150 207 271 314 364 397 451 470  513
-#                                                  67 100 157 221 264 314 347 401 420  463
-#                                                      33  90 154 197 247 280 334 353  396
-#                                                          57 121 164 214 247 301 320  363
-#                                                              64 107 157 190 244 263  306
-#                                                                  43  93 126 180 199  242
-#                                                                      50  83 137 156  199
-#                                                                          33  87 106  149
-#                                                                              54  73  116
-#                                                                                  19   62
-#                                                                                       43
+# <console>:1: NameError: name 'tt' is not defined
 # >>> 
 # >>> tell('upharsin')
-# u  p  h a r  s  i n
-# 21+16+8+1+18+19+9+14=106
+# u  p  h a r  s  i n   =
+# 21 16 8 1 18 19 9 14 106
 # >>> b.verse(1)-b.verse(106)
 # Genesis 1:1-4:26 (106 verses)
 # >>> p(_.midv())
 # Genesis 2:22 And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.
 # Genesis 2:23 And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.
 # >>> tell('son','lord')
-# s  o  n
-# 19+15+14=48
-# l  o  r  d
-# 12+15+18+4=49
+# s  o  n  =
+# 19 15 14 48
 # >>> tell('XX XY')
-# XX XY
-# 48+49=97
+# XX XY =
+# 48 49 97
 # >>> osum('tekel')
 # 53
 # >>> _*2
@@ -476,5 +456,4 @@
 # 980.0
 # >>> 70-980
 # -910
-
 # >>> 

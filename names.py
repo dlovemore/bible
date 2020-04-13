@@ -26,6 +26,27 @@ Authorised Version  =
    120       102   222
    777       714   1491
 >>> 
+>>> tell('NIV',osum,ssum)
+N  I  V   =
+14 9  22  45
+50 9 400 459
+>>> tell('New International Version',osum,ssum)
+New International Version  =
+ 42      152        102   296
+555      755        714   2024
+>>> tell('Authorised Version',lsum,osum,ssum)
+Authorised Version  =
+    10        7     17
+   120       102   222
+   777       714   1491
+>>> tell('ישראל, Israel')
+ישר אל, Israel  =
+ 51  13   64   128
+>>> tell('Authorised King James Version',lsum,osum,ssum)
+Authorised King James Version  =
+    10      4     5      7     26
+   120      41    48    102   311
+   777      86   156    714   1733
 >>> sums('Authorised')
 (120, 777)
 >>> pf(777)

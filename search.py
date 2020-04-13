@@ -325,8 +325,6 @@ def verselist(bible):
                 text = verse[1]
                 yield title,i,j,text
 
-p=print
-
 # >>> from bible import *
 # >>> contranges([0,1,2,3,6,9,10,11,14,22,23,24,25,26,31])
 # [(0, 4), (6, 7), (9, 12), (14, 15), (22, 27), (31, 32)]

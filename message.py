@@ -1,27 +1,27 @@
 >>> from bible import *
 >>> c='Who sends a message in the number of characters in a book?'
 >>> tell(lsum,c)
-Who sends a message in the number of characters in a book?
- 3 +  5  +1+   7   +2 + 3 +  6   +2 +    10    +2 +1+  4  =46
+Who sends a message in the number of characters in a book? =
+ 3    5   1    7    2   3    6    2      10     2  1   4   46
 >>> tell(lsum,"1:1 In the beginning God created the heaven and the earth.")
-1:1 In the beginning God created the heaven and the earth.
- 0 +2 + 3 +    9    + 3 +   7   + 3 +  6   + 3 + 3 +  5   =44
+1:1 In the beginning God created the heaven and the earth. =
+ 2  2   3      9      3     7     3    6     3   3    5    46
 >>> tell(lsum,osum,Isaiah[41:26].text())
-Who hath declared from the beginning, that we may know? and beforetime, that we may say, He is righteous? yea, there is none that sheweth, yea, there is none that declareth, yea, there is none that heareth your words.
- 3 + 4  +   8    + 4  + 3 +    9     + 4  +2 + 3 +  4  + 3 +     10    + 4  +2 + 3 + 3  +2 +2 +    9     + 3  +  5  +2 + 4  + 4  +   7    + 3  +  5  +2 + 4  + 4  +    9     + 3  +  5  +2 + 4  + 4  +   7   + 4  +  5   =168
- 46+ 37 +   52   + 52 + 33+    81    + 49 +28+ 39+  63 + 19+     98    + 49 +28+ 39+ 45 +13+28+   122    + 31 +  56 +28+ 48 + 49 +   88   + 31 +  56 +28+ 48 + 49 +    76    + 31 +  56 +28+ 48 + 49 +   65  + 79 +  79  =1944
+Who hath declared from the beginning, that we may know? and beforetime, that we may say, He is righteous? yea, there is none that sheweth, yea, there is none that declareth, yea, there is none that heareth your words.  =
+ 3   4      8      4    3      9       4   2   3    4    3       10      4   2   3   3   2  2      9       3     5   2   4    4      7      3     5   2   4    4       9       3     5   2   4    4      7     4     5    168
+ 46  37     52     52   33     81      49  28  39   63   19      98      49  28  39  45  13 28    122      31    56  28  48   49     88     31    56  28  48   49      76      31    56  28  48   49     65    79    79   1944
 >>> tell(lsum,osum,Isaiah[46:10].text())
-Declaring the end from the beginning, and from ancient times the things that are not yet done, saying, My counsel shall stand, and I will do all my pleasure:
-    9    + 3 + 3 + 4  + 3 +    9     + 3 + 4  +   7   +  5  + 3 +  6   + 4  + 3 + 3 + 3 +  4  +   6   +2 +   7   +  5  +  5   + 3 +1+ 4  +2 + 3 +2 +    8    =124
-    73   + 33+ 23+ 52 + 33+    81    + 19+ 52 +   66  +  66 + 33+  77  + 49 + 24+ 49+ 50+  38 +   75  +38+   89  +  52 +  58  + 19+9+ 56 +19+ 25+38+    97   =1393
+Declaring the end from the beginning, and from ancient times the things that are not yet done, saying, My counsel shall stand, and I will do all my pleasure:  =
+    9      3   3   4    3      9       3   4      7      5    3    6     4    3   3   3    4      6    2     7      5     5     3  1  4   2   3  2      8     124
+    73     33  23  52   33     81      19  52     66     66   33   77    49   24  49  50   38     75   38    89     52    58    19 9  56  19  25 38     97    1393
 >>> tell(lsum,osum,Isaiah[48:3].text())
-I have declared the former things from the beginning; and they went forth out of my mouth, and I shewed them; I did them suddenly, and they came to pass.
-1+ 4  +   8    + 3 +  6   +  6   + 4  + 3 +    9     + 3 + 4  + 4  +  5  + 3 +2 +2 +  5   + 3 +1+  6   +  4  +1+ 3 + 4  +    8    + 3 + 4  + 4  +2 +  4  =119
-9+ 36 +   52   + 33+  75  +  77  + 52 + 33+    81    + 19+ 58 + 62 +  67 + 56+21+38+  77  + 19+9+  64  +  46 +9+ 17+ 46 +   104   + 19+ 58 + 22 +35+  55 =1349
+I have declared the former things from the beginning; and they went forth out of my mouth, and I shewed them; I did them suddenly, and they came to pass.  =
+1  4      8      3    6      6     4    3      9       3   4    4     5    3  2  2    5     3  1   6      4   1  3   4       8      3   4    4   2    4   119
+9  36     52     33   75     77    52   33     81      19  58   62    67   56 21 38   77    19 9   64     46  9  17  46     104     19  58   22  35   55  1349
 >>> tell(lsum,osum,Isaiah[48:5].text())
-I have even from the beginning declared it to thee; before it came to pass I shewed it thee: lest thou shouldest say, Mine idol hath done them, and my graven image, and my molten image, hath commanded them.
-1+ 4  + 4  + 4  + 3 +    9    +   8    +2 +2 +  4  +  6   +2 + 4  +2 + 4  +1+  6   +2 +  4  + 4  + 4  +    9    + 3  + 4  + 4  + 4  + 4  +  4  + 3 +2 +  6   +  5   + 3 +2 +  6   +  5   + 4  +    9    +  4  =161
-9+ 36 + 46 + 52 + 33+    81   +   52   +29+35+  38 +  51  +29+ 22 +35+ 55 +9+  64  +29+  38 + 56 + 64 +   123   + 45 + 41 + 40 + 37 + 38 +  46 + 19+38+  67  +  35  + 19+38+  79  +  35  + 37 +    72   +  46 =1718
+I have even from the beginning declared it to thee; before it came to pass I shewed it thee: lest thou shouldest say, Mine idol hath done them, and my graven image, and my molten image, hath commanded them.  =
+1  4    4    4    3      9        8     2  2    4     6    2   4   2   4   1   6    2    4    4    4       9      3    4    4    4    4     4    3  2    6      5     3  2    6      5     4       9       4   161
+9  36   46   52   33     81       52    29 35   38    51   29  22  35  55  9   64   29   38   56   64     123     45   41   40   37   38    46   19 38   67     35    19 38   79     35    37      72      46  1718
 >>> Isaiah[41:26]|Isaiah[48:5]
 Isaiah 41:26 Who hath declared from the beginning, that we may know? and beforetime, that we may say, He is righteous? yea, there is none that sheweth, yea, there is none that declareth, yea, there is none that heareth your words.
 Isaiah 48:5 I have even from the beginning declared it to thee; before it came to pass I shewed it thee: lest thou shouldest say, Mine idol hath done them, and my graven image, and my molten image, hath commanded them.
@@ -34,33 +34,30 @@ Isaiah 48:5 I have even from the beginning declared it to thee; before it came t
 >>> 
 >>> 
 >>> lsum(Genesis[1:1])
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "/home/pi/bible/mene.py", line 47, in lsum
-    def lsum(s): return sum((l.isalpha() for l in letters(s)))
-TypeError: unhashable type: 'Sel'
+<console>:1: TypeError: unhashable type: 'Sel'
+/home/pi/python/bible/mene.py:56: TypeError: unhashable type: 'Sel'
 >>> 
 >>> base(22,103)
 [4, 15]
 >>> tell(lsum,osum,ssum,'Or in the base of the code in the book?')
- Or in the base of the code in the book?
- 2 +2 + 3 + 4  +2 + 3 + 4  +2 + 3 +  4  = 29
- 33+23+ 33+ 27 +21+ 33+ 27 +23+ 33+  43 =296
-150+59+213+108 +66+213+ 72 +59+213+ 142 =1295
+ Or in the base of the code in the book?  =
+ 2  2   3   4   2   3   4   2   3    4    29
+ 33 23  33  27  21  33  27  23  33   43  296
+150 59 213 108  66 213  72  59 213  142  1295
 >>> tell(lsum,'The contents of the book are the message.')
-The contents of the book are the message.
- 3 +   8    +2 + 3 + 4  + 3 + 3 +   7    =33
+The contents of the book are the message. =
+ 3     8     2   3   4    3   3     7     33
 >>> base(33,1189)
 [1, 3, 1]
 >>> IJohn[5:7:8]
 1 John 5:7 For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
 1 John 5:8 And there are three that bear witness in earth, the Spirit, and the water, and the blood: and these three agree in one.
 >>> tell(lsum,'the Father, the Word, and the Holy Ghost')
-the Father, the Word, and the Holy Ghost
- 3 +   6   + 3 +  4  + 3 + 3 + 4  +  5  =31
+the Father, the Word, and the Holy Ghost =
+ 3     6     3    4    3   3   4     5   31
 >>> tell(lsum,'the Spirit, and the water, and the blood')
-the Spirit, and the water, and the blood
- 3 +   6   + 3 + 3 +  5   + 3 + 3 +  5  =31
+the Spirit, and the water, and the blood =
+ 3     6     3   3    5     3   3    5   31
 >>> base(22,3088286401)
 [1, 5, 5, 5, 8, 9, 0, 13]
 >>> base(23,3088286401)
@@ -68,11 +65,11 @@ the Spirit, and the water, and the blood
 >>> sum(_)
 123
 >>> tell('rib')
-r  i b
-18+9+2=29
+r  i b =
+18 9 2 29
 >>> tell('Lord Jesus')
-Lord Jesus
- 49 +  74 =123
+Lord Jesus  =
+ 49    74  123
 >>> base(33,1189)
 [1, 3, 1]
 >>> int('1555890d',base=22)
@@ -123,10 +120,10 @@ Psalms 103
 21 Bless ye the LORD, all ye his hosts; ye ministers of his, that do his pleasure.
 22 Bless the LORD, all his works in all places of his dominion: bless the LORD, O my soul.
 >>> tell(lsum,osum,ssum,'Bless bless who who who the he the he he for as like for as for but to the bless bless bless')
-Bless bless who who who the he the he he for  as like for  as for but  to the bless bless bless
-  5  +  5  + 3 + 3 + 3 + 3 +2 + 3 +2 +2 + 3 + 2 + 4  + 3 + 2 + 3 + 3 + 2 + 3 +  5  +  5  +  5  = 71
-  57 +  57 + 46+ 46+ 46+ 33+13+ 33+13+13+ 39+ 20+ 37 + 39+ 20+ 39+ 43+ 35+ 33+  57 +  57 +  57 =833
- 237 + 237 +568+568+568+213+13+213+13+13+156+101+ 64 +156+101+156+502+260+213+ 237 + 237 + 237 =5063
+Bless bless who who who the he the he he for  as like for  as for but  to the bless bless bless  =
+  5     5    3   3   3   3  2   3  2  2   3   2   4    3   2   3   3   2   3    5     5     5    71
+  57    57   46  46  46  33 13  33 13 13  39  20  37   39  20  39  43  35  33   57    57    57  833
+ 237   237  568 568 568 213 13 213 13 13 156 101  64  156 101 156 502 260 213  237   237   237  5063
 >>> b.v(15558)
 'The LORD is merciful and gracious, slow to anger, and plenteous in mercy.'
 >>> 
@@ -141,20 +138,19 @@ Counter({3: 3, 2: 1, 41: 1, 131: 1})
 >>> pf(3088286401)
 Counter({6619: 1, 466579: 1})
 >>> pf(_)
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "/home/pi/python/parle/primes.py", line 82, in pf
-    return collections.Counter(factors(n))
-  File "/home/pi/python/parle/primes.py", line 69, in factors
-    for p in (prime(j) for j in range(1,n)):
-TypeError: 'Counter' object cannot be interpreted as an integer
+<console>:1: TypeError: 'Counter' object cannot be interpreted as an integer
+/home/pi/python/parle/primes.py:82: TypeError: 'Counter' object cannot be interpreted as an integer
+    n=Counter({6619: 1, 466579: 1})
+/home/pi/python/parle/primes.py:69: TypeError: 'Counter' object cannot be interpreted as an integer
+    k=Counter({6619: 1, 466579: 1})
+    n=Counter({6619: 1, 466579: 1})
 >>> [b.name() for b in b.books()]
 ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi', 'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation']
 >>> ' '.join(_)
 'Genesis Exodus Leviticus Numbers Deuteronomy Joshua Judges Ruth 1 Samuel 2 Samuel 1 Kings 2 Kings 1 Chronicles 2 Chronicles Ezra Nehemiah Esther Job Psalms Proverbs Ecclesiastes Song of Solomon Isaiah Jeremiah Lamentations Ezekiel Daniel Hosea Joel Amos Obadiah Jonah Micah Nahum Habakkuk Zephaniah Haggai Zechariah Malachi Matthew Mark Luke John Acts Romans 1 Corinthians 2 Corinthians Galatians Ephesians Philippians Colossians 1 Thessalonians 2 Thessalonians 1 Timothy 2 Timothy Titus Philemon Hebrews James 1 Peter 2 Peter 1 John 2 John 3 John Jude Revelation'
 >>> tell(lsum,_)
-Genesis Exodus Leviticus Numbers Deuteronomy Joshua Judges Ruth 1 Samuel 2 Samuel 1 Kings 2 Kings 1 Chronicles 2 Chronicles Ezra Nehemiah Esther Job Psalms Proverbs Ecclesiastes Song of Solomon Isaiah Jeremiah Lamentations Ezekiel Daniel Hosea Joel Amos Obadiah Jonah Micah Nahum Habakkuk Zephaniah Haggai Zechariah Malachi Matthew Mark Luke John Acts Romans 1 Corinthians 2 Corinthians Galatians Ephesians Philippians Colossians 1 Thessalonians 2 Thessalonians 1 Timothy 2 Timothy Titus Philemon Hebrews James 1 Peter 2 Peter 1 John 2 John 3 John Jude Revelation
-   7   +  6   +    9    +   7   +     11    +  6   +  6   + 4  +0+  6   +0+  6   +0+  5  +0+  5  +0+    10    +0+    10    + 4  +   8    +  6   + 3 +  6   +   8    +     12     + 4  +2 +   7   +  6   +   8    +     12     +   7   +  6   +  5  + 4  + 4  +   7   +  5  +  5  +  5  +   8    +    9    +  6   +    9    +   7   +   7   + 4  + 4  + 4  + 4  +  6   +0+     11    +0+     11    +    9    +    9    +     11    +    10    +0+      13     +0+      13     +0+   7   +0+   7   +  5  +   8    +   7   +  5  +0+  5  +0+  5  +0+ 4  +0+ 4  +0+ 4  + 4  +    10    =462
+Genesis Exodus Leviticus Numbers Deuteronomy Joshua Judges Ruth 1 Samuel 2 Samuel 1 Kings 2 Kings 1 Chronicles 2 Chronicles Ezra Nehemiah Esther Job Psalms Proverbs Ecclesiastes Song of Solomon Isaiah Jeremiah Lamentations Ezekiel Daniel Hosea Joel Amos Obadiah Jonah Micah Nahum Habakkuk Zephaniah Haggai Zechariah Malachi Matthew Mark Luke John Acts Romans 1 Corinthians 2 Corinthians Galatians Ephesians Philippians Colossians 1 Thessalonians 2 Thessalonians 1 Timothy 2 Timothy Titus Philemon Hebrews James 1 Peter 2 Peter 1 John 2 John 3 John Jude Revelation  =
+   7      6        9        7         11       6      6     4   1   6    1   6    1   5   1   5   1     10     1     10      4      8       6     3    6       8          12       4   2     7      6       8          12         7      6      5    4    4      7      5     5     5      8         9       6        9        7       7     4    4    4    4     6    1      11     1      11         9         9          11         10     1       13      1       13      1    7    1    7      5      8        7      5   1   5   1   5   1  4   1  4   1  4    4       10     479
 >>> nF(51)
 (9, 34, -17, 51, 4, 55, 10)
 >>> nF(55)
@@ -228,6 +224,17 @@ Counter({2: 4, 193: 1})
 3088286401
 >>> math.sqrt(_), _/299792.458
 (55572.35284743665, 10301.414590623224)
+>>> b.Deut[5].wc()
+921
+>>> pf(921)
+Counter({3: 1, 307: 1})
+>>> pn(pn(21))
+367
+>>> pn(74)
+373
+>>> 
+>>> 
+>>> 
 >>> Deuteronomy[5].vn()
 5055
 >>> b.vi(30882)

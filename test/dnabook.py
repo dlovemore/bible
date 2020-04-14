@@ -12,15 +12,15 @@
 # >>> pf(303)
 # Counter({3: 1, 101: 1})
 # >>> tell("God's will")
-# God's will
-#   45 + 56 =101
+# God's will  =
+#   45   56  101
 # >>> tell('ACT of God')
-# ACT of God
-#  24+21+ 26=71
+# ACT of God =
+#  24 21  26 71
 # >>> ssum('God')
 # 71
 # >>> sums('miracles')
-# (80, 278)
+# (8, 80, 278)
 # >>> AY
 # 3088286401
 # >>> base(22,AY)

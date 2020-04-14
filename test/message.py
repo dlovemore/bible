@@ -139,11 +139,11 @@ Counter({3: 3, 2: 1, 41: 1, 131: 1})
 Counter({6619: 1, 466579: 1})
 >>> pf(_)
 <console>:1: TypeError: 'Counter' object cannot be interpreted as an integer
-/home/pi/python/parle/primes.py:82: TypeError: 'Counter' object cannot be interpreted as an integer
+/home/pi/python/parle/primes.py:86: TypeError: 'Counter' object cannot be interpreted as an integer
     n=Counter({6619: 1, 466579: 1})
-/home/pi/python/parle/primes.py:69: TypeError: 'Counter' object cannot be interpreted as an integer
+/home/pi/python/parle/primes.py:73: TypeError: 'Counter' object cannot be interpreted as an integer
+    n=Counter({6619: 1, 466579: 1})
     k=Counter({6619: 1, 466579: 1})
-    n=Counter({6619: 1, 466579: 1})
 >>> [b.name() for b in b.books()]
 ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi', 'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation']
 >>> ' '.join(_)

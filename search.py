@@ -6,22 +6,6 @@ from itertools import chain
 from word2num import word2num
 from func import aslist
 
-def span(a,b=None,step=1):
-    """
-        >>> from search import span
-        >>> span(3)
-        range(1, 4)
-        >>> list(span(3))
-        [1, 2, 3]
-        >>> list(span(3,5))
-        [3, 4, 5]
-        >>> list(span(25,50,5))
-        [25, 30, 35, 40, 45, 50]
-        >>> 
-    """
-    if b is None: a,b=1,a
-    return range(1,a+1,step) if b is None else range(a,b+1,step)
-
 def get(l,*xs):
     return [l[x] for x in xs]
 

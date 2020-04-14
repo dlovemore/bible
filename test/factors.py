@@ -1,7 +1,4 @@
-from primes import *
-
-# >>> from factors import *
-# >>> from search import *
+# >>> from bible import *
 # >>> factors(979)
 # [11, 89]
 # >>> pp(23)

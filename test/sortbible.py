@@ -2,10 +2,10 @@
 >>> import re
 >>> def cvtotup(x): return list(eval(x).items())[0]
 ... 
->>> with open('bible4.txt') as f:
+>>> with open('texts/bible4.txt') as f:
 ...     b4=f.readlines()
 ... 
->>> with open('KJBIBLE.txt') as f:
+>>> with open('texts/KJBIBLE.txt') as f:
 ...     b=f.readlines()
 ... 
 >>> t='\n'.join(b4)
@@ -34,8 +34,8 @@
 >>> 
 >>> 
 >>> 
->>> [sorted(x)==x for x in ch.split(';')]
-[False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+>>> [sorted(x)==x for x in b.chapters().split(';')]
+<console>:1: NameError: name 'ch' is not defined
 >>> 
 >>> 
 >>> 

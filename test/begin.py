@@ -1,5 +1,7 @@
 >>> from bible import *
 >>> # tell=tellmd
+>>> sums('begin')
+(5, 37, 73)
 >>> b/'hair'/'numbered'
 Matthew 10:30 But the very hairs of your head are all numbered.
 Luke 12:7 But even the very hairs of your head are all numbered. Fear not therefore: ye are of more value than many sparrows.

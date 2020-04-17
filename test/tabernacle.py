@@ -142,7 +142,8 @@ behold the former  =
 112
 >>> 
 >>> 
->>> 
+>>> 4.5*79.75**.5+90
+130.18628497385643
 >>> 
 >>> 
 >>> 
@@ -159,6 +160,25 @@ Counter({2: 3, 3: 3})
 Counter({7: 1, 31: 1})
 >>> 
 >>> 
+>>> 
+>>> 
+>>> 
+>>> 4.5*79.75**.5
+40.18628497385644
+>>> _*30
+1205.588549215693
+>>> 90*30
+2700
+>>> 
+>>> 100-4.5**2
+79.75
+>>> _**.5
+8.930285549745875
+>>> _*4.5
+40.18628497385644
+>>> 
+>>> b.vi(5405)
+Deuteronomy 18:20 But the prophet, which shall presume to speak a word in my name, which I have not commanded him to speak, or that shall speak in the name of other gods, even that prophet shall die.
 >>> 
 >>> 
 >>> 

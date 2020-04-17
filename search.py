@@ -1,5 +1,5 @@
 import re
-from parle.primes import *
+from parle import *
 from mene import *
 from bisect import bisect_right
 from itertools import chain

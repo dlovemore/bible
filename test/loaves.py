@@ -6,11 +6,11 @@
 # Leviticus 8:8 And he put the breastplate upon him: also he put in the breastplate the Urim and the Thummim.
 # Leviticus 8:9 And he put the mitre upon his head; also upon the mitre, even upon his forefront, did he put the golden plate, the holy crown; as the LORD commanded Moses.
 # >>> tell('Urim Thummim')
-# Urim Thummim
-#  61 +   97  =158
+# Urim Thummim  =
+#  61     97   158
 # >>> tell('the Urim and the Thummim')
-# the Urim and the Thummim
-#  33+ 61 + 19+ 33+   97  =243
+# the Urim and the Thummim  =
+#  33  61   19  33    97   243
 # >>> factors(243)
 # [3, 3, 3, 3, 3]
 # >>> torah.midv().vn()
@@ -20,9 +20,9 @@
 # >>> torah.midch()
 # Leviticus 4:1-35 (35 verses)
 # >>> _.wcs()
-# [6, 36, 37, 33, 20, 25, 58, 31, 29, 26, 22, 38, 43, 30, 27, 17, 23, 54, 14, 37, 26, 29, 25, 31, 41, 37, 33, 33, 24, 37, 52, 17, 28, 40, 63]
+# [7, 37, 38, 34, 21, 26, 59, 32, 30, 27, 23, 39, 44, 31, 28, 18, 24, 55, 15, 38, 27, 30, 26, 32, 42, 38, 34, 34, 25, 38, 53, 18, 29, 41, 64]
 # >>> tale(_)
-# [6, 42, 79, 112, 132, 157, 215, 246, 275, 301, 323, 361, 404, 434, 461, 478, 501, 555, 569, 606, 632, 661, 686, 717, 758, 795, 828, 861, 885, 922, 974, 991, 1019, 1059, 1122]
+# [7, 44, 82, 116, 137, 163, 222, 254, 284, 311, 334, 373, 417, 448, 476, 494, 518, 573, 588, 626, 653, 683, 709, 741, 783, 821, 855, 889, 914, 952, 1005, 1023, 1052, 1093, 1157]
 # >>> Leviticus.midv()
 # Leviticus 15:7 And he that toucheth the flesh of him that hath the issue shall wash his clothes, and bathe himself in water, and be unclean until the even.
 # >>> torah.vi(4048)

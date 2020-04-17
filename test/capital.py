@@ -145,6 +145,7 @@ TEKEL UPHARSIN
   53 +  106   =159
 >>> fs(159)
 [3, 53]
+>>> 
 >>> tell('TEKEL UPHARSIN',ssum)
 TEKEL UPHARSIN
  260 +  628   =888

@@ -2,7 +2,7 @@
 # >>> base(12, 595)
 # [4, 1, 7]
 # >>> base
-# <function base at 0xb6590150>
+# <function base at 0xb6442e40>
 # >>> import itertools
 # >>> dir(itertools)
 # ['__doc__', '__loader__', '__name__', '__package__', '__spec__', '_grouper', '_tee', '_tee_dataobject', 'accumulate', 'chain', 'combinations', 'combinations_with_replacement', 'compress', 'count', 'cycle', 'dropwhile', 'filterfalse', 'groupby', 'islice', 'permutations', 'product', 'repeat', 'starmap', 'takewhile', 'tee', 'zip_longest']
@@ -10,7 +10,7 @@
 # [3, 3, 5, 20, 17, 9, 20, 8, 1, 3, 19, 20, 7, 0, 15, 19, 19, 19, 21, 1, 5, 0, 18]
 # >>> from table import *
 # >>> Row[_]
-# Row([3, 3, 5, 20, 17, 9, 20, 8, 1, 3, 19, 20, 7, 0, 15, 19, 19, 19, 21, 1, 5, 0, 18])
+# 3 3 5 20 17 9 20 8 1 3 19 20 7 0 15 19 19 19 21 1 5 0 18
 # >>> tod='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.__getitem__
 # >>> ''.join(_@tod)
 # '335kh9k813jk70fjjjl150i'
@@ -24,26 +24,28 @@
 # >>> 
 # >>> 
 # >>> tell(ssum,osum,lsum,'cube cubes')
-# cube cubes
-# 310 + 410 =720
-#  31 +  50 = 81
-#  4  +  5  = 9
+# cube cubes  =
+# 310   410  720
+#  31    50   81
+#  4     5    9
 # >>> 31**(1/3)
 # 3.1413806523913927
 # >>> tell(ssum,osum,lsum,'guide')
-# g  u  i d e
-# 7+300+9+4+5=325
-# 7+ 21+9+4+5= 46
-# 1+ 1 +1+1+1= 5
+# g  u  i d e  =
+# 7 300 9 4 5 325
+# 7  21 9 4 5  46
+# 1  1  1 1 1  5
 # >>> tell(ssum,osum,lsum,'guides')
-# g  u  i d e  s
-# 7+300+9+4+5+100=425
-# 7+ 21+9+4+5+ 19= 65
-# 1+ 1 +1+1+1+ 1 = 6
+# g  u  i d e  s   =
+# 7 300 9 4 5 100 425
+# 7  21 9 4 5  19  65
+# 1  1  1 1 1  1   6
 # >>> b/'guide'
 # Exodus 15:13;2 Chronicles 32:22;Job 31:18;38:32;Psalms 25:9;31:3;32:8;48:14;55:13;73:24;78:52,72;112:5;Proverbs 2:17;6:7;11:3;23:19;Isaiah 49:10;51:18;58:11;Jeremiah 3:4;Micah 7:5;Matthew 23:16,24;Luke 1:79;John 16:13;Acts 1:16;8:31;Romans 2:19;1 Timothy 5:14 (30 verses)
 # >>> base(1189,31102)
 # [26, 188]
+# >>> pn(188)
+# 1123
 # >>> base(33,1189)
 # [1, 3, 1]
 # >>> base(33,3088286401)

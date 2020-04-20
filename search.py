@@ -23,6 +23,16 @@ def upharsin(l):
 
 def wc(s): len(s.split(' '))
 
+class cache:
+    def __init__(self,f):
+        self.f=f
+        self.cache=dict()
+    def __call__(self,*args):
+        if args not in self.cache:
+            r=self.f(*args)
+            self.cache[args]=r
+        return self.cache[args]
+
 @aslist
 def contranges(ix,a=0,b=None):
     if b is None: b=len(ix)
@@ -60,14 +70,20 @@ class Sel:
         if ix is None: ix=range(len(self.doc))
         self.ix = ix
     def __eq__(self, other):
+        if type(other)!=type(self): return False
         if len(self.ix)!=len(other.ix) or list(self.ix)!=list(other.ix):
             return False
         return all((self.doc[i]==other.doc[i]) for i in self.ix)
     def __lt__(self, other):
         if self.doc==other.doc:
             return tuple(self.ix)<tuple(other.ix)
-    def __div__(self, s):
+    def __floordiv__(self, s):
         return Sel(self,[i for i in self.ix if re.search(s,self.doc[i][3])])
+    def numbers(self):
+        @cache
+        def nums(doc,i):
+            return list(word2num(doc[i][3]))
+        return sum([nums(self.doc,i) for i in self.ix],[])
     def __truediv__(self, s):
         if isinstance(s, int):
             return Sel(self,[i for i in self.ix if s in word2num(self.doc[i][3])])
@@ -184,6 +200,8 @@ class Sel:
         for i in self.ix:
             ws+=self.doc[i][3].split()
         return ws
+    def ws(self):
+        return [w.rstrip(':);.,-!?') for w in self.words()]
     def __getitem__(self,k):
         if isinstance(k, str):
             return getattr(self,k)
@@ -310,6 +328,14 @@ def verselist(bible):
                 yield title,i,j,text
 
 # >>> from bible import *
+# >>> isp=cache(isprime)
+# >>> isp(5)
+# True
+# >>> isp(466579)
+# True
+# >>> isp.cache
+# {(5,): True, (466579,): True}
+# >>> 
 # >>> contranges([0,1,2,3,6,9,10,11,14,22,23,24,25,26,31])
 # [(0, 4), (6, 7), (9, 12), (14, 15), (22, 27), (31, 32)]
 # >>> 
@@ -321,9 +347,7 @@ def verselist(bible):
 # >>> (Genesis[1:1]-(2,3))
 # Genesis 1:1-2:3 (34 verses)
 # >>> len(_)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# TypeError: object of type 'Sel' has no len()
+# <console>:1: TypeError: object of type 'Sel' has no len()
 # >>> b.chapter(595)
 # Psalms 117:1 O praise the LORD, all ye nations: praise him, all ye people.
 # Psalms 117:2 For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
@@ -440,7 +464,7 @@ def verselist(bible):
 # >>> b.Jude
 # Jude 1:1-25 (25 verses)
 # >>> p(b.doc[31102//2-1:31102//2+1])
-# [('Psalms', 103, 1, 'Bless the LORD, O my soul: and all that is within me, bless his holy name.'), ('Psalms', 103, 2, 'Bless the LORD, O my soul, and forget not all his benefits:')]
+# (('Psalms', 103, 1, 'Bless the LORD, O my soul: and all that is within me, bless his holy name.'), ('Psalms', 103, 2, 'Bless the LORD, O my soul, and forget not all his benefits:'))
 # >>> b.midv()
 # Psalms 103:1 Bless the LORD, O my soul: and all that is within me, bless his holy name.
 # Psalms 103:2 Bless the LORD, O my soul, and forget not all his benefits:
@@ -486,7 +510,7 @@ def verselist(bible):
 # >>> Genesis.midword()
 # ['to', 'Padanaram']
 # >>> sums(' '.join(_))
-# (104, 518)
+# (11, 104, 518)
 # >>> Genesis/'to Padanaram'
 # Genesis 28:2,5-7 (4 verses)
 # >>> p(_)
@@ -505,8 +529,8 @@ def verselist(bible):
 # ['to', 'Padanaram']
 # >>> 
 # >>> tell('to Padanaram')
-# to Padanaram
-# 35+    69   =104
+# to Padanaram  =
+# 35     69    104
 # >>> 
 # >>> 
 # >>> 
@@ -522,7 +546,7 @@ def verselist(bible):
 # >>> len(set(g1w))
 # 198
 # >>> set([letters(w) for w in g1w])
-# {'were', 'sea', 'void', 'created', 'seasons', 'likeness', 'gathering', 'deep', 'earth', 'that', 'winged', 'and', 'land', 'meat', 'wherein', 'blessed', 'it', 'beast', 'fourth', 'creepeth', 'fish', 'have', 'under', 'he', 'subdue', 'behold', 'thing', 'beginning', 'one', 'air', 'in', 'years', 'great', 'above', 'fruit', 'divide', 'appear', 'bring', 'grass', 'man', 'first', 'two', 'evening', 'make', 'unto', 'fill', 'from', 'which', 'signs', 'given', 'brought', 'a', 'made', 'is', 'rule', 'place', 'you', 'hath', 'heaven', 'darkness', 'image', 'i', 'divided', 'kind', 'be', 'days', 'us', 'abundantly', 'multiply', 'third', 'midst', 'all', 'yielding', 'saying', 'tree', 'saw', 'open', 'shall', 'moveth', 'second', 'without', 'fowl', 'called', 'forth', 'seed', 'firmament', 'living', 'set', 'sixth', 'every', 'moved', 'of', 'seas', 'had', 'god', 'greater', 'cattle', 'spirit', 'said', 'life', 'fruitful', 'over', 'upon', 'night', 'replenish', 'lesser', 'to', 'moving', 'their', 'give', 'also', 'may', 'very', 'bearing', 'dominion', 'together', 'whose', 'day', 'gathered', 'his', 'female', 'green', 'let', 'so', 'creeping', 'after', 'creature', 'male', 'herb', 'dry', 'morning', 'there', 'fly', 'was', 'fifth', 'light', 'good', 'the', 'waters', 'face', 'form', 'itself', 'them', 'own', 'him', 'stars', 'lights', 'whales', 'our', 'for'}
+# {'together', 'morning', 'air', 'lights', 'form', 'abundantly', 'after', 'let', 'day', 'which', 'winged', 'waters', 'fill', 'living', 'seed', 'good', 'god', 'yielding', 'moved', 'earth', 'hath', 'image', 'under', 'kind', 'bearing', 'be', 'whales', 'gathered', 'dry', 'life', 'green', 'place', 'appear', 'man', 'deep', 'you', 'lesser', 'firmament', 'gathering', 'also', 'it', 'replenish', 'so', 'and', 'fish', 'fly', 'shall', 'stars', 'seasons', 'in', 'dominion', 'midst', 'fifth', 'great', 'third', 'brought', 'female', 'own', 'cattle', 'all', 'moving', 'of', 'itself', 'make', 'above', 'their', 'creepeth', 'beginning', 'open', 'have', 'spirit', 'wherein', 'give', 'from', 'thing', 'divide', 'given', 'night', 'behold', 'upon', 'had', 'male', 'sixth', 'first', 'his', 'fruitful', 'a', 'subdue', 'creature', 'face', 'said', 'greater', 'seas', 'beast', 'darkness', 'light', 'meat', 'that', 'signs', 'to', 'was', 'set', 'forth', 'without', 'void', 'divided', 'him', 'bring', 'he', 'whose', 'may', 'tree', 'days', 'herb', 'created', 'made', 'blessed', 'second', 'every', 'evening', 'creeping', 'heaven', 'land', 'grass', 'is', 'likeness', 'called', 'were', 'fruit', 'unto', 'there', 'over', 'moveth', 'one', 'years', 'for', 'our', 'fourth', 'i', 'saying', 'rule', 'them', 'fowl', 'us', 'sea', 'saw', 'very', 'the', 'multiply', 'two'}
 # >>> len(_)
 # 150
 # >>> pf(12691)
@@ -641,8 +665,8 @@ def verselist(bible):
 # >>> b.Ecc[7:27]
 # Ecclesiastes 7:27 Behold, this have I found, saith the preacher, counting one by one, to find out the account:
 # >>> _.chn(),_.tell()
-# Behold, this have I found, saith the preacher, counting one by one, to find out the account:
-#    46  + 56 + 36 +9+  60  +  57 + 33+    74   +  103   + 34+27+ 34 +35+ 33 + 56+ 33+   77   =803
+# Behold, this have I found, saith the preacher, counting one by one, to find out the account:  =
+#    46    56   36  9   60     57   33     74      103     34 27  34  35  33   56  33    77    803
 # (666, None)
 # >>> 
 # >>> 33*33/7
@@ -680,11 +704,15 @@ def verselist(bible):
 # Jeremiah 33:3 Call unto me, and I will answer thee, and shew thee great and mighty things, which thou knowest not.
 # >>> b/"trusteth in him"
 # Psalms 34:8 O taste and see that the LORD is good: blessed is the man that trusteth in him.
+# >>> Genesis[5].numbers()
+# [130, 800, 930, 105, 807, 912, 90, 815, 905, 70, 840, 910, 65, 830, 895, 162, 800, 962, 65, 300, 365, 187, 782, 969, 182, 595, 777, 500]
+# >>> 
+# >>> 
 # >>> 
 # >>> b/777
 # Genesis 5:31 And all the days of Lamech were seven hundred seventy and seven years: and he died.
 # >>> b/60
-# Genesis 25:26;Leviticus 27:3,7;Numbers 7:88;Deuteronomy 3:4;Joshua 13:30;1 Kings 4:13,22;6:2;2 Kings 25:19;1 Chronicles 2:21,23;2 Chronicles 3:3;11:21;Ezra 6:3;8:13;Psalms 90:10;Song of Solomon 3:7;6:8;Jeremiah 52:25;Ezekiel 40:14;Daniel 3:1;Matthew 13:23;Mark 4:8,20;Luke 24:13;1 Timothy 5:9 (27 verses)
+# Genesis 25:26;Leviticus 27:3,7;Numbers 7:88;Deuteronomy 3:4;Joshua 13:30;1 Kings 4:13,22;6:2;2 Kings 25:19;1 Chronicles 2:21,23;2 Chronicles 3:3;11:21;Ezra 6:3;8:13;Psalms 90:10;Song of Solomon 3:7;6:8;Jeremiah 52:25;Ezekiel 40:14;Daniel 3:1;Matthew 13:8,23;Mark 4:8,20;Luke 24:13;1 Timothy 5:9 (28 verses)
 # >>> b/666
 # 1 Kings 10:14;2 Chronicles 9:13;Ezra 2:13;Revelation 13:18 (4 verses)
 # >>> b/'Here is wisdom'

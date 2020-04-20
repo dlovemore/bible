@@ -1,7 +1,13 @@
+import itertools
 from mene import *
 from func import *
 from word2num import *
 from bible import *
+
+@aslist
+def withoutrepeats(l):
+    return [x for x,y in pairs(itertools.chain(l,[None])) if x!=y]
+
 ns=word2num((Genesis[5:1]-31).text())
 ns=[(x,y) if x+y==z else zz for x,y,z in inks(3,ns)]
 names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[5].text()))
@@ -46,6 +52,9 @@ names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[11:10:25].t
 # 24 And Nahor lived nine and twenty years, and begat Terah:
 # 25 And Nahor lived after he begat Terah an hundred and nineteen years, and begat sons and daughters.
 # 26 And Terah lived seventy years, and begat Abram, Nahor, and Haran.
+# >>> ns
+# [(2, 500), (35, 403), (30, 403), (34, 430), (30, 209), (32, 207), (30, 200), (29, 119)]
+# >>> 
 # >>> tl(ns, names)
 # ++++++++++++++++++++++++++++++++++++++++++++++++++ Arphaxad
 # ***++++++++++++++++++++++++++++++++++++++++ Salah
@@ -57,9 +66,9 @@ names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[11:10:25].t
 #                    **+++++++++++ Terah
 # >>> 
 # >>> word2num
-# functools.partial(<function aslist.<locals>.tolist at 0xb655fa98>, <function word2num at 0xb655fa50>)
+# Func(functools.partial(<function aslist.<locals>.tolist at 0xb639f390>, <function word2num at 0xb639f348>))
 # >>> wordnums
-# {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80, 'ninety': 90, 'and': 0, 'hundred': 100, 'thousand': 1000, 'score': 20, 'twoscore': 40, 'threescore': 60, 'fourscore': 80}
+# {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80, 'ninety': 90, 'and': 0, 'hundred': 100, 'thousand': 1000, 'score': 20, 'twoscore': 40, 'threescore': 60, 'fourscore': 80, 'onefold': 1, 'twofold': 2, 'threefold': 3, 'fourfold': 4, 'fivefold': 5, 'sixfold': 6, 'sevenfold': 7, 'eightfold': 8, 'ninefold': 9, 'tenfold': 10, 'elevenfold': 11, 'twelvefold': 12, 'thirteenfold': 13, 'fourteenfold': 14, 'fifteenfold': 15, 'sixteenfold': 16, 'seventeenfold': 17, 'eighteenfold': 18, 'nineteenfold': 19, 'twentyfold': 20, 'thirtyfold': 30, 'fortyfold': 40, 'fiftyfold': 50, 'sixtyfold': 60, 'seventyfold': 70, 'eightyfold': 80, 'ninetyfold': 90, 'andfold': 0, 'hundredfold': 100, 'thousandfold': 1000, 'scorefold': 20, 'twoscorefold': 40, 'threescorefold': 60, 'fourscorefold': 80}
 # >>> ns=word2num((Genesis[5:1]-31).text())
 # >>> ns
 # [130, 800, 930, 105, 807, 912, 90, 815, 905, 70, 840, 910, 65, 830, 895, 162, 800, 962, 65, 300, 365, 187, 782, 969, 182, 595, 777]
@@ -69,8 +78,6 @@ names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[11:10:25].t
 # [(130, 800, 930), (105, 807, 912), (90, 815, 905), (70, 840, 910), (65, 830, 895), (162, 800, 962), (65, 300, 365), (187, 782, 969), (182, 595, 777)]
 # >>> t=0
 # >>> names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[5].text()))
-# >>> names
-# ['Adam', 'Seth', 'Enos', 'Cainan', 'Mahalaleel', 'Jared', 'Enoch', 'Methuselah', 'Lamech', 'Noah', 'Shem']
 # >>> for (x,y,z),name in zip(_,names):
 # ...     print(' '*(t//10)+'*'*(x//10)+'+'*(y//10),name)
 # ...     t+=x
@@ -120,7 +127,6 @@ names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[11:10:25].t
 # 30 And Lamech lived after he begat Noah five hundred ninety and five years, and begat sons and daughters:
 # 31 And all the days of Lamech were seven hundred seventy and seven years: and he died.
 # 32 And Noah was five hundred years old: and Noah begat Shem, Ham, and Japheth.
-# >>> 
 # >>> 
 # >>> 
 # >>> 

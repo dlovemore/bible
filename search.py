@@ -9,9 +9,9 @@ from func import aslist
 def get(l,*xs):
     return [l[x] for x in xs]
 
-def middle(l):
+def middle(l,k=1):
     n=len(l)
-    return l[(n-1)//2:n//2+1]
+    return l[(n+1)//2-k:n//2+k]
 
 def tekel(l):
     n=len(l)
@@ -347,7 +347,7 @@ def verselist(bible):
 # >>> (Genesis[1:1]-(2,3))
 # Genesis 1:1-2:3 (34 verses)
 # >>> len(_)
-# <console>:1: TypeError: object of type 'Sel' has no len()
+# <14>:1: TypeError: object of type 'Sel' has no len()
 # >>> b.chapter(595)
 # Psalms 117:1 O praise the LORD, all ye nations: praise him, all ye people.
 # Psalms 117:2 For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
@@ -397,6 +397,8 @@ def verselist(bible):
 # [2, 3]
 # >>> middle([])
 # []
+# >>> middle(range(100),9)
+# range(41, 59)
 # >>> 
 # >>> 
 # >>> b.Ps[119].wc()
@@ -546,7 +548,7 @@ def verselist(bible):
 # >>> len(set(g1w))
 # 198
 # >>> set([letters(w) for w in g1w])
-# {'together', 'morning', 'air', 'lights', 'form', 'abundantly', 'after', 'let', 'day', 'which', 'winged', 'waters', 'fill', 'living', 'seed', 'good', 'god', 'yielding', 'moved', 'earth', 'hath', 'image', 'under', 'kind', 'bearing', 'be', 'whales', 'gathered', 'dry', 'life', 'green', 'place', 'appear', 'man', 'deep', 'you', 'lesser', 'firmament', 'gathering', 'also', 'it', 'replenish', 'so', 'and', 'fish', 'fly', 'shall', 'stars', 'seasons', 'in', 'dominion', 'midst', 'fifth', 'great', 'third', 'brought', 'female', 'own', 'cattle', 'all', 'moving', 'of', 'itself', 'make', 'above', 'their', 'creepeth', 'beginning', 'open', 'have', 'spirit', 'wherein', 'give', 'from', 'thing', 'divide', 'given', 'night', 'behold', 'upon', 'had', 'male', 'sixth', 'first', 'his', 'fruitful', 'a', 'subdue', 'creature', 'face', 'said', 'greater', 'seas', 'beast', 'darkness', 'light', 'meat', 'that', 'signs', 'to', 'was', 'set', 'forth', 'without', 'void', 'divided', 'him', 'bring', 'he', 'whose', 'may', 'tree', 'days', 'herb', 'created', 'made', 'blessed', 'second', 'every', 'evening', 'creeping', 'heaven', 'land', 'grass', 'is', 'likeness', 'called', 'were', 'fruit', 'unto', 'there', 'over', 'moveth', 'one', 'years', 'for', 'our', 'fourth', 'i', 'saying', 'rule', 'them', 'fowl', 'us', 'sea', 'saw', 'very', 'the', 'multiply', 'two'}
+# {'was', 'dominion', 'saw', 'which', 'green', 'fifth', 'form', 'lesser', 'image', 'first', 'gathered', 'dry', 'is', 'us', 'for', 'own', 'above', 'grass', 'appear', 'sea', 'air', 'created', 'after', 'in', 'evening', 'upon', 'from', 'under', 'of', 'second', 'were', 'yielding', 'shall', 'void', 'seas', 'the', 'moveth', 'there', 'without', 'days', 'seasons', 'gathering', 'let', 'night', 'meat', 'god', 'signs', 'have', 'our', 'saying', 'man', 'brought', 'face', 'one', 'moved', 'itself', 'morning', 'unto', 'place', 'greater', 'winged', 'set', 'him', 'living', 'wherein', 'that', 'it', 'darkness', 'fowl', 'fourth', 'may', 'divided', 'and', 'heaven', 'to', 'very', 'also', 'over', 'two', 'thing', 'female', 'life', 'lights', 'hath', 'stars', 'likeness', 'sixth', 'together', 'seed', 'whales', 'blessed', 'you', 'herb', 'so', 'open', 'i', 'kind', 'a', 'them', 'creeping', 'behold', 'multiply', 'bring', 'subdue', 'fish', 'had', 'waters', 'third', 'every', 'their', 'creature', 'great', 'bearing', 'light', 'his', 'made', 'beast', 'creepeth', 'years', 'rule', 'fruit', 'all', 'moving', 'tree', 'spirit', 'he', 'given', 'firmament', 'fill', 'forth', 'land', 'called', 'replenish', 'make', 'midst', 'good', 'fly', 'whose', 'day', 'divide', 'cattle', 'abundantly', 'fruitful', 'give', 'beginning', 'said', 'deep', 'male', 'be', 'earth'}
 # >>> len(_)
 # 150
 # >>> pf(12691)
@@ -821,9 +823,7 @@ def verselist(bible):
 # >>> 
 # >>> 
 # >>> len(_)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# TypeError: object of type 'Sel' has no len()
+# <206>:1: TypeError: object of type 'Sel' has no len()
 # >>> 
 # >>> b/'abraham'/'ewe'
 # Genesis 21:28 And Abraham set seven ewe lambs of the flock by themselves.
@@ -896,14 +896,14 @@ def verselist(bible):
 # Genesis 1:1 In the beginning God created the heaven and the earth.
 # Revelation 22:21 The grace of our Lord Jesus Christ be with you all. Amen.
 # >>> _.tell()
-# In the beginning God created the heaven and the earth.
-# 23+ 33+    81   + 26+   56  + 33+  55  + 19+ 33+  52  =411
-# The grace of our Lord Jesus Christ be with you all. Amen.
-#  33+  34 +21+ 54+ 49 +  74 +  77  +7 + 60 + 61+ 25 +  33 =528
+# In the beginning God created the heaven and the earth.  =
+# 23  33     81     26    56    33   55    19  33   52   411
+# The grace of our Lord Jesus Christ be with you all. Amen.  =
+#  33   34  21  54  49    74    77   7   60   61  25    33  528
 # >>> bible.midv().tell()
-# Bless the LORD, O  my soul: and all that is within me, bless his holy name.
-#   57 + 33+  49 +15+38+  67 + 19+ 25+ 49 +28+  83  + 18+  57 + 36+ 60 +  33 =667
-# Bless the LORD, O  my soul, and forget not all his benefits:
-#   57 + 33+  49 +15+38+  67 + 19+  71  + 49+ 25+ 36+    80   =539
+# Bless the LORD, O  my soul: and all that is within me, bless his holy name.  =
+#   57   33   49  15 38   67   19  25  49  28   83    18   57   36  60    33  667
+# Bless the LORD, O  my soul, and forget not all his benefits:  =
+#   57   33   49  15 38   67   19   71    49  25  36     80    539
 # >>> 667+539
 # 1206

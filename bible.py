@@ -71,6 +71,7 @@ IIIJohn=b['3 John']
 Jude=b.Jude
 Revelation=b.Revelation
 
+five=b[1]-b[5]
 OT=ot=Genesis-Malachi
 NT=nt=Matthew-Revelation
 

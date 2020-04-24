@@ -182,3 +182,73 @@
 # 33 Yet a little sleep, a little slumber, a little folding of the hands to sleep:
 # 34 So shall thy poverty come as one that travelleth; and thy want as an armed man.
 # >>> 
+# >>> nt.vi(1611)
+# Mark 14:1 After two days was the feast of the passover, and of unleavened bread: and the chief priests and the scribes sought how they might take him by craft, and put him to death.
+# >>> b.vi(1611)
+# Exodus 4:9 And it shall come to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour it upon the dry land: and the water which thou takest out of the river shall become blood upon the dry land.
+# >>> _.tell(lsum,osum,ssum)
+# And  it shall come  to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour  it upon the dry land: and the water which thou takest out of the river shall become blood upon the dry land.   =
+#  3   2    5    4    2    4   2   4    4    3     7     4     5    3    5       7       7     4    3    5     4    4     5    4   2   3    5   2   3    5     3   4    2   4    3   3    4    3   3    5     5    4     6     3  2   3    5     5     6      5    4    3   3    4    212
+#  19  29   52   36   35   55  15  58   56   49    60    47    57   58   68      79      62    70   53   54    49   64    60   37  21  33   67  21  33   72    19  70   29  66   33  47   31   19  33   67    51   64    76    56 21  33   72    52    43     48   66   33  47   31   2576
+#  55 209  169  108  260  271  15 913  569  310   456   191   318  760  266     367     179   610  908  477   409  568   339  226  66 213  796  66 213  594    55 520  209 480  213 794   85   55 213  796   528  568   526   560 66 213  594   169   115    156  480  213 794   85  19388
+# >>> Isaiah-Daniel
+# Isaiah 1:1-Daniel 12:13 (4440 verses)
+# >>> 
+# >>> _.vi(1611)
+# Jeremiah 12:16 And it shall come to pass, if they will diligently learn the ways of my people, to swear by my name, The LORD liveth; as they taught my people to swear by Baal; then shall they be built in the midst of my people.
+# >>> 
+# >>> b.vi(1611)
+# Exodus 4:9 And it shall come to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour it upon the dry land: and the water which thou takest out of the river shall become blood upon the dry land.
+# >>> s=_.text()
+# >>> s.split(':')
+# ['And it shall come to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour it upon the dry land', ' and the water which thou takest out of the river shall become blood upon the dry land.']
+# >>> _@F(partial(tell,lsum,osum,ssum))
+# And  it shall come  to pass, if they will not believe also these two signs, neither hearken unto thy voice, that thou shalt take of the water of the river, and pour  it upon the dry land   =
+#  3   2    5    4    2    4   2   4    4    3     7     4     5    3    5       7       7     4    3    5     4    4     5    4   2   3    5   2   3    5     3   4    2   4    3   3   4    143
+#  19  29   52   36   35   55  15  58   56   49    60    47    57   58   68      79      62    70   53   54    49   64    60   37  21  33   67  21  33   72    19  70   29  66   33  47  31   1764
+#  55 209  169  108  260  271  15 913  569  310   456   191   318  760  266     367     179   610  908  477   409  568   339  226  66 213  796  66 213  594    55 520  209 480  213 794  85  13257
+# and the water which thou takest out of the river shall become blood upon the dry land.  =
+#  3   3    5     5    4     6     3  2   3    5     5     6      5    4    3   3    4    69
+#  19  33   67    51   64    76    56 21  33   72    52    43     48   66   33  47   31  812
+#  55 213  796   528  568   526   560 66 213  594   169   115    156  480  213 794   85  6131
+# [None, None]
+# >>> 77*76
+# 5852
+# >>> five.vc()
+# 5852
+# >>> 176*177
+# 31152
+# >>> 31102-176**2
+# 126
+# >>> 31102**.5
+# 176.35759127409287
+# >>> base(22,31102)
+# [2, 20, 5, 16]
+# >>> base(32,31102)
+# [30, 11, 30]
+# >>> (66*10**2+19)*(6**6*10+19)
+# 3088286401
+# >>> base(22,_),base(23,_)
+# ([1, 5, 5, 5, 8, 9, 0, 13], [20, 19, 18, 19, 18, 11, 18])
+# >>> Deuteronomy[11:18]
+# Deuteronomy 11:18 Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes.
+# >>> b/'as frontlets'
+# Deuteronomy 6:8 And thou shalt bind them for a sign upon thine hand, and they shall be as frontlets between thine eyes.
+# Deuteronomy 11:18 Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes.
+# >>> _.vns()
+# [5095, 5227]
+# >>> _@ns
+# [5, 1019] [3, 171]
+# [5227] [694]
+# [None, None]
+# >>> ns(694)
+# [2, 347] [1, 69]
+# >>> pn(pn(69))
+# 2341
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 

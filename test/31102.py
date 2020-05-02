@@ -44,6 +44,29 @@
 # 1189
 # >>> 1+33*3+33*33
 # 1189
+# >>> 31102/333
+# 93.3993993993994
+# >>> 31102/9900-pi
+# 2.3508026368634916e-05
+# >>> _*9900
+# 0.23272946104948566
+# >>> 23/99
+# 0.23232323232323232
+# >>> 31102-2300
+# 28802
+# >>> 31102/9900
+# 3.1416161616161618
+# >>> 934*333
+# 311022
+# >>> ns(934*333)
+# [2, 3, 3, 37, 467] [1, 2, 2, 12, 91]
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
+# >>> 
 # >>> 
 # >>> 
 # >>> 
@@ -369,10 +392,10 @@
 # Luke 9:19 They answering said, John the Baptist; but some say, Elias; and others say, that one of the old prophets is risen again.
 # >>> import chapters
 # >>> add//Row(lmap(osum, Job[39:1].words()))
-# Row([107, 171, 204, 251, 301, 334, 382, 444, 465, 498, 545, 595, 662, 695, 752, 816, 859, 909, 942, 996, 1015, 1058])
+# 107 171 204 251 301 334 382 444 465 498 545 595 662 695 752 816 859 909 942 996 1015 1058
 # >>> 
 # >>> p(tt(chapters.partialsums([osum(w) for w in Job[39:1].words()])))
-# <console>:1: NameError: name 'tt' is not defined
+# <169>:1: NameError: name 'tt' is not defined
 # >>> 
 # >>> tell('upharsin')
 # u  p  h a r  s  i n   =
@@ -401,8 +424,7 @@
 # >>> 
 # >>> 
 # >>> b/77
-# Judges 8:14 And caught a young man of the men of Succoth, and enquired of him: and he described unto him the princes of Succoth, and the elders thereof, even threescore and seventeen men.
-# Ezra 8:35 Also the children of those that had been carried away, which were come out of the captivity, offered burnt offerings unto the God of Israel, twelve bullocks for all Israel, ninety and six rams, seventy and seven lambs, twelve he goats for a sin offering: all this was a burnt offering unto the LORD.
+# Genesis 4:24;Judges 8:14;Ezra 8:35 (3 verses)
 # >>> 
 # >>> base(255, 31102)
 # [121, 247]
@@ -427,9 +449,9 @@
 # >>> sof(126)
 # 312
 # >>> sums('Revelation')
-# (121, 850)
+# (10, 121, 850)
 # >>> [(b.name(),sums(b.name())) for b in b.books()]
-# [('Genesis', (78, 276)), ('Exodus', (88, 1069)), ('Leviticus', (120, 1056)), ('Numbers', (92, 587)), ('Deuteronomy', (155, 1514)), ('Joshua', (74, 479)), ('Judges', (66, 426)), ('Ruth', (67, 598)), ('1 Samuel', (72, 477)), ('2 Samuel', (73, 478)), ('1 Kings', (61, 187)), ('2 Kings', (62, 188)), ('1 Chronicles', (107, 359)), ('2 Chronicles', (108, 360)), ('Ezra', (50, 896)), ('Nehemiah', (63, 126)), ('Esther', (75, 408)), ('Job', (27, 72)), ('Psalms', (80, 341)), ('Proverbs', (115, 817)), ('Ecclesiastes', (120, 561)), ('Song of Solomon', (179, 683)), ('Isaiah', (47, 128)), ('Jeremiah', (69, 168)), ('Lamentations', (143, 746)), ('Ezekiel', (73, 874)), ('Daniel', (45, 99)), ('Hosea', (48, 174)), ('Joel', (42, 105)), ('Amos', (48, 201)), ('Obadiah', (40, 85)), ('Jonah', (48, 129)), ('Micah', (34, 61)), ('Nahum', (57, 399)), ('Habakkuk', (66, 372)), ('Zephaniah', (88, 952)), ('Haggai', (33, 33)), ('Zechariah', (79, 925)), ('Malachi', (47, 92)), ('Matthew', (90, 954)), ('Mark', (43, 151)), ('Luke', (49, 355)), ('John', (47, 128)), ('Acts', (43, 304)), ('Romans', (80, 341)), ('1 Corinthians', (131, 581)), ('2 Corinthians', (132, 582)), ('Galatians', (84, 399)), ('Ephesians', (96, 348)), ('Philippians', (129, 426)), ('Colossians', (126, 513)), ('1 Thessalonians', (157, 715)), ('2 Thessalonians', (158, 716)), ('1 Timothy', (111, 1218)), ('2 Timothy', (112, 1219)), ('Titus', (89, 809)), ('Philemon', (92, 272)), ('Hebrews', (80, 710)), ('James', (48, 156)), ('1 Peter', (65, 371)), ('2 Peter', (66, 372)), ('1 John', (48, 129)), ('2 John', (49, 130)), ('3 John', (50, 131)), ('Jude', (40, 319)), ('Revelation', (121, 850))]
+# [('Genesis', (7, 78, 276)), ('Exodus', (6, 88, 1069)), ('Leviticus', (9, 120, 1056)), ('Numbers', (7, 92, 587)), ('Deuteronomy', (11, 155, 1514)), ('Joshua', (6, 74, 479)), ('Judges', (6, 66, 426)), ('Ruth', (4, 67, 598)), ('1 Samuel', (7, 72, 477)), ('2 Samuel', (7, 73, 478)), ('1 Kings', (6, 61, 187)), ('2 Kings', (6, 62, 188)), ('1 Chronicles', (11, 107, 359)), ('2 Chronicles', (11, 108, 360)), ('Ezra', (4, 50, 896)), ('Nehemiah', (8, 63, 126)), ('Esther', (6, 75, 408)), ('Job', (3, 27, 72)), ('Psalms', (6, 80, 341)), ('Proverbs', (8, 115, 817)), ('Ecclesiastes', (12, 120, 561)), ('Song of Solomon', (13, 179, 683)), ('Isaiah', (6, 47, 128)), ('Jeremiah', (8, 69, 168)), ('Lamentations', (12, 143, 746)), ('Ezekiel', (7, 73, 874)), ('Daniel', (6, 45, 99)), ('Hosea', (5, 48, 174)), ('Joel', (4, 42, 105)), ('Amos', (4, 48, 201)), ('Obadiah', (7, 40, 85)), ('Jonah', (5, 48, 129)), ('Micah', (5, 34, 61)), ('Nahum', (5, 57, 399)), ('Habakkuk', (8, 66, 372)), ('Zephaniah', (9, 88, 952)), ('Haggai', (6, 33, 33)), ('Zechariah', (9, 79, 925)), ('Malachi', (7, 47, 92)), ('Matthew', (7, 90, 954)), ('Mark', (4, 43, 151)), ('Luke', (4, 49, 355)), ('John', (4, 47, 128)), ('Acts', (4, 43, 304)), ('Romans', (6, 80, 341)), ('1 Corinthians', (12, 131, 581)), ('2 Corinthians', (12, 132, 582)), ('Galatians', (9, 84, 399)), ('Ephesians', (9, 96, 348)), ('Philippians', (11, 129, 426)), ('Colossians', (10, 126, 513)), ('1 Thessalonians', (14, 157, 715)), ('2 Thessalonians', (14, 158, 716)), ('1 Timothy', (8, 111, 1218)), ('2 Timothy', (8, 112, 1219)), ('Titus', (5, 89, 809)), ('Philemon', (8, 92, 272)), ('Hebrews', (7, 80, 710)), ('James', (5, 48, 156)), ('1 Peter', (6, 65, 371)), ('2 Peter', (6, 66, 372)), ('1 John', (5, 48, 129)), ('2 John', (5, 49, 130)), ('3 John', (5, 50, 131)), ('Jude', (4, 40, 319)), ('Revelation', (10, 121, 850))]
 # >>> math.exp(1)
 # 2.718281828459045
 # >>> 31102-27182
@@ -456,4 +478,8 @@
 # 980.0
 # >>> 70-980
 # -910
+# >>> 0x797e
+# 31102
+# >>> base(797,31102)
+# [39, 19]
 # >>> 

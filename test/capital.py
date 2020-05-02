@@ -35,6 +35,36 @@
  (763,
   'MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS AND ABOMINATIONS OF THE '
   'EARTH')]
+>>> sums('Messiah')
+(7, 74, 263)
+>>> osum('dnA')
+19
+>>> osum('את'),osum('I AM')
+(23, 23)
+>>> osum('begin')
+37
+>>> osum('King')
+41
+>>> ssum('Adam')
+46
+>>> osum('XY')
+49
+>>> osum('ישוע')
+53
+>>> 63*63,49*81,49*osum('beginning')
+(3969, 3969, 3969)
+>>> 2**6,osum('God')
+(64, 26)
+>>> 3*osum('I AM')
+69
+>>> osum('Joshua'),osum('Messiah'),osum('MENE MENE')
+(74, 74, 74)
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
 >>> pp(sorted([(ssum(s),s) for s in _]))
 [(19, 'JAH'),
  (50, 'I AM'),

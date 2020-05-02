@@ -39,7 +39,7 @@
     1
     >>> b.count('tru')
     670
-    >>> sorted(set(b.words()@meth.rstrip(',.:;?)')))/meth.startswith('tru')
+    >>> sorted(set(b.ws()))/meth.startswith('tru')
     ['trucebreakers', 'true', 'truly', 'trump', 'trumpet', 'trumpeters', 'trumpets', 'trust', 'trusted', 'trustedst', 'trustest', 'trusteth', 'trusting', 'trusty', 'truth', "truth's"]
     >>> _**p
     trucebreakers true truly trump trumpet trumpeters trumpets trust trusted trustedst trustest trusteth trusting trusty truth truth's
@@ -62,6 +62,105 @@
     truth's
     [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
     >>> 
+    >>> tell(ssum,'true')
+     t  r   u  e  =
+    200 90 300 5 595
+    >>> 
+    >>> 66**2+1
+    4357
+    >>> np(_)
+    595
+    >>> sos(pn(595))
+    [[(1, 1), (66, 66)]]
+    >>> pn(66)
+    317
+    >>> sos(_)
+    [[(11, 11), (14, 14)]]
+    >>> pn(37)
+    157
+    >>> sos(_)
+    [[(6, 6), (11, 11)]]
+    >>> pn(73)
+    367
+    >>> sos(_),sos(74)
+    ([], [[(5, 5), (7, 7)]])
+    >>> sos(77)
+    []
+    >>> sos(151)
+    []
+    >>> np(151)
+    36
+    >>> span(40)@F(pn)
+    [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173]
+    >>> pn(151)
+    877
+    >>> pn(36)
+    151
+    >>> ns(28657)
+    [28657] [3121]
+    >>> ns(3121)
+    [3121] [445]
+    >>> ns(445)
+    [5, 89] [3, 24]
+    >>> pn(pn(5*89))
+    28657
+    >>> Fn(23)
+    28657
+    >>> sos(3121)
+    [[(39, 39), (40, 40)]]
+    >>> 
+    >>> 
+    >>> Fn(40)
+    102334155
+    >>> 2**10*10000
+    10240000
+    >>> Fn(40)**.5
+    10116.034549169946
+    >>> 10116/32
+    316.125
+    >>> 5058/16
+    316.125
+    >>> _**2
+    99935.015625
+    >>> pi=math.pi
+    >>> pi**2
+    9.869604401089358
+    >>> divmod(9869,49)
+    (201, 20)
+    >>> 201*49
+    9849
+    >>> 161*49
+    7889
+    >>> int('30213',2*3)
+    3969
+    >>> base(64,3969)
+    [62, 1]
+    >>> 64**2
+    4096
+    >>> 4096-3969
+    127
+    >>> 
+    >>> 
+    >>> 
+    >>> _**2
+    16129
+    >>> 
+    >>> 
+    >>> 10000**.5
+    100.0
+    >>> 
+    >>> b.vi(28657)
+    1 Corinthians 12:22 Nay, much more those members of the body, which seem to be more feeble, are necessary:
+    >>> 
+    >>> 28657-23145
+    5512
+    >>> b.vi(5512)
+    Deuteronomy 23:11 But it shall be, when evening cometh on, he shall wash himself with water: and when the sun is down, he shall come into the camp again.
+    >>> _.tells()
+    But  it shall be, when evening cometh on, he shall wash himself with water: and when the sun  is down, he shall come into the camp again.  =
+     3   2    5    2   4      7      6     2  2    5    4      7     4     5     3   4    3   3   2    4   2    5    4    4    3   4     5    104
+     43  29   52   7   50     76     64    29 13   52   51     72    60    67    19  50   33  54  28   56  13   52   36   58   33  33    32   1162
+    502 209  169   7  563    526    316   110 13  169  609    198   717   796    55 563  213 450 109  614  13  169  108  319  213 114    68   7912
     >>> 
     >>> 
     >>> 

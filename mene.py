@@ -112,7 +112,7 @@ def issquare(n): return int(math.sqrt(n))**2==n
 
 @Func
 def sos(n):
-    r=span(int((n/2)**.5))/F((lambda x: issquare(n-x*x)))
+    r=span(0,int((n/2)**.5))/F((lambda x: issquare(n-x*x)))
     return [[i,int(math.sqrt(n-i*i))]@(I+I) for i in r]
 
 # >>> from mene import *

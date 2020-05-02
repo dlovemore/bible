@@ -192,6 +192,7 @@ class Sel:
             s=count
         return sum([s(v.vs()) for v in self])
 
+    def tells(self): return self.tell(lsum,osum,ssum)
     def tell(self,*fs):
         for i in span(self.vc()):
             tell(self.verse(i).vs(),*fs)
@@ -201,7 +202,7 @@ class Sel:
             ws+=self.doc[i][3].split()
         return ws
     def ws(self):
-        return [w.rstrip(':);.,-!?') for w in self.words()]
+        return [w.rstrip(':);.,-!?').lstrip('(') for w in self.words()]
     def __getitem__(self,k):
         if isinstance(k, str):
             return getattr(self,k)
@@ -548,7 +549,7 @@ def verselist(bible):
 # >>> len(set(g1w))
 # 198
 # >>> set([letters(w) for w in g1w])
-# {'was', 'dominion', 'saw', 'which', 'green', 'fifth', 'form', 'lesser', 'image', 'first', 'gathered', 'dry', 'is', 'us', 'for', 'own', 'above', 'grass', 'appear', 'sea', 'air', 'created', 'after', 'in', 'evening', 'upon', 'from', 'under', 'of', 'second', 'were', 'yielding', 'shall', 'void', 'seas', 'the', 'moveth', 'there', 'without', 'days', 'seasons', 'gathering', 'let', 'night', 'meat', 'god', 'signs', 'have', 'our', 'saying', 'man', 'brought', 'face', 'one', 'moved', 'itself', 'morning', 'unto', 'place', 'greater', 'winged', 'set', 'him', 'living', 'wherein', 'that', 'it', 'darkness', 'fowl', 'fourth', 'may', 'divided', 'and', 'heaven', 'to', 'very', 'also', 'over', 'two', 'thing', 'female', 'life', 'lights', 'hath', 'stars', 'likeness', 'sixth', 'together', 'seed', 'whales', 'blessed', 'you', 'herb', 'so', 'open', 'i', 'kind', 'a', 'them', 'creeping', 'behold', 'multiply', 'bring', 'subdue', 'fish', 'had', 'waters', 'third', 'every', 'their', 'creature', 'great', 'bearing', 'light', 'his', 'made', 'beast', 'creepeth', 'years', 'rule', 'fruit', 'all', 'moving', 'tree', 'spirit', 'he', 'given', 'firmament', 'fill', 'forth', 'land', 'called', 'replenish', 'make', 'midst', 'good', 'fly', 'whose', 'day', 'divide', 'cattle', 'abundantly', 'fruitful', 'give', 'beginning', 'said', 'deep', 'male', 'be', 'earth'}
+# {'third', 'all', 'god', 'fly', 'moved', 'above', 'sea', 'behold', 'of', 'also', 'very', 'lights', 'creeping', 'kind', 'form', 'was', 'them', 'man', 'from', 'him', 'make', 'be', 'every', 'unto', 'there', 'which', 'said', 'in', 'land', 'air', 'subdue', 'under', 'so', 'two', 'dominion', 'living', 'is', 'greater', 'creepeth', 'beast', 'day', 'signs', 'winged', 'itself', 'replenish', 'forth', 'fourth', 'female', 'their', 'sixth', 'fowl', 'good', 'brought', 'darkness', 'cattle', 'earth', 'bearing', 'appear', 'abundantly', 'called', 'firmament', 'fish', 'night', 'you', 'herb', 'divide', 'saw', 'fruitful', 'divided', 'lesser', 'seas', 'have', 'give', 'dry', 'stars', 'moveth', 'whales', 'upon', 'blessed', 'one', 'bring', 'face', 'deep', 'likeness', 'green', 'were', 'over', 'set', 'meat', 'spirit', 'a', 'our', 'the', 'it', 'place', 'void', 'thing', 'fruit', 'gathering', 'created', 'us', 'wherein', 'years', 'i', 'tree', 'seasons', 'whose', 'moving', 'to', 'for', 'shall', 'gathered', 'life', 'may', 'open', 'beginning', 'first', 'heaven', 'after', 'male', 'morning', 'that', 'second', 'creature', 'multiply', 'rule', 'he', 'his', 'and', 'fill', 'had', 'without', 'saying', 'given', 'midst', 'made', 'seed', 'hath', 'fifth', 'yielding', 'evening', 'image', 'together', 'great', 'grass', 'waters', 'light', 'let', 'days', 'own'}
 # >>> len(_)
 # 150
 # >>> pf(12691)
@@ -907,3 +908,13 @@ def verselist(bible):
 #   57   33   49  15 38   67   19   71    49  25  36     80    539
 # >>> 667+539
 # 1206
+# >>> Genesis[1:2].tell(osum,ssum)
+# And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.  =
+#  19  33   52   43   116     52   19   50   19    91     43  66   33  15  21  33   30   19  33   91   21  26   59   66   33  15  21  33    86   1238
+#  55 213  304  601   1277   196   55  473   55   370    601 480  213  15  66 213   84   55 213  478   66  71  509  480  213  15  66 213   896   8546
+# >>> Genesis[1:2].tells()
+# And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.  =
+#  3   3    5    3     7      4    3    4    3     8      3   4    3   4   2   3    4    3   3    6    2   3    5    4    3   4   2   3     6    110
+#  19  33   52   43   116     52   19   50   19    91     43  66   33  15  21  33   30   19  33   91   21  26   59   66   33  15  21  33    86   1238
+#  55 213  304  601   1277   196   55  473   55   370    601 480  213  15  66 213   84   55 213  478   66  71  509  480  213  15  66 213   896   8546
+# >>> 

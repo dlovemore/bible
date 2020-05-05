@@ -9,14 +9,17 @@ c=299792458
 ab='abcdefghijklmnopqrstuvwxyz'
 αβ='αβγδεϝζηθικλμνξοπϙρστυφχψωϡ'
 אב='אבגדהוזחטיכלמנסעפצקרשת'
+аб='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+
 nn='0123456789'
 pos={c:i for i,c in enumerate(ab,start=1)}
 pos.update({c:i for i,c in enumerate(αβ,start=1)})
 pos.update({c:i for i,c in enumerate(אב,start=1)})
+pos.update({c:i for i,c in enumerate(аб,start=1)})
 pos.update({c:i for i,c in enumerate(nn)})
 
-characters={a:a for a in ab+αβ+אב+nn}
-vowels=set('aeiou' + 'αεηιουω')
+characters={a:a for a in pos.keys()}
+vowels=set('aeiou' + 'αεηιουω' + 'аеёийоуыьэюя')
 
 def begin():
     eqss=['αάἀἁἂἃἄἅἆἇὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷ','εέἐἑἒἓἔἕὲέ','ηήἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇ',
@@ -40,13 +43,16 @@ def isletter(c):
             stop
     return c in characters
 
+@Func
 @functools.lru_cache(22222)
 def letters(s):
     return ''.join([characters[c] for c in s.lower() if isletter(c)])
 
+@Func
 def ovals(s):
     return [pos[c] for c in letters(s)]
 
+@Func
 def count(s): return sum(ovals(s))
 
 osum=count
@@ -58,22 +64,29 @@ def ascsum(s): return sum((ord(l) for l in s if isletter(l)))
 def sums(s): return lsum(s),osum(s),psum(s)
 psum=ssum
 
+@Func
 def showalphas(ab=ab,f=osum):
     letters, vals = table(ab,[f(l) for l in ab])
     print(' '.join(letters))
     print(' '.join(vals))
 
+@Func
 def join(sep,l):
     r=[sep]*(len(l)*2-1)
     r[::2]=l
     return r
 
+@Func
 def tell(*ss):
     print(texttable(telltable(*ss)))
 
+tells=partial(tell,lsum,osum,ssum)
+
+@Func
 def tellmd(*ss):
     print(mdtable(telltable(*ss)))
 
+@Func
 def telltable(*ss):
     if not ss: return
     fs = [f for f in ss if callable(f)]
@@ -93,9 +106,11 @@ def telltable(*ss):
             vv.append(vals+[sum(vals)])
         return Table(vv)
 
+@Func
 def texttable(vv,sep=' '):
     return '\n'.join([sep.join(v).rstrip() for v in justify(vv)])
 
+@Func
 def mdtable(vv):
     vv=fill(vv@str,'')
     def j(s,l): return s+s.join(l)
@@ -153,7 +168,7 @@ def sos(n):
 # 31
 # >>> 
 # >>> sos(100)
-# [[(6, 6), (8, 8)]]
+# [[(0, 0), (10, 10)], [(6, 6), (8, 8)]]
 # >>> sos(50)
 # [[(1, 1), (7, 7)], [(5, 5), (5, 5)]]
 # >>> sos(18)
@@ -813,4 +828,15 @@ def sos(n):
 # >>> 
 # >>> ns(123)
 # [3, 41] [2, 13]
-# >>> 
+# >>> tell('Бог')
+# Б о  г =
+# 2 16 4 22
+# >>> tell('Иегова')
+# И  е г о  в а =
+# 10 6 4 16 3 1 40
+# >>> tell('Жэхова')
+# Ж э  х  о  в а =
+# 8 31 23 16 3 1 82
+# >>> tell(аб)
+# а б в г д е ё ж з и  й  к  л  м  н  о  п  р  с  т  у  ф  х  ц  ч  ш  щ  ъ  ы  ь  э  ю  я   =
+# 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 561

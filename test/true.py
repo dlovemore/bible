@@ -1,166 +1,1401 @@
-    >>> from bible import *
-    >>> tell('truth')
-    t  r  u  t  h =
-    20 18 21 20 8 87
-    >>> tell('true')
-    t  r  u  e =
-    20 18 21 5 64
-    >>> b[64]
-    3 John 1:1-14 (14 verses)
-    >>> p(_)
-    3 John 1
-    1 The elder unto the wellbeloved Gaius, whom I love in the truth.
-    2 Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth.
-    3 For I rejoiced greatly, when the brethren came and testified of the truth that is in thee, even as thou walkest in the truth.
-    4 I have no greater joy than to hear that my children walk in truth.
-    5 Beloved, thou doest faithfully whatsoever thou doest to the brethren, and to strangers;
-    6 Which have borne witness of thy charity before the church: whom if thou bring forward on their journey after a godly sort, thou shalt do well:
-    7 Because that for his name's sake they went forth, taking nothing of the Gentiles.
-    8 We therefore ought to receive such, that we might be fellowhelpers to the truth.
-    9 I wrote unto the church: but Diotrephes, who loveth to have the preeminence among them, receiveth us not.
-    10 Wherefore, if I come, I will remember his deeds which he doeth, prating against us with malicious words: and not content therewith, neither doth he himself receive the brethren, and forbiddeth them that would, and casteth them out of the church.
-    11 Beloved, follow not that which is evil, but that which is good. He that doeth good is of God: but he that doeth evil hath not seen God.
-    12 Demetrius hath good report of all men, and of the truth itself: yea, and we also bear record; and ye know that our record is true.
-    13 I had many things to write, but I will not with ink and pen write unto thee:
-    14 But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name.
-    >>> _.count('truth')
-    6
-    >>> b.count('truth')
-    237
-    >>> pf(_)
-    Counter({3: 1, 79: 1})
-    >>> b.count('true')
-    81
-    >>> 237+81
-    318
-    >>> b.count('truly')
-    42
-    >>> b[64].count('true')
-    1
-    >>> b.count('tru')
-    670
-    >>> sorted(set(b.ws()))/meth.startswith('tru')
-    ['trucebreakers', 'true', 'truly', 'trump', 'trumpet', 'trumpeters', 'trumpets', 'trust', 'trusted', 'trustedst', 'trustest', 'trusteth', 'trusting', 'trusty', 'truth', "truth's"]
-    >>> _**p
-    trucebreakers true truly trump trumpet trumpeters trumpets trust trusted trustedst trustest trusteth trusting trusty truth truth's
-    >>> _@p
-    trucebreakers
-    true
-    truly
-    trump
-    trumpet
-    trumpeters
-    trumpets
-    trust
-    trusted
-    trustedst
-    trustest
-    trusteth
-    trusting
-    trusty
-    truth
-    truth's
-    [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
-    >>> 
-    >>> tell(ssum,'true')
-     t  r   u  e  =
-    200 90 300 5 595
-    >>> 
-    >>> 66**2+1
-    4357
-    >>> np(_)
-    595
-    >>> sos(pn(595))
-    [[(1, 1), (66, 66)]]
-    >>> pn(66)
-    317
-    >>> sos(_)
-    [[(11, 11), (14, 14)]]
-    >>> pn(37)
-    157
-    >>> sos(_)
-    [[(6, 6), (11, 11)]]
-    >>> pn(73)
-    367
-    >>> sos(_),sos(74)
-    ([], [[(5, 5), (7, 7)]])
-    >>> sos(77)
-    []
-    >>> sos(151)
-    []
-    >>> np(151)
-    36
-    >>> span(40)@F(pn)
-    [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173]
-    >>> pn(151)
-    877
-    >>> pn(36)
-    151
-    >>> ns(28657)
-    [28657] [3121]
-    >>> ns(3121)
-    [3121] [445]
-    >>> ns(445)
-    [5, 89] [3, 24]
-    >>> pn(pn(5*89))
-    28657
-    >>> Fn(23)
-    28657
-    >>> sos(3121)
-    [[(39, 39), (40, 40)]]
-    >>> 
-    >>> 
-    >>> Fn(40)
-    102334155
-    >>> 2**10*10000
-    10240000
-    >>> Fn(40)**.5
-    10116.034549169946
-    >>> 10116/32
-    316.125
-    >>> 5058/16
-    316.125
-    >>> _**2
-    99935.015625
-    >>> pi=math.pi
-    >>> pi**2
-    9.869604401089358
-    >>> divmod(9869,49)
-    (201, 20)
-    >>> 201*49
-    9849
-    >>> 161*49
-    7889
-    >>> int('30213',2*3)
-    3969
-    >>> base(64,3969)
-    [62, 1]
-    >>> 64**2
-    4096
-    >>> 4096-3969
-    127
-    >>> 
-    >>> 
-    >>> 
-    >>> _**2
-    16129
-    >>> 
-    >>> 
-    >>> 10000**.5
-    100.0
-    >>> 
-    >>> b.vi(28657)
-    1 Corinthians 12:22 Nay, much more those members of the body, which seem to be more feeble, are necessary:
-    >>> 
-    >>> 28657-23145
-    5512
-    >>> b.vi(5512)
-    Deuteronomy 23:11 But it shall be, when evening cometh on, he shall wash himself with water: and when the sun is down, he shall come into the camp again.
-    >>> _.tells()
-    But  it shall be, when evening cometh on, he shall wash himself with water: and when the sun  is down, he shall come into the camp again.  =
-     3   2    5    2   4      7      6     2  2    5    4      7     4     5     3   4    3   3   2    4   2    5    4    4    3   4     5    104
-     43  29   52   7   50     76     64    29 13   52   51     72    60    67    19  50   33  54  28   56  13   52   36   58   33  33    32   1162
-    502 209  169   7  563    526    316   110 13  169  609    198   717   796    55 563  213 450 109  614  13  169  108  319  213 114    68   7912
-    >>> 
-    >>> 
-    >>> 
+# >>> from bible import *
+# >>> tell('truth')
+# t  r  u  t  h =
+# 20 18 21 20 8 87
+# >>> tell('true')
+# t  r  u  e =
+# 20 18 21 5 64
+# >>> b[64]
+# 3 John 1:1-14 (14 verses)
+# >>> p(_)
+# 3 John 1
+# 1 The elder unto the wellbeloved Gaius, whom I love in the truth.
+# 2 Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth.
+# 3 For I rejoiced greatly, when the brethren came and testified of the truth that is in thee, even as thou walkest in the truth.
+# 4 I have no greater joy than to hear that my children walk in truth.
+# 5 Beloved, thou doest faithfully whatsoever thou doest to the brethren, and to strangers;
+# 6 Which have borne witness of thy charity before the church: whom if thou bring forward on their journey after a godly sort, thou shalt do well:
+# 7 Because that for his name's sake they went forth, taking nothing of the Gentiles.
+# 8 We therefore ought to receive such, that we might be fellowhelpers to the truth.
+# 9 I wrote unto the church: but Diotrephes, who loveth to have the preeminence among them, receiveth us not.
+# 10 Wherefore, if I come, I will remember his deeds which he doeth, prating against us with malicious words: and not content therewith, neither doth he himself receive the brethren, and forbiddeth them that would, and casteth them out of the church.
+# 11 Beloved, follow not that which is evil, but that which is good. He that doeth good is of God: but he that doeth evil hath not seen God.
+# 12 Demetrius hath good report of all men, and of the truth itself: yea, and we also bear record; and ye know that our record is true.
+# 13 I had many things to write, but I will not with ink and pen write unto thee:
+# 14 But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name.
+# >>> _.count('truth')
+# 6
+# >>> b.count('truth')
+# 237
+# >>> pf(_)
+# Counter({3: 1, 79: 1})
+# >>> b.count('true')
+# 81
+# >>> 237+81
+# 318
+# >>> b.count('truly')
+# 42
+# >>> b[64].count('true')
+# 1
+# >>> b.count('tru')
+# 670
+# >>> sorted(set(b.ws()))/meth.startswith('tru')
+# ['trucebreakers', 'true', 'truly', 'trump', 'trumpet', 'trumpeters', 'trumpets', 'trust', 'trusted', 'trustedst', 'trustest', 'trusteth', 'trusting', 'trusty', 'truth', "truth's"]
+# >>> _**p
+# trucebreakers true truly trump trumpet trumpeters trumpets trust trusted trustedst trustest trusteth trusting trusty truth truth's
+# >>> _@p
+# trucebreakers
+# true
+# truly
+# trump
+# trumpet
+# trumpeters
+# trumpets
+# trust
+# trusted
+# trustedst
+# trustest
+# trusteth
+# trusting
+# trusty
+# truth
+# truth's
+# [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+# >>> 
+# >>> tell(ssum,'true')
+#  t  r   u  e  =
+# 200 90 300 5 595
+# >>> 
+# >>> 66**2+1
+# 4357
+# >>> np(_)
+# 595
+# >>> sos(pn(595))
+# [[(1, 1), (66, 66)]]
+# >>> pn(66)
+# 317
+# >>> sos(_)
+# [[(11, 11), (14, 14)]]
+# >>> pn(37)
+# 157
+# >>> sos(_)
+# [[(6, 6), (11, 11)]]
+# >>> pn(73)
+# 367
+# >>> sos(_),sos(74)
+# ([], [[(5, 5), (7, 7)]])
+# >>> sos(77)
+# []
+# >>> sos(151)
+# []
+# >>> np(151)
+# 36
+# >>> span(40)@F(pn)
+# [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173]
+# >>> pn(151)
+# 877
+# >>> pn(36)
+# 151
+# >>> ns(28657)
+# [28657] [3121]
+# >>> ns(3121)
+# [3121] [445]
+# >>> ns(445)
+# [5, 89] [3, 24]
+# >>> pn(pn(5*89))
+# 28657
+# >>> Fn(23)
+# 28657
+# >>> sos(3121)
+# [[(39, 39), (40, 40)]]
+# >>> 
+# >>> 
+# >>> Fn(40)
+# 102334155
+# >>> 2**10*10000
+# 10240000
+# >>> Fn(40)**.5
+# 10116.034549169946
+# >>> 10116/32
+# 316.125
+# >>> 5058/16
+# 316.125
+# >>> _**2
+# 99935.015625
+# >>> pi=math.pi
+# >>> pi**2
+# 9.869604401089358
+# >>> divmod(9869,49)
+# (201, 20)
+# >>> 201*49
+# 9849
+# >>> 161*49
+# 7889
+# >>> int('30213',2*3)
+# 3969
+# >>> base(64,3969)
+# [62, 1]
+# >>> 64**2
+# 4096
+# >>> 4096-3969
+# 127
+# >>> 
+# >>> 
+# >>> 
+# >>> _**2
+# 16129
+# >>> 
+# >>> 
+# >>> 10000**.5
+# 100.0
+# >>> 
+# >>> b.vi(28657)
+# 1 Corinthians 12:22 Nay, much more those members of the body, which seem to be more feeble, are necessary:
+# >>> 
+# >>> 28657-23145
+# 5512
+# >>> b.vi(5512)
+# Deuteronomy 23:11 But it shall be, when evening cometh on, he shall wash himself with water: and when the sun is down, he shall come into the camp again.
+# >>> _.tells()
+# But  it shall be, when evening cometh on, he shall wash himself with water: and when the sun  is down, he shall come into the camp again.  =
+#  3   2    5    2   4      7      6     2  2    5    4      7     4     5     3   4    3   3   2    4   2    5    4    4    3   4     5    104
+#  43  29   52   7   50     76     64    29 13   52   51     72    60    67    19  50   33  54  28   56  13   52   36   58   33  33    32   1162
+# 502 209  169   7  563    526    316   110 13  169  609    198   717   796    55 563  213 450 109  614  13  169  108  319  213 114    68   7912
+# >>> 
+# >>> 
+# >>> 
+# >>> [b[i][1].vc()==Isaiah[i].vc() and i for i in span(66)]
+# [1, 2, False, False, False, False, False, 8, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, 53, False, False, False, False, 58, False, False, False, False, False, False, False, False]
+# >>> [b[i][1].vc()<Isaiah[i].vc() for i in span(66)]*F(sum)
+# 27
+# >>> 
+# >>> [b[i][1].vc()>Isaiah[i].vc() for i in span(66)]*F(sum)
+# 34
+# >>> 
+# >>> [b[i][1].vc()==Isaiah[i].vc() for i in span(66)]*F(sum)
+# 5
+# >>> [b.count('truth')+b.count('truly')+b.count('true') for b in b.books()]
+# [12, 2, 0, 2, 5, 4, 3, 1, 3, 3, 5, 3, 0, 4, 0, 1, 1, 2, 46, 12, 2, 0, 19, 14, 0, 2, 13, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 6, 1, 7, 6, 10, 49, 7, 9, 3, 11, 5, 7, 3, 2, 2, 3, 6, 6, 3, 0, 6, 3, 2, 3, 16, 5, 7, 0, 10]
+## >>> truthdensity=sorted([((b.count('truth')+b.count('truly')+b.count('true'))/b.vc(),b) for b in b.chapters()])[::-1]
+## >>> pprint.pprint(truthdensity)
+## [(0.5, 3 John 1:1-14 (14 verses)),
+##  (0.5,
+##   Psalms 117:1 O praise the LORD, all ye nations: praise him, all ye people.
+## Psalms 117:2 For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.),
+##  (0.38461538461538464, 2 John 1:1-13 (13 verses)),
+##  (0.3, 1 John 1:1-10 (10 verses)),
+##  (0.21739130434782608, Zechariah 8:1-23 (23 verses)),
+##  (0.20689655172413793, 1 John 2:1-29 (29 verses)),
+##  (0.2033898305084746, John 8:1-59 (59 verses)),
+##  (0.2, Psalms 100:1-5 (5 verses)),
+##  (0.2, Psalms 43:1-5 (5 verses)),
+##  (0.2, Psalms 15:1-5 (5 verses)),
+##  (0.19047619047619047, 1 John 5:1-21 (21 verses)),
+##  (0.1875, Titus 1:1-16 (16 verses)),
+##  (0.18181818181818182, Psalms 57:1-11 (11 verses)),
+##  (0.17647058823529413, 2 Thessalonians 2:1-17 (17 verses)),
+##  (0.15789473684210525, Genesis 42:1-38 (38 verses)),
+##  (0.15384615384615385, John 17:1-26 (26 verses)),
+##  (0.15384615384615385, Psalms 85:1-13 (13 verses)),
+##  (0.14285714285714285, Revelation 19:1-21 (21 verses)),
+##  (0.14285714285714285, 2 Corinthians 13:1-14 (14 verses)),
+##  (0.14285714285714285, Isaiah 59:1-21 (21 verses)),
+##  (0.14285714285714285, Psalms 54:1-7 (7 verses)),
+##  (0.13636363636363635, Isaiah 38:1-22 (22 verses)),
+##  (0.13333333333333333, 1 Timothy 2:1-15 (15 verses)),
+##  (0.125, Revelation 15:1-8 (8 verses)),
+##  (0.125, 1 Timothy 3:1-16 (16 verses)),
+##  (0.125, Ephesians 4:1-32 (32 verses)),
+##  (0.125, 2 Corinthians 7:1-16 (16 verses)),
+##  (0.125, Isaiah 39:1-8 (8 verses)),
+##  (0.125, Psalms 138:1-8 (8 verses)),
+##  (0.125, Psalms 61:1-8 (8 verses)),
+##  (0.125, Joshua 2:1-24 (24 verses)),
+##  (0.11764705882352941, 2 Timothy 3:1-17 (17 verses)),
+##  (0.11764705882352941, Psalms 86:1-17 (17 verses)),
+##  (0.11764705882352941, Psalms 40:1-17 (17 verses)),
+##  (0.11538461538461539, 2 Timothy 2:1-26 (26 verses)),
+##  (0.1111111111111111, 2 Corinthians 6:1-18 (18 verses)),
+##  (0.1111111111111111, Psalms 98:1-9 (9 verses)),
+##  (0.10714285714285714, Proverbs 12:1-28 (28 verses)),
+##  (0.10344827586206896, Romans 2:1-29 (29 verses)),
+##  (0.1, 1 Thessalonians 1:1-10 (10 verses)),
+##  (0.1, Ecclesiastes 11:1-10 (10 verses)),
+##  (0.1, Psalms 146:1-10 (10 verses)),
+##  (0.1, Psalms 111:1-10 (10 verses)),
+##  (0.09523809523809523, Galatians 2:1-21 (21 verses)),
+##  (0.09523809523809523, 2 Corinthians 12:1-21 (21 verses)),
+##  (0.09523809523809523, Daniel 10:1-21 (21 verses)),
+##  (0.09523809523809523, 2 Kings 20:1-21 (21 verses)),
+##  (0.09259259259259259, John 4:1-54 (54 verses)),
+##  (0.09090909090909091, Revelation 3:1-22 (22 verses)),
+##  (0.09090909090909091, 2 Peter 2:1-22 (22 verses)),
+##  (0.09090909090909091, John 16:1-33 (33 verses)),
+##  (0.09090909090909091, Isaiah 61:1-11 (11 verses)),
+##  (0.09090909090909091, Psalms 25:1-22 (22 verses)),
+##  (0.08695652173913043, Philippians 4:1-23 (23 verses)),
+##  (0.08333333333333333, 1 John 3:1-24 (24 verses)),
+##  (0.08333333333333333, Micah 3:1-12 (12 verses)),
+##  (0.08333333333333333, Isaiah 25:1-12 (12 verses)),
+##  (0.08333333333333333, Psalms 62:1-12 (12 verses)),
+##  (0.08333333333333333, Psalms 60:1-12 (12 verses)),
+##  (0.08333333333333333, Psalms 30:1-12 (12 verses)),
+##  (0.08333333333333333, Psalms 26:1-12 (12 verses)),
+##  (0.08, Jeremiah 10:1-25 (25 verses)),
+##  (0.08, Jeremiah 3:1-25 (25 verses)),
+##  (0.08, Isaiah 65:1-25 (25 verses)),
+##  (0.07692307692307693, Hebrews 8:1-13 (13 verses)),
+##  (0.07692307692307693, 1 Corinthians 13:1-13 (13 verses)),
+##  (0.07692307692307693, 1 Corinthians 5:1-13 (13 verses)),
+##  (0.07692307692307693, Jeremiah 9:1-26 (26 verses)),
+##  (0.07692307692307693, Psalms 108:1-13 (13 verses)),
+##  (0.07692307692307693, Psalms 96:1-13 (13 verses)),
+##  (0.075, John 18:1-40 (40 verses)),
+##  (0.07407407407407407, John 15:1-27 (27 verses)),
+##  (0.07407407407407407, Daniel 8:1-27 (27 verses)),
+##  (0.07142857142857142, 1 Peter 5:1-14 (14 verses)),
+##  (0.07142857142857142, Zechariah 7:1-14 (14 verses)),
+##  (0.07142857142857142, Daniel 7:1-28 (28 verses)),
+##  (0.07142857142857142, Isaiah 16:1-14 (14 verses)),
+##  (0.07142857142857142, Ecclesiastes 12:1-14 (14 verses)),
+##  (0.07142857142857142, Psalms 19:1-14 (14 verses)),
+##  (0.06896551724137931, Colossians 1:1-29 (29 verses)),
+##  (0.06896551724137931, Proverbs 22:1-29 (29 verses)),
+##  (0.06818181818181818, Mark 12:1-44 (44 verses)),
+##  (0.06666666666666667, Daniel 3:1-30 (30 verses)),
+##  (0.06666666666666667, 1 Samuel 21:1-15 (15 verses)),
+##  (0.06451612903225806, Romans 3:1-31 (31 verses)),
+##  (0.06451612903225806, John 14:1-31 (31 verses)),
+##  (0.06451612903225806, Jeremiah 5:1-31 (31 verses)),
+##  (0.06382978723404255, John 5:1-47 (47 verses)),
+##  (0.0625, 1 Timothy 4:1-16 (16 verses)),
+##  (0.0625, Romans 1:1-32 (32 verses)),
+##  (0.0625, Ezekiel 18:1-32 (32 verses)),
+##  (0.0625, Psalms 91:1-16 (16 verses)),
+##  (0.058823529411764705, Revelation 6:1-17 (17 verses)),
+##  (0.058823529411764705, John 1:1-51 (51 verses)),
+##  (0.058823529411764705, Malachi 2:1-17 (17 verses)),
+##  (0.058823529411764705, Jeremiah 28:1-17 (17 verses)),
+##  (0.058823529411764705, Psalms 45:1-17 (17 verses)),
+##  (0.05714285714285714, Proverbs 14:1-35 (35 verses)),
+##  (0.05660377358490566, John 7:1-53 (53 verses)),
+##  (0.05555555555555555, James 3:1-18 (18 verses)),
+##  (0.05555555555555555, 2 Corinthians 4:1-18 (18 verses)),
+##  (0.05555555555555555, John 3:1-36 (36 verses)),
+##  (0.05555555555555555, Psalms 132:1-18 (18 verses)),
+##  (0.05555555555555555, Psalms 115:1-18 (18 verses)),
+##  (0.05555555555555555, Ruth 3:1-18 (18 verses)),
+##  (0.05555555555555555, Deuteronomy 13:1-18 (18 verses)),
+##  (0.05263157894736842, Hosea 4:1-19 (19 verses)),
+##  (0.05263157894736842, Psalms 116:1-19 (19 verses)),
+##  (0.05263157894736842, Psalms 51:1-19 (19 verses)),
+##  (0.05263157894736842, 2 Chronicles 15:1-19 (19 verses)),
+##  (0.05263157894736842, Judges 9:1-57 (57 verses)),
+##  (0.05128205128205128, Hebrews 10:1-39 (39 verses)),
+##  (0.05, James 5:1-20 (20 verses)),
+##  (0.05, 1 Thessalonians 2:1-20 (20 verses)),
+##  (0.05, Micah 7:1-20 (20 verses)),
+##  (0.05, Deuteronomy 17:1-20 (20 verses)),
+##  (0.047619047619047616, Revelation 22:1-21 (21 verses)),
+##  (0.047619047619047616, Revelation 16:1-21 (21 verses)),
+##  (0.047619047619047616, 1 John 4:1-21 (21 verses)),
+##  (0.047619047619047616, 2 Peter 1:1-21 (21 verses)),
+##  (0.047619047619047616, 1 Timothy 6:1-21 (21 verses)),
+##  (0.047619047619047616, John 19:1-42 (42 verses)),
+##  (0.047619047619047616, Isaiah 26:1-21 (21 verses)),
+##  (0.047619047619047616, Psalms 145:1-21 (21 verses)),
+##  (0.047619047619047616, 2 Chronicles 31:1-21 (21 verses)),
+##  (0.045454545454545456, 2 Timothy 4:1-22 (22 verses)),
+##  (0.045454545454545456, Jeremiah 42:1-22 (22 verses)),
+##  (0.045454545454545456, Isaiah 48:1-22 (22 verses)),
+##  (0.045454545454545456, Psalms 33:1-22 (22 verses)),
+##  (0.045454545454545456, Genesis 48:1-22 (22 verses)),
+##  (0.044444444444444446, Numbers 14:1-45 (45 verses)),
+##  (0.043478260869565216, Ephesians 1:1-23 (23 verses)),
+##  (0.043478260869565216, Matthew 22:1-46 (46 verses)),
+##  (0.041666666666666664, Ephesians 6:1-24 (24 verses)),
+##  (0.041666666666666664, 2 Corinthians 1:1-24 (24 verses)),
+##  (0.041666666666666664, Jeremiah 26:1-24 (24 verses)),
+##  (0.041666666666666664, Psalms 71:1-24 (24 verses)),
+##  (0.041666666666666664, Psalms 31:1-24 (24 verses)),
+##  (0.041666666666666664, 1 Kings 17:1-24 (24 verses)),
+##  (0.04, 1 Peter 1:1-25 (25 verses)),
+##  (0.04, Acts 12:1-25 (25 verses)),
+##  (0.04, John 21:1-25 (25 verses)),
+##  (0.04, Isaiah 42:1-25 (25 verses)),
+##  (0.04, 1 Samuel 12:1-25 (25 verses)),
+##  (0.038461538461538464, Galatians 5:1-26 (26 verses)),
+##  (0.038461538461538464, Acts 3:1-26 (26 verses)),
+##  (0.038461538461538464, Acts 1:1-26 (26 verses)),
+##  (0.038461538461538464, Jeremiah 33:1-26 (26 verses)),
+##  (0.038461538461538464, Psalms 89:1-52 (52 verses)),
+##  (0.038461538461538464, Genesis 4:1-26 (26 verses)),
+##  (0.037037037037037035, Revelation 21:1-27 (27 verses)),
+##  (0.037037037037037035, James 1:1-27 (27 verses)),
+##  (0.037037037037037035, Matthew 17:1-27 (27 verses)),
+##  (0.037037037037037035, Daniel 9:1-27 (27 verses)),
+##  (0.037037037037037035, Exodus 18:1-27 (27 verses)),
+##  (0.03571428571428571, Hebrews 9:1-28 (28 verses)),
+##  (0.03571428571428571, Hebrews 7:1-28 (28 verses)),
+##  (0.03571428571428571, Daniel 6:1-28 (28 verses)),
+##  (0.03571428571428571, Isaiah 43:1-28 (28 verses)),
+##  (0.03571428571428571, Psalms 73:1-28 (28 verses)),
+##  (0.03571428571428571, 1 Kings 3:1-28 (28 verses)),
+##  (0.034482758620689655, Galatians 3:1-29 (29 verses)),
+##  (0.034482758620689655, 1 Kings 10:1-29 (29 verses)),
+##  (0.034482758620689655, 2 Samuel 7:1-29 (29 verses)),
+##  (0.034482758620689655, Deuteronomy 14:1-29 (29 verses)),
+##  (0.03333333333333333, Philippians 1:1-30 (30 verses)),
+##  (0.03333333333333333, Isaiah 5:1-30 (30 verses)),
+##  (0.03333333333333333, Proverbs 20:1-30 (30 verses)),
+##  (0.03333333333333333, Deuteronomy 22:1-30 (30 verses)),
+##  (0.03225806451612903, Galatians 4:1-31 (31 verses)),
+##  (0.03225806451612903, John 20:1-31 (31 verses)),
+##  (0.03225806451612903, Luke 16:1-31 (31 verses)),
+##  (0.03225806451612903, Jeremiah 4:1-31 (31 verses)),
+##  (0.03225806451612903, 2 Chronicles 9:1-31 (31 verses)),
+##  (0.03225806451612903, Genesis 47:1-31 (31 verses)),
+##  (0.03125, Acts 26:1-32 (32 verses)),
+##  (0.03125, Esther 9:1-32 (32 verses)),
+##  (0.03125, 2 Samuel 2:1-32 (32 verses)),
+##  (0.03125, Genesis 32:1-32 (32 verses)),
+##  (0.030303030303030304, Ephesians 5:1-33 (33 verses)),
+##  (0.030303030303030304, 2 Corinthians 11:1-33 (33 verses)),
+##  (0.030303030303030304, Romans 15:1-33 (33 verses)),
+##  (0.030303030303030304, Romans 9:1-33 (33 verses)),
+##  (0.030303030303030304, Proverbs 16:1-33 (33 verses)),
+##  (0.030303030303030304, Job 36:1-33 (33 verses)),
+##  (0.030303030303030304, Joshua 24:1-33 (33 verses)),
+##  (0.029850746268656716, Genesis 24:1-67 (67 verses)),
+##  (0.029411764705882353, Jeremiah 7:1-34 (34 verses)),
+##  (0.029411764705882353, Isaiah 10:1-34 (34 verses)),
+##  (0.029411764705882353, 2 Chronicles 18:1-34 (34 verses)),
+##  (0.02857142857142857, Proverbs 23:1-35 (35 verses)),
+##  (0.02857142857142857, Proverbs 3:1-35 (35 verses)),
+##  (0.02857142857142857, Job 9:1-35 (35 verses)),
+##  (0.02857142857142857, Exodus 34:1-35 (35 verses)),
+##  (0.028409090909090908, Psalms 119:1-176 (176 verses)),
+##  (0.028169014084507043, John 6:1-71 (71 verses)),
+##  (0.028169014084507043, Luke 22:1-71 (71 verses)),
+##  (0.027777777777777776, Matthew 14:1-36 (36 verses)),
+##  (0.027777777777777776, Proverbs 8:1-36 (36 verses)),
+##  (0.027777777777777776, Psalms 69:1-36 (36 verses)),
+##  (0.02702702702702703, Acts 4:1-37 (37 verses)),
+##  (0.02702702702702703, Daniel 4:1-37 (37 verses)),
+##  (0.02702702702702703, 2 Kings 19:1-37 (37 verses)),
+##  (0.02702702702702703, 2 Samuel 15:1-37 (37 verses)),
+##  (0.02631578947368421, Luke 21:1-38 (38 verses)),
+##  (0.02631578947368421, Matthew 9:1-38 (38 verses)),
+##  (0.02631578947368421, Isaiah 37:1-38 (38 verses)),
+##  (0.02631578947368421, Nehemiah 9:1-38 (38 verses)),
+##  (0.02564102564102564, Matthew 15:1-39 (39 verses)),
+##  (0.025, Hebrews 11:1-40 (40 verses)),
+##  (0.025, 1 Corinthians 14:1-40 (40 verses)),
+##  (0.023809523809523808, Acts 5:1-42 (42 verses)),
+##  (0.023809523809523808, John 10:1-42 (42 verses)),
+##  (0.023809523809523808, Luke 10:1-42 (42 verses)),
+##  (0.023809523809523808, 1 Samuel 20:1-42 (42 verses)),
+##  (0.023255813953488372, Mark 5:1-43 (43 verses)),
+##  (0.022727272727272728, Luke 4:1-44 (44 verses)),
+##  (0.022222222222222223, Daniel 11:1-45 (45 verses)),
+##  (0.021739130434782608, 1 Kings 2:1-46 (46 verses)),
+##  (0.02127659574468085, Luke 20:1-47 (47 verses)),
+##  (0.02127659574468085, Mark 15:1-47 (47 verses)),
+##  (0.020833333333333332, Acts 10:1-48 (48 verses)),
+##  (0.02040816326530612, Daniel 2:1-49 (49 verses)),
+##  (0.019230769230769232, Deuteronomy 32:1-52 (52 verses)),
+##  (0.018867924528301886, 1 Kings 22:1-53 (53 verses)),
+##  (0.018518518518518517, Luke 11:1-54 (54 verses)),
+##  (0.01694915254237288, Luke 12:1-59 (59 verses)),
+##  (0.016129032258064516, Luke 9:1-62 (62 verses)),
+##  (0.015151515151515152, Matthew 27:1-66 (66 verses)),
+##  (0.013888888888888888, Mark 14:1-72 (72 verses)),
+##  (0.0, Revelation 20:1-15 (15 verses)),
+##  (0.0, Revelation 18:1-24 (24 verses)),
+##  (0.0, Revelation 17:1-18 (18 verses)),
+##  (0.0, Revelation 14:1-20 (20 verses)),
+##  (0.0, Revelation 13:1-18 (18 verses)),
+##  (0.0, Revelation 12:1-17 (17 verses)),
+##  (0.0, Revelation 11:1-19 (19 verses)),
+##  (0.0, Revelation 10:1-11 (11 verses)),
+##  (0.0, Revelation 9:1-21 (21 verses)),
+##  (0.0, Revelation 8:1-13 (13 verses)),
+##  (0.0, Revelation 7:1-17 (17 verses)),
+##  (0.0, Revelation 5:1-14 (14 verses)),
+##  (0.0, Revelation 4:1-11 (11 verses)),
+##  (0.0, Revelation 2:1-29 (29 verses)),
+##  (0.0, Revelation 1:1-20 (20 verses)),
+##  (0.0, Jude 1:1-25 (25 verses)),
+##  (0.0, 2 Peter 3:1-18 (18 verses)),
+##  (0.0, 1 Peter 4:1-19 (19 verses)),
+##  (0.0, 1 Peter 3:1-22 (22 verses)),
+##  (0.0, 1 Peter 2:1-25 (25 verses)),
+##  (0.0, James 4:1-17 (17 verses)),
+##  (0.0, James 2:1-26 (26 verses)),
+##  (0.0, Hebrews 13:1-25 (25 verses)),
+##  (0.0, Hebrews 12:1-29 (29 verses)),
+##  (0.0, Hebrews 6:1-20 (20 verses)),
+##  (0.0, Hebrews 5:1-14 (14 verses)),
+##  (0.0, Hebrews 4:1-16 (16 verses)),
+##  (0.0, Hebrews 3:1-19 (19 verses)),
+##  (0.0, Hebrews 2:1-18 (18 verses)),
+##  (0.0, Hebrews 1:1-14 (14 verses)),
+##  (0.0, Philemon 1:1-25 (25 verses)),
+##  (0.0, Titus 3:1-15 (15 verses)),
+##  (0.0, Titus 2:1-15 (15 verses)),
+##  (0.0, 2 Timothy 1:1-18 (18 verses)),
+##  (0.0, 1 Timothy 5:1-25 (25 verses)),
+##  (0.0, 1 Timothy 1:1-20 (20 verses)),
+##  (0.0, 2 Thessalonians 3:1-18 (18 verses)),
+##  (0.0, 2 Thessalonians 1:1-12 (12 verses)),
+##  (0.0, 1 Thessalonians 5:1-28 (28 verses)),
+##  (0.0, 1 Thessalonians 4:1-18 (18 verses)),
+##  (0.0, 1 Thessalonians 3:1-13 (13 verses)),
+##  (0.0, Colossians 4:1-18 (18 verses)),
+##  (0.0, Colossians 3:1-25 (25 verses)),
+##  (0.0, Colossians 2:1-23 (23 verses)),
+##  (0.0, Philippians 3:1-21 (21 verses)),
+##  (0.0, Philippians 2:1-30 (30 verses)),
+##  (0.0, Ephesians 3:1-21 (21 verses)),
+##  (0.0, Ephesians 2:1-22 (22 verses)),
+##  (0.0, Galatians 6:1-18 (18 verses)),
+##  (0.0, Galatians 1:1-24 (24 verses)),
+##  (0.0, 2 Corinthians 10:1-18 (18 verses)),
+##  (0.0, 2 Corinthians 9:1-15 (15 verses)),
+##  (0.0, 2 Corinthians 8:1-24 (24 verses)),
+##  (0.0, 2 Corinthians 5:1-21 (21 verses)),
+##  (0.0, 2 Corinthians 3:1-18 (18 verses)),
+##  (0.0, 2 Corinthians 2:1-17 (17 verses)),
+##  (0.0, 1 Corinthians 16:1-24 (24 verses)),
+##  (0.0, 1 Corinthians 15:1-58 (58 verses)),
+##  (0.0, 1 Corinthians 12:1-31 (31 verses)),
+##  (0.0, 1 Corinthians 11:1-34 (34 verses)),
+##  (0.0, 1 Corinthians 10:1-33 (33 verses)),
+##  (0.0, 1 Corinthians 9:1-27 (27 verses)),
+##  (0.0, 1 Corinthians 8:1-13 (13 verses)),
+##  (0.0, 1 Corinthians 7:1-40 (40 verses)),
+##  (0.0, 1 Corinthians 6:1-20 (20 verses)),
+##  (0.0, 1 Corinthians 4:1-21 (21 verses)),
+##  (0.0, 1 Corinthians 3:1-23 (23 verses)),
+##  (0.0, 1 Corinthians 2:1-16 (16 verses)),
+##  (0.0, 1 Corinthians 1:1-31 (31 verses)),
+##  (0.0, Romans 16:1-27 (27 verses)),
+##  (0.0, Romans 14:1-23 (23 verses)),
+##  (0.0, Romans 13:1-14 (14 verses)),
+##  (0.0, Romans 12:1-21 (21 verses)),
+##  (0.0, Romans 11:1-36 (36 verses)),
+##  (0.0, Romans 10:1-21 (21 verses)),
+##  (0.0, Romans 8:1-39 (39 verses)),
+##  (0.0, Romans 7:1-25 (25 verses)),
+##  (0.0, Romans 6:1-23 (23 verses)),
+##  (0.0, Romans 5:1-21 (21 verses)),
+##  (0.0, Romans 4:1-25 (25 verses)),
+##  (0.0, Acts 28:1-31 (31 verses)),
+##  (0.0, Acts 27:1-44 (44 verses)),
+##  (0.0, Acts 25:1-27 (27 verses)),
+##  (0.0, Acts 24:1-27 (27 verses)),
+##  (0.0, Acts 23:1-35 (35 verses)),
+##  (0.0, Acts 22:1-30 (30 verses)),
+##  (0.0, Acts 21:1-40 (40 verses)),
+##  (0.0, Acts 20:1-38 (38 verses)),
+##  (0.0, Acts 19:1-41 (41 verses)),
+##  (0.0, Acts 18:1-28 (28 verses)),
+##  (0.0, Acts 17:1-34 (34 verses)),
+##  (0.0, Acts 16:1-40 (40 verses)),
+##  (0.0, Acts 15:1-41 (41 verses)),
+##  (0.0, Acts 14:1-28 (28 verses)),
+##  (0.0, Acts 13:1-52 (52 verses)),
+##  (0.0, Acts 11:1-30 (30 verses)),
+##  (0.0, Acts 9:1-43 (43 verses)),
+##  (0.0, Acts 8:1-40 (40 verses)),
+##  (0.0, Acts 7:1-60 (60 verses)),
+##  (0.0, Acts 6:1-15 (15 verses)),
+##  (0.0, Acts 2:1-47 (47 verses)),
+##  (0.0, John 13:1-38 (38 verses)),
+##  (0.0, John 12:1-50 (50 verses)),
+##  (0.0, John 11:1-57 (57 verses)),
+##  (0.0, John 9:1-41 (41 verses)),
+##  (0.0, John 2:1-25 (25 verses)),
+##  (0.0, Luke 24:1-53 (53 verses)),
+##  (0.0, Luke 23:1-56 (56 verses)),
+##  (0.0, Luke 19:1-48 (48 verses)),
+##  (0.0, Luke 18:1-43 (43 verses)),
+##  (0.0, Luke 17:1-37 (37 verses)),
+##  (0.0, Luke 15:1-32 (32 verses)),
+##  (0.0, Luke 14:1-35 (35 verses)),
+##  (0.0, Luke 13:1-35 (35 verses)),
+##  (0.0, Luke 8:1-56 (56 verses)),
+##  (0.0, Luke 7:1-50 (50 verses)),
+##  (0.0, Luke 6:1-49 (49 verses)),
+##  (0.0, Luke 5:1-39 (39 verses)),
+##  (0.0, Luke 3:1-38 (38 verses)),
+##  (0.0, Luke 2:1-52 (52 verses)),
+##  (0.0, Luke 1:1-80 (80 verses)),
+##  (0.0, Mark 16:1-20 (20 verses)),
+##  (0.0, Mark 13:1-37 (37 verses)),
+##  (0.0, Mark 11:1-33 (33 verses)),
+##  (0.0, Mark 10:1-52 (52 verses)),
+##  (0.0, Mark 9:1-50 (50 verses)),
+##  (0.0, Mark 8:1-38 (38 verses)),
+##  (0.0, Mark 7:1-37 (37 verses)),
+##  (0.0, Mark 6:1-56 (56 verses)),
+##  (0.0, Mark 4:1-41 (41 verses)),
+##  (0.0, Mark 3:1-35 (35 verses)),
+##  (0.0, Mark 2:1-28 (28 verses)),
+##  (0.0, Mark 1:1-45 (45 verses)),
+##  (0.0, Matthew 28:1-20 (20 verses)),
+##  (0.0, Matthew 26:1-75 (75 verses)),
+##  (0.0, Matthew 25:1-46 (46 verses)),
+##  (0.0, Matthew 24:1-51 (51 verses)),
+##  (0.0, Matthew 23:1-39 (39 verses)),
+##  (0.0, Matthew 21:1-46 (46 verses)),
+##  (0.0, Matthew 20:1-34 (34 verses)),
+##  (0.0, Matthew 19:1-30 (30 verses)),
+##  (0.0, Matthew 18:1-35 (35 verses)),
+##  (0.0, Matthew 16:1-28 (28 verses)),
+##  (0.0, Matthew 13:1-58 (58 verses)),
+##  (0.0, Matthew 12:1-50 (50 verses)),
+##  (0.0, Matthew 11:1-30 (30 verses)),
+##  (0.0, Matthew 10:1-42 (42 verses)),
+##  (0.0, Matthew 8:1-34 (34 verses)),
+##  (0.0, Matthew 7:1-29 (29 verses)),
+##  (0.0, Matthew 6:1-34 (34 verses)),
+##  (0.0, Matthew 5:1-48 (48 verses)),
+##  (0.0, Matthew 4:1-25 (25 verses)),
+##  (0.0, Matthew 3:1-17 (17 verses)),
+##  (0.0, Matthew 2:1-23 (23 verses)),
+##  (0.0, Matthew 1:1-25 (25 verses)),
+##  (0.0, Malachi 4:1-6 (6 verses)),
+##  (0.0, Malachi 3:1-18 (18 verses)),
+##  (0.0, Malachi 1:1-14 (14 verses)),
+##  (0.0, Zechariah 14:1-21 (21 verses)),
+##  (0.0, Zechariah 13:1-9 (9 verses)),
+##  (0.0, Zechariah 12:1-14 (14 verses)),
+##  (0.0, Zechariah 11:1-17 (17 verses)),
+##  (0.0, Zechariah 10:1-12 (12 verses)),
+##  (0.0, Zechariah 9:1-17 (17 verses)),
+##  (0.0, Zechariah 6:1-15 (15 verses)),
+##  (0.0, Zechariah 5:1-11 (11 verses)),
+##  (0.0, Zechariah 4:1-14 (14 verses)),
+##  (0.0, Zechariah 3:1-10 (10 verses)),
+##  (0.0, Zechariah 2:1-13 (13 verses)),
+##  (0.0, Zechariah 1:1-21 (21 verses)),
+##  (0.0, Haggai 2:1-23 (23 verses)),
+##  (0.0, Haggai 1:1-15 (15 verses)),
+##  (0.0, Zephaniah 3:1-20 (20 verses)),
+##  (0.0, Zephaniah 2:1-15 (15 verses)),
+##  (0.0, Zephaniah 1:1-18 (18 verses)),
+##  (0.0, Habakkuk 3:1-19 (19 verses)),
+##  (0.0, Habakkuk 2:1-20 (20 verses)),
+##  (0.0, Habakkuk 1:1-17 (17 verses)),
+##  (0.0, Nahum 3:1-19 (19 verses)),
+##  (0.0, Nahum 2:1-13 (13 verses)),
+##  (0.0, Nahum 1:1-15 (15 verses)),
+##  (0.0, Micah 6:1-16 (16 verses)),
+##  (0.0, Micah 5:1-15 (15 verses)),
+##  (0.0, Micah 4:1-13 (13 verses)),
+##  (0.0, Micah 2:1-13 (13 verses)),
+##  (0.0, Micah 1:1-16 (16 verses)),
+##  (0.0, Jonah 4:1-11 (11 verses)),
+##  (0.0, Jonah 3:1-10 (10 verses)),
+##  (0.0, Jonah 2:1-10 (10 verses)),
+##  (0.0, Jonah 1:1-17 (17 verses)),
+##  (0.0, Obadiah 1:1-21 (21 verses)),
+##  (0.0, Amos 9:1-15 (15 verses)),
+##  (0.0, Amos 8:1-14 (14 verses)),
+##  (0.0, Amos 7:1-17 (17 verses)),
+##  (0.0, Amos 6:1-14 (14 verses)),
+##  (0.0, Amos 5:1-27 (27 verses)),
+##  (0.0, Amos 4:1-13 (13 verses)),
+##  (0.0, Amos 3:1-15 (15 verses)),
+##  (0.0, Amos 2:1-16 (16 verses)),
+##  (0.0, Amos 1:1-15 (15 verses)),
+##  (0.0, Joel 3:1-21 (21 verses)),
+##  (0.0, Joel 2:1-32 (32 verses)),
+##  (0.0, Joel 1:1-20 (20 verses)),
+##  (0.0, Hosea 14:1-9 (9 verses)),
+##  (0.0, Hosea 13:1-16 (16 verses)),
+##  (0.0, Hosea 12:1-14 (14 verses)),
+##  (0.0, Hosea 11:1-12 (12 verses)),
+##  (0.0, Hosea 10:1-15 (15 verses)),
+##  (0.0, Hosea 9:1-17 (17 verses)),
+##  (0.0, Hosea 8:1-14 (14 verses)),
+##  (0.0, Hosea 7:1-16 (16 verses)),
+##  (0.0, Hosea 6:1-11 (11 verses)),
+##  (0.0, Hosea 5:1-15 (15 verses)),
+##  (0.0, Hosea 3:1-5 (5 verses)),
+##  (0.0, Hosea 2:1-23 (23 verses)),
+##  (0.0, Hosea 1:1-11 (11 verses)),
+##  (0.0, Daniel 12:1-13 (13 verses)),
+##  (0.0, Daniel 5:1-31 (31 verses)),
+##  (0.0, Daniel 1:1-21 (21 verses)),
+##  (0.0, Ezekiel 48:1-35 (35 verses)),
+##  (0.0, Ezekiel 47:1-23 (23 verses)),
+##  (0.0, Ezekiel 46:1-24 (24 verses)),
+##  (0.0, Ezekiel 45:1-25 (25 verses)),
+##  (0.0, Ezekiel 44:1-31 (31 verses)),
+##  (0.0, Ezekiel 43:1-27 (27 verses)),
+##  (0.0, Ezekiel 42:1-20 (20 verses)),
+##  (0.0, Ezekiel 41:1-26 (26 verses)),
+##  (0.0, Ezekiel 40:1-49 (49 verses)),
+##  (0.0, Ezekiel 39:1-29 (29 verses)),
+##  (0.0, Ezekiel 38:1-23 (23 verses)),
+##  (0.0, Ezekiel 37:1-28 (28 verses)),
+##  (0.0, Ezekiel 36:1-38 (38 verses)),
+##  (0.0, Ezekiel 35:1-15 (15 verses)),
+##  (0.0, Ezekiel 34:1-31 (31 verses)),
+##  (0.0, Ezekiel 33:1-33 (33 verses)),
+##  (0.0, Ezekiel 32:1-32 (32 verses)),
+##  (0.0, Ezekiel 31:1-18 (18 verses)),
+##  (0.0, Ezekiel 30:1-26 (26 verses)),
+##  (0.0, Ezekiel 29:1-21 (21 verses)),
+##  (0.0, Ezekiel 28:1-26 (26 verses)),
+##  (0.0, Ezekiel 27:1-36 (36 verses)),
+##  (0.0, Ezekiel 26:1-21 (21 verses)),
+##  (0.0, Ezekiel 25:1-17 (17 verses)),
+##  (0.0, Ezekiel 24:1-27 (27 verses)),
+##  (0.0, Ezekiel 23:1-49 (49 verses)),
+##  (0.0, Ezekiel 22:1-31 (31 verses)),
+##  (0.0, Ezekiel 21:1-32 (32 verses)),
+##  (0.0, Ezekiel 20:1-49 (49 verses)),
+##  (0.0, Ezekiel 19:1-14 (14 verses)),
+##  (0.0, Ezekiel 17:1-24 (24 verses)),
+##  (0.0, Ezekiel 16:1-63 (63 verses)),
+##  (0.0, Ezekiel 15:1-8 (8 verses)),
+##  (0.0, Ezekiel 14:1-23 (23 verses)),
+##  (0.0, Ezekiel 13:1-23 (23 verses)),
+##  (0.0, Ezekiel 12:1-28 (28 verses)),
+##  (0.0, Ezekiel 11:1-25 (25 verses)),
+##  (0.0, Ezekiel 10:1-22 (22 verses)),
+##  (0.0, Ezekiel 9:1-11 (11 verses)),
+##  (0.0, Ezekiel 8:1-18 (18 verses)),
+##  (0.0, Ezekiel 7:1-27 (27 verses)),
+##  (0.0, Ezekiel 6:1-14 (14 verses)),
+##  (0.0, Ezekiel 5:1-17 (17 verses)),
+##  (0.0, Ezekiel 4:1-17 (17 verses)),
+##  (0.0, Ezekiel 3:1-27 (27 verses)),
+##  (0.0, Ezekiel 2:1-10 (10 verses)),
+##  (0.0, Ezekiel 1:1-28 (28 verses)),
+##  (0.0, Lamentations 5:1-22 (22 verses)),
+##  (0.0, Lamentations 4:1-22 (22 verses)),
+##  (0.0, Lamentations 3:1-66 (66 verses)),
+##  (0.0, Lamentations 2:1-22 (22 verses)),
+##  (0.0, Lamentations 1:1-22 (22 verses)),
+##  (0.0, Jeremiah 52:1-34 (34 verses)),
+##  (0.0, Jeremiah 51:1-64 (64 verses)),
+##  (0.0, Jeremiah 50:1-46 (46 verses)),
+##  (0.0, Jeremiah 49:1-39 (39 verses)),
+##  (0.0, Jeremiah 48:1-47 (47 verses)),
+##  (0.0, Jeremiah 47:1-7 (7 verses)),
+##  (0.0, Jeremiah 46:1-28 (28 verses)),
+##  (0.0, Jeremiah 45:1-5 (5 verses)),
+##  (0.0, Jeremiah 44:1-30 (30 verses)),
+##  (0.0, Jeremiah 43:1-13 (13 verses)),
+##  (0.0, Jeremiah 41:1-18 (18 verses)),
+##  (0.0, Jeremiah 40:1-16 (16 verses)),
+##  (0.0, Jeremiah 39:1-18 (18 verses)),
+##  (0.0, Jeremiah 38:1-28 (28 verses)),
+##  (0.0, Jeremiah 37:1-21 (21 verses)),
+##  (0.0, Jeremiah 36:1-32 (32 verses)),
+##  (0.0, Jeremiah 35:1-19 (19 verses)),
+##  (0.0, Jeremiah 34:1-22 (22 verses)),
+##  (0.0, Jeremiah 32:1-44 (44 verses)),
+##  (0.0, Jeremiah 31:1-40 (40 verses)),
+##  (0.0, Jeremiah 30:1-24 (24 verses)),
+##  (0.0, Jeremiah 29:1-32 (32 verses)),
+##  (0.0, Jeremiah 27:1-22 (22 verses)),
+##  (0.0, Jeremiah 25:1-38 (38 verses)),
+##  (0.0, Jeremiah 24:1-10 (10 verses)),
+##  (0.0, Jeremiah 23:1-40 (40 verses)),
+##  (0.0, Jeremiah 22:1-30 (30 verses)),
+##  (0.0, Jeremiah 21:1-14 (14 verses)),
+##  (0.0, Jeremiah 20:1-18 (18 verses)),
+##  (0.0, Jeremiah 19:1-15 (15 verses)),
+##  (0.0, Jeremiah 18:1-23 (23 verses)),
+##  (0.0, Jeremiah 17:1-27 (27 verses)),
+##  (0.0, Jeremiah 16:1-21 (21 verses)),
+##  (0.0, Jeremiah 15:1-21 (21 verses)),
+##  (0.0, Jeremiah 14:1-22 (22 verses)),
+##  (0.0, Jeremiah 13:1-27 (27 verses)),
+##  (0.0, Jeremiah 12:1-17 (17 verses)),
+##  (0.0, Jeremiah 11:1-23 (23 verses)),
+##  (0.0, Jeremiah 8:1-22 (22 verses)),
+##  (0.0, Jeremiah 6:1-30 (30 verses)),
+##  (0.0, Jeremiah 2:1-37 (37 verses)),
+##  (0.0, Jeremiah 1:1-19 (19 verses)),
+##  (0.0, Isaiah 66:1-24 (24 verses)),
+##  (0.0, Isaiah 64:1-12 (12 verses)),
+##  (0.0, Isaiah 63:1-19 (19 verses)),
+##  (0.0, Isaiah 62:1-12 (12 verses)),
+##  (0.0, Isaiah 60:1-22 (22 verses)),
+##  (0.0, Isaiah 58:1-14 (14 verses)),
+##  (0.0, Isaiah 57:1-21 (21 verses)),
+##  (0.0, Isaiah 56:1-12 (12 verses)),
+##  (0.0, Isaiah 55:1-13 (13 verses)),
+##  (0.0, Isaiah 54:1-17 (17 verses)),
+##  (0.0, Isaiah 53:1-12 (12 verses)),
+##  (0.0, Isaiah 52:1-15 (15 verses)),
+##  (0.0, Isaiah 51:1-23 (23 verses)),
+##  (0.0, Isaiah 50:1-11 (11 verses)),
+##  (0.0, Isaiah 49:1-26 (26 verses)),
+##  (0.0, Isaiah 47:1-15 (15 verses)),
+##  (0.0, Isaiah 46:1-13 (13 verses)),
+##  (0.0, Isaiah 45:1-25 (25 verses)),
+##  (0.0, Isaiah 44:1-28 (28 verses)),
+##  (0.0, Isaiah 41:1-29 (29 verses)),
+##  (0.0, Isaiah 40:1-31 (31 verses)),
+##  (0.0, Isaiah 36:1-22 (22 verses)),
+##  (0.0, Isaiah 35:1-10 (10 verses)),
+##  (0.0, Isaiah 34:1-17 (17 verses)),
+##  (0.0, Isaiah 33:1-24 (24 verses)),
+##  (0.0, Isaiah 32:1-20 (20 verses)),
+##  (0.0, Isaiah 31:1-9 (9 verses)),
+##  (0.0, Isaiah 30:1-33 (33 verses)),
+##  (0.0, Isaiah 29:1-24 (24 verses)),
+##  (0.0, Isaiah 28:1-29 (29 verses)),
+##  (0.0, Isaiah 27:1-13 (13 verses)),
+##  (0.0, Isaiah 24:1-23 (23 verses)),
+##  (0.0, Isaiah 23:1-18 (18 verses)),
+##  (0.0, Isaiah 22:1-25 (25 verses)),
+##  (0.0, Isaiah 21:1-17 (17 verses)),
+##  (0.0, Isaiah 20:1-6 (6 verses)),
+##  (0.0, Isaiah 19:1-25 (25 verses)),
+##  (0.0, Isaiah 18:1-7 (7 verses)),
+##  (0.0, Isaiah 17:1-14 (14 verses)),
+##  (0.0, Isaiah 15:1-9 (9 verses)),
+##  (0.0, Isaiah 14:1-32 (32 verses)),
+##  (0.0, Isaiah 13:1-22 (22 verses)),
+##  (0.0, Isaiah 12:1-6 (6 verses)),
+##  (0.0, Isaiah 11:1-16 (16 verses)),
+##  (0.0, Isaiah 9:1-21 (21 verses)),
+##  (0.0, Isaiah 8:1-22 (22 verses)),
+##  (0.0, Isaiah 7:1-25 (25 verses)),
+##  (0.0, Isaiah 6:1-13 (13 verses)),
+##  (0.0, Isaiah 4:1-6 (6 verses)),
+##  (0.0, Isaiah 3:1-26 (26 verses)),
+##  (0.0, Isaiah 2:1-22 (22 verses)),
+##  (0.0, Isaiah 1:1-31 (31 verses)),
+##  (0.0, Song of Solomon 8:1-14 (14 verses)),
+##  (0.0, Song of Solomon 7:1-13 (13 verses)),
+##  (0.0, Song of Solomon 6:1-13 (13 verses)),
+##  (0.0, Song of Solomon 5:1-16 (16 verses)),
+##  (0.0, Song of Solomon 4:1-16 (16 verses)),
+##  (0.0, Song of Solomon 3:1-11 (11 verses)),
+##  (0.0, Song of Solomon 2:1-17 (17 verses)),
+##  (0.0, Song of Solomon 1:1-17 (17 verses)),
+##  (0.0, Ecclesiastes 10:1-20 (20 verses)),
+##  (0.0, Ecclesiastes 9:1-18 (18 verses)),
+##  (0.0, Ecclesiastes 8:1-17 (17 verses)),
+##  (0.0, Ecclesiastes 7:1-29 (29 verses)),
+##  (0.0, Ecclesiastes 6:1-12 (12 verses)),
+##  (0.0, Ecclesiastes 5:1-20 (20 verses)),
+##  (0.0, Ecclesiastes 4:1-16 (16 verses)),
+##  (0.0, Ecclesiastes 3:1-22 (22 verses)),
+##  (0.0, Ecclesiastes 2:1-26 (26 verses)),
+##  (0.0, Ecclesiastes 1:1-18 (18 verses)),
+##  (0.0, Proverbs 31:1-31 (31 verses)),
+##  (0.0, Proverbs 30:1-33 (33 verses)),
+##  (0.0, Proverbs 29:1-27 (27 verses)),
+##  (0.0, Proverbs 28:1-28 (28 verses)),
+##  (0.0, Proverbs 27:1-27 (27 verses)),
+##  (0.0, Proverbs 26:1-28 (28 verses)),
+##  (0.0, Proverbs 25:1-28 (28 verses)),
+##  (0.0, Proverbs 24:1-34 (34 verses)),
+##  (0.0, Proverbs 21:1-31 (31 verses)),
+##  (0.0, Proverbs 19:1-29 (29 verses)),
+##  (0.0, Proverbs 18:1-24 (24 verses)),
+##  (0.0, Proverbs 17:1-28 (28 verses)),
+##  (0.0, Proverbs 15:1-33 (33 verses)),
+##  (0.0, Proverbs 13:1-25 (25 verses)),
+##  (0.0, Proverbs 11:1-31 (31 verses)),
+##  (0.0, Proverbs 10:1-32 (32 verses)),
+##  (0.0, Proverbs 9:1-18 (18 verses)),
+##  (0.0, Proverbs 7:1-27 (27 verses)),
+##  (0.0, Proverbs 6:1-35 (35 verses)),
+##  (0.0, Proverbs 5:1-23 (23 verses)),
+##  (0.0, Proverbs 4:1-27 (27 verses)),
+##  (0.0, Proverbs 2:1-22 (22 verses)),
+##  (0.0, Proverbs 1:1-33 (33 verses)),
+##  (0.0, Psalms 150:1-6 (6 verses)),
+##  (0.0, Psalms 149:1-9 (9 verses)),
+##  (0.0, Psalms 148:1-14 (14 verses)),
+##  (0.0, Psalms 147:1-20 (20 verses)),
+##  (0.0, Psalms 144:1-15 (15 verses)),
+##  (0.0, Psalms 143:1-12 (12 verses)),
+##  (0.0, Psalms 142:1-7 (7 verses)),
+##  (0.0, Psalms 141:1-10 (10 verses)),
+##  (0.0, Psalms 140:1-13 (13 verses)),
+##  (0.0, Psalms 139:1-24 (24 verses)),
+##  (0.0, Psalms 137:1-9 (9 verses)),
+##  (0.0, Psalms 136:1-26 (26 verses)),
+##  (0.0, Psalms 135:1-21 (21 verses)),
+##  (0.0, Psalms 134:1-3 (3 verses)),
+##  (0.0, Psalms 133:1-3 (3 verses)),
+##  (0.0, Psalms 131:1-3 (3 verses)),
+##  (0.0, Psalms 130:1-8 (8 verses)),
+##  (0.0, Psalms 129:1-8 (8 verses)),
+##  (0.0, Psalms 128:1-6 (6 verses)),
+##  (0.0, Psalms 127:1-5 (5 verses)),
+##  (0.0, Psalms 126:1-6 (6 verses)),
+##  (0.0, Psalms 125:1-5 (5 verses)),
+##  (0.0, Psalms 124:1-8 (8 verses)),
+##  (0.0, Psalms 123:1-4 (4 verses)),
+##  (0.0, Psalms 122:1-9 (9 verses)),
+##  (0.0, Psalms 121:1-8 (8 verses)),
+##  (0.0, Psalms 120:1-7 (7 verses)),
+##  (0.0, Psalms 118:1-29 (29 verses)),
+##  (0.0, Psalms 114:1-8 (8 verses)),
+##  (0.0, Psalms 113:1-9 (9 verses)),
+##  (0.0, Psalms 112:1-10 (10 verses)),
+##  (0.0, Psalms 110:1-7 (7 verses)),
+##  (0.0, Psalms 109:1-31 (31 verses)),
+##  (0.0, Psalms 107:1-43 (43 verses)),
+##  (0.0, Psalms 106:1-48 (48 verses)),
+##  (0.0, Psalms 105:1-45 (45 verses)),
+##  (0.0, Psalms 104:1-35 (35 verses)),
+##  (0.0, Psalms 103:1-22 (22 verses)),
+##  (0.0, Psalms 102:1-28 (28 verses)),
+##  (0.0, Psalms 101:1-8 (8 verses)),
+##  (0.0, Psalms 99:1-9 (9 verses)),
+##  (0.0, Psalms 97:1-12 (12 verses)),
+##  (0.0, Psalms 95:1-11 (11 verses)),
+##  (0.0, Psalms 94:1-23 (23 verses)),
+##  (0.0, Psalms 93:1-5 (5 verses)),
+##  (0.0, Psalms 92:1-15 (15 verses)),
+##  (0.0, Psalms 90:1-17 (17 verses)),
+##  (0.0, Psalms 88:1-18 (18 verses)),
+##  (0.0, Psalms 87:1-7 (7 verses)),
+##  (0.0, Psalms 84:1-12 (12 verses)),
+##  (0.0, Psalms 83:1-18 (18 verses)),
+##  (0.0, Psalms 82:1-8 (8 verses)),
+##  (0.0, Psalms 81:1-16 (16 verses)),
+##  (0.0, Psalms 80:1-19 (19 verses)),
+##  (0.0, Psalms 79:1-13 (13 verses)),
+##  (0.0, Psalms 78:1-72 (72 verses)),
+##  (0.0, Psalms 77:1-20 (20 verses)),
+##  (0.0, Psalms 76:1-12 (12 verses)),
+##  (0.0, Psalms 75:1-10 (10 verses)),
+##  (0.0, Psalms 74:1-23 (23 verses)),
+##  (0.0, Psalms 72:1-20 (20 verses)),
+##  (0.0, Psalms 70:1-5 (5 verses)),
+##  (0.0, Psalms 68:1-35 (35 verses)),
+##  (0.0, Psalms 67:1-7 (7 verses)),
+##  (0.0, Psalms 66:1-20 (20 verses)),
+##  (0.0, Psalms 65:1-13 (13 verses)),
+##  (0.0, Psalms 64:1-10 (10 verses)),
+##  (0.0, Psalms 63:1-11 (11 verses)),
+##  (0.0, Psalms 59:1-17 (17 verses)),
+##  (0.0, Psalms 58:1-11 (11 verses)),
+##  (0.0, Psalms 56:1-13 (13 verses)),
+##  (0.0, Psalms 55:1-23 (23 verses)),
+##  (0.0, Psalms 53:1-6 (6 verses)),
+##  (0.0, Psalms 52:1-9 (9 verses)),
+##  (0.0, Psalms 50:1-23 (23 verses)),
+##  (0.0, Psalms 49:1-20 (20 verses)),
+##  (0.0, Psalms 48:1-14 (14 verses)),
+##  (0.0, Psalms 47:1-9 (9 verses)),
+##  (0.0, Psalms 46:1-11 (11 verses)),
+##  (0.0, Psalms 44:1-26 (26 verses)),
+##  (0.0, Psalms 42:1-11 (11 verses)),
+##  (0.0, Psalms 41:1-13 (13 verses)),
+##  (0.0, Psalms 39:1-13 (13 verses)),
+##  (0.0, Psalms 38:1-22 (22 verses)),
+##  (0.0, Psalms 37:1-40 (40 verses)),
+##  (0.0, Psalms 36:1-12 (12 verses)),
+##  (0.0, Psalms 35:1-28 (28 verses)),
+##  (0.0, Psalms 34:1-22 (22 verses)),
+##  (0.0, Psalms 32:1-11 (11 verses)),
+##  (0.0, Psalms 29:1-11 (11 verses)),
+##  (0.0, Psalms 28:1-9 (9 verses)),
+##  (0.0, Psalms 27:1-14 (14 verses)),
+##  (0.0, Psalms 24:1-10 (10 verses)),
+##  (0.0, Psalms 23:1-6 (6 verses)),
+##  (0.0, Psalms 22:1-31 (31 verses)),
+##  (0.0, Psalms 21:1-13 (13 verses)),
+##  (0.0, Psalms 20:1-9 (9 verses)),
+##  (0.0, Psalms 18:1-50 (50 verses)),
+##  (0.0, Psalms 17:1-15 (15 verses)),
+##  (0.0, Psalms 16:1-11 (11 verses)),
+##  (0.0, Psalms 14:1-7 (7 verses)),
+##  (0.0, Psalms 13:1-6 (6 verses)),
+##  (0.0, Psalms 12:1-8 (8 verses)),
+##  (0.0, Psalms 11:1-7 (7 verses)),
+##  (0.0, Psalms 10:1-18 (18 verses)),
+##  (0.0, Psalms 9:1-20 (20 verses)),
+##  (0.0, Psalms 8:1-9 (9 verses)),
+##  (0.0, Psalms 7:1-17 (17 verses)),
+##  (0.0, Psalms 6:1-10 (10 verses)),
+##  (0.0, Psalms 5:1-12 (12 verses)),
+##  (0.0, Psalms 4:1-8 (8 verses)),
+##  (0.0, Psalms 3:1-8 (8 verses)),
+##  (0.0, Psalms 2:1-12 (12 verses)),
+##  (0.0, Psalms 1:1-6 (6 verses)),
+##  (0.0, Job 42:1-17 (17 verses)),
+##  (0.0, Job 41:1-34 (34 verses)),
+##  (0.0, Job 40:1-24 (24 verses)),
+##  (0.0, Job 39:1-30 (30 verses)),
+##  (0.0, Job 38:1-41 (41 verses)),
+##  (0.0, Job 37:1-24 (24 verses)),
+##  (0.0, Job 35:1-16 (16 verses)),
+##  (0.0, Job 34:1-37 (37 verses)),
+##  (0.0, Job 33:1-33 (33 verses)),
+##  (0.0, Job 32:1-22 (22 verses)),
+##  (0.0, Job 31:1-40 (40 verses)),
+##  (0.0, Job 30:1-31 (31 verses)),
+##  (0.0, Job 29:1-25 (25 verses)),
+##  (0.0, Job 28:1-28 (28 verses)),
+##  (0.0, Job 27:1-23 (23 verses)),
+##  (0.0, Job 26:1-14 (14 verses)),
+##  (0.0, Job 25:1-6 (6 verses)),
+##  (0.0, Job 24:1-25 (25 verses)),
+##  (0.0, Job 23:1-17 (17 verses)),
+##  (0.0, Job 22:1-30 (30 verses)),
+##  (0.0, Job 21:1-34 (34 verses)),
+##  (0.0, Job 20:1-29 (29 verses)),
+##  (0.0, Job 19:1-29 (29 verses)),
+##  (0.0, Job 18:1-21 (21 verses)),
+##  (0.0, Job 17:1-16 (16 verses)),
+##  (0.0, Job 16:1-22 (22 verses)),
+##  (0.0, Job 15:1-35 (35 verses)),
+##  (0.0, Job 14:1-22 (22 verses)),
+##  (0.0, Job 13:1-28 (28 verses)),
+##  (0.0, Job 12:1-25 (25 verses)),
+##  (0.0, Job 11:1-20 (20 verses)),
+##  (0.0, Job 10:1-22 (22 verses)),
+##  (0.0, Job 8:1-22 (22 verses)),
+##  (0.0, Job 7:1-21 (21 verses)),
+##  (0.0, Job 6:1-30 (30 verses)),
+##  (0.0, Job 5:1-27 (27 verses)),
+##  (0.0, Job 4:1-21 (21 verses)),
+##  (0.0, Job 3:1-26 (26 verses)),
+##  (0.0, Job 2:1-13 (13 verses)),
+##  (0.0, Job 1:1-22 (22 verses)),
+##  (0.0, Esther 10:1-3 (3 verses)),
+##  (0.0, Esther 8:1-17 (17 verses)),
+##  (0.0, Esther 7:1-10 (10 verses)),
+##  (0.0, Esther 6:1-14 (14 verses)),
+##  (0.0, Esther 5:1-14 (14 verses)),
+##  (0.0, Esther 4:1-17 (17 verses)),
+##  (0.0, Esther 3:1-15 (15 verses)),
+##  (0.0, Esther 2:1-23 (23 verses)),
+##  (0.0, Esther 1:1-22 (22 verses)),
+##  (0.0, Nehemiah 13:1-31 (31 verses)),
+##  (0.0, Nehemiah 12:1-47 (47 verses)),
+##  (0.0, Nehemiah 11:1-36 (36 verses)),
+##  (0.0, Nehemiah 10:1-39 (39 verses)),
+##  (0.0, Nehemiah 8:1-18 (18 verses)),
+##  (0.0, Nehemiah 7:1-73 (73 verses)),
+##  (0.0, Nehemiah 6:1-19 (19 verses)),
+##  (0.0, Nehemiah 5:1-19 (19 verses)),
+##  (0.0, Nehemiah 4:1-23 (23 verses)),
+##  (0.0, Nehemiah 3:1-32 (32 verses)),
+##  (0.0, Nehemiah 2:1-20 (20 verses)),
+##  (0.0, Nehemiah 1:1-11 (11 verses)),
+##  (0.0, Ezra 10:1-44 (44 verses)),
+##  (0.0, Ezra 9:1-15 (15 verses)),
+##  (0.0, Ezra 8:1-36 (36 verses)),
+##  (0.0, Ezra 7:1-28 (28 verses)),
+##  (0.0, Ezra 6:1-22 (22 verses)),
+##  (0.0, Ezra 5:1-17 (17 verses)),
+##  (0.0, Ezra 4:1-24 (24 verses)),
+##  (0.0, Ezra 3:1-13 (13 verses)),
+##  (0.0, Ezra 2:1-70 (70 verses)),
+##  (0.0, Ezra 1:1-11 (11 verses)),
+##  (0.0, 2 Chronicles 36:1-23 (23 verses)),
+##  (0.0, 2 Chronicles 35:1-27 (27 verses)),
+##  (0.0, 2 Chronicles 34:1-33 (33 verses)),
+##  (0.0, 2 Chronicles 33:1-25 (25 verses)),
+##  (0.0, 2 Chronicles 32:1-33 (33 verses)),
+##  (0.0, 2 Chronicles 30:1-27 (27 verses)),
+##  (0.0, 2 Chronicles 29:1-36 (36 verses)),
+##  (0.0, 2 Chronicles 28:1-27 (27 verses)),
+##  (0.0, 2 Chronicles 27:1-9 (9 verses)),
+##  (0.0, 2 Chronicles 26:1-23 (23 verses)),
+##  (0.0, 2 Chronicles 25:1-28 (28 verses)),
+##  (0.0, 2 Chronicles 24:1-27 (27 verses)),
+##  (0.0, 2 Chronicles 23:1-21 (21 verses)),
+##  (0.0, 2 Chronicles 22:1-12 (12 verses)),
+##  (0.0, 2 Chronicles 21:1-20 (20 verses)),
+##  (0.0, 2 Chronicles 20:1-37 (37 verses)),
+##  (0.0, 2 Chronicles 19:1-11 (11 verses)),
+##  (0.0, 2 Chronicles 17:1-19 (19 verses)),
+##  (0.0, 2 Chronicles 16:1-14 (14 verses)),
+##  (0.0, 2 Chronicles 14:1-15 (15 verses)),
+##  (0.0, 2 Chronicles 13:1-22 (22 verses)),
+##  (0.0, 2 Chronicles 12:1-16 (16 verses)),
+##  (0.0, 2 Chronicles 11:1-23 (23 verses)),
+##  (0.0, 2 Chronicles 10:1-19 (19 verses)),
+##  (0.0, 2 Chronicles 8:1-18 (18 verses)),
+##  (0.0, 2 Chronicles 7:1-22 (22 verses)),
+##  (0.0, 2 Chronicles 6:1-42 (42 verses)),
+##  (0.0, 2 Chronicles 5:1-14 (14 verses)),
+##  (0.0, 2 Chronicles 4:1-22 (22 verses)),
+##  (0.0, 2 Chronicles 3:1-17 (17 verses)),
+##  (0.0, 2 Chronicles 2:1-18 (18 verses)),
+##  (0.0, 2 Chronicles 1:1-17 (17 verses)),
+##  (0.0, 1 Chronicles 29:1-30 (30 verses)),
+##  (0.0, 1 Chronicles 28:1-21 (21 verses)),
+##  (0.0, 1 Chronicles 27:1-34 (34 verses)),
+##  (0.0, 1 Chronicles 26:1-32 (32 verses)),
+##  (0.0, 1 Chronicles 25:1-31 (31 verses)),
+##  (0.0, 1 Chronicles 24:1-31 (31 verses)),
+##  (0.0, 1 Chronicles 23:1-32 (32 verses)),
+##  (0.0, 1 Chronicles 22:1-19 (19 verses)),
+##  (0.0, 1 Chronicles 21:1-30 (30 verses)),
+##  (0.0, 1 Chronicles 20:1-8 (8 verses)),
+##  (0.0, 1 Chronicles 19:1-19 (19 verses)),
+##  (0.0, 1 Chronicles 18:1-17 (17 verses)),
+##  (0.0, 1 Chronicles 17:1-27 (27 verses)),
+##  (0.0, 1 Chronicles 16:1-43 (43 verses)),
+##  (0.0, 1 Chronicles 15:1-29 (29 verses)),
+##  (0.0, 1 Chronicles 14:1-17 (17 verses)),
+##  (0.0, 1 Chronicles 13:1-14 (14 verses)),
+##  (0.0, 1 Chronicles 12:1-40 (40 verses)),
+##  (0.0, 1 Chronicles 11:1-47 (47 verses)),
+##  (0.0, 1 Chronicles 10:1-14 (14 verses)),
+##  (0.0, 1 Chronicles 9:1-44 (44 verses)),
+##  (0.0, 1 Chronicles 8:1-40 (40 verses)),
+##  (0.0, 1 Chronicles 7:1-40 (40 verses)),
+##  (0.0, 1 Chronicles 6:1-81 (81 verses)),
+##  (0.0, 1 Chronicles 5:1-26 (26 verses)),
+##  (0.0, 1 Chronicles 4:1-43 (43 verses)),
+##  (0.0, 1 Chronicles 3:1-24 (24 verses)),
+##  (0.0, 1 Chronicles 2:1-55 (55 verses)),
+##  (0.0, 1 Chronicles 1:1-54 (54 verses)),
+##  (0.0, 2 Kings 25:1-30 (30 verses)),
+##  (0.0, 2 Kings 24:1-20 (20 verses)),
+##  (0.0, 2 Kings 23:1-37 (37 verses)),
+##  (0.0, 2 Kings 22:1-20 (20 verses)),
+##  (0.0, 2 Kings 21:1-26 (26 verses)),
+##  (0.0, 2 Kings 18:1-37 (37 verses)),
+##  (0.0, 2 Kings 17:1-41 (41 verses)),
+##  (0.0, 2 Kings 16:1-20 (20 verses)),
+##  (0.0, 2 Kings 15:1-38 (38 verses)),
+##  (0.0, 2 Kings 14:1-29 (29 verses)),
+##  (0.0, 2 Kings 13:1-25 (25 verses)),
+##  (0.0, 2 Kings 12:1-21 (21 verses)),
+##  (0.0, 2 Kings 11:1-21 (21 verses)),
+##  (0.0, 2 Kings 10:1-36 (36 verses)),
+##  (0.0, 2 Kings 9:1-37 (37 verses)),
+##  (0.0, 2 Kings 8:1-29 (29 verses)),
+##  (0.0, 2 Kings 7:1-20 (20 verses)),
+##  (0.0, 2 Kings 6:1-33 (33 verses)),
+##  (0.0, 2 Kings 5:1-27 (27 verses)),
+##  (0.0, 2 Kings 4:1-44 (44 verses)),
+##  (0.0, 2 Kings 3:1-27 (27 verses)),
+##  (0.0, 2 Kings 2:1-25 (25 verses)),
+##  (0.0, 2 Kings 1:1-18 (18 verses)),
+##  (0.0, 1 Kings 21:1-29 (29 verses)),
+##  (0.0, 1 Kings 20:1-43 (43 verses)),
+##  (0.0, 1 Kings 19:1-21 (21 verses)),
+##  (0.0, 1 Kings 18:1-46 (46 verses)),
+##  (0.0, 1 Kings 16:1-34 (34 verses)),
+##  (0.0, 1 Kings 15:1-34 (34 verses)),
+##  (0.0, 1 Kings 14:1-31 (31 verses)),
+##  (0.0, 1 Kings 13:1-34 (34 verses)),
+##  (0.0, 1 Kings 12:1-33 (33 verses)),
+##  (0.0, 1 Kings 11:1-43 (43 verses)),
+##  (0.0, 1 Kings 9:1-28 (28 verses)),
+##  (0.0, 1 Kings 8:1-66 (66 verses)),
+##  (0.0, 1 Kings 7:1-51 (51 verses)),
+##  (0.0, 1 Kings 6:1-38 (38 verses)),
+##  (0.0, 1 Kings 5:1-18 (18 verses)),
+##  (0.0, 1 Kings 4:1-34 (34 verses)),
+##  (0.0, 1 Kings 1:1-53 (53 verses)),
+##  (0.0, 2 Samuel 24:1-25 (25 verses)),
+##  (0.0, 2 Samuel 23:1-39 (39 verses)),
+##  (0.0, 2 Samuel 22:1-51 (51 verses)),
+##  (0.0, 2 Samuel 21:1-22 (22 verses)),
+##  (0.0, 2 Samuel 20:1-26 (26 verses)),
+##  (0.0, 2 Samuel 19:1-43 (43 verses)),
+##  (0.0, 2 Samuel 18:1-33 (33 verses)),
+##  (0.0, 2 Samuel 17:1-29 (29 verses)),
+##  (0.0, 2 Samuel 16:1-23 (23 verses)),
+##  (0.0, 2 Samuel 14:1-33 (33 verses)),
+##  (0.0, 2 Samuel 13:1-39 (39 verses)),
+##  (0.0, 2 Samuel 12:1-31 (31 verses)),
+##  (0.0, 2 Samuel 11:1-27 (27 verses)),
+##  (0.0, 2 Samuel 10:1-19 (19 verses)),
+##  (0.0, 2 Samuel 9:1-13 (13 verses)),
+##  (0.0, 2 Samuel 8:1-18 (18 verses)),
+##  (0.0, 2 Samuel 6:1-23 (23 verses)),
+##  (0.0, 2 Samuel 5:1-25 (25 verses)),
+##  (0.0, 2 Samuel 4:1-12 (12 verses)),
+##  (0.0, 2 Samuel 3:1-39 (39 verses)),
+##  (0.0, 2 Samuel 1:1-27 (27 verses)),
+##  (0.0, 1 Samuel 31:1-13 (13 verses)),
+##  (0.0, 1 Samuel 30:1-31 (31 verses)),
+##  (0.0, 1 Samuel 29:1-11 (11 verses)),
+##  (0.0, 1 Samuel 28:1-25 (25 verses)),
+##  (0.0, 1 Samuel 27:1-12 (12 verses)),
+##  (0.0, 1 Samuel 26:1-25 (25 verses)),
+##  (0.0, 1 Samuel 25:1-44 (44 verses)),
+##  (0.0, 1 Samuel 24:1-22 (22 verses)),
+##  (0.0, 1 Samuel 23:1-29 (29 verses)),
+##  (0.0, 1 Samuel 22:1-23 (23 verses)),
+##  (0.0, 1 Samuel 19:1-24 (24 verses)),
+##  (0.0, 1 Samuel 18:1-30 (30 verses)),
+##  (0.0, 1 Samuel 17:1-58 (58 verses)),
+##  (0.0, 1 Samuel 16:1-23 (23 verses)),
+##  (0.0, 1 Samuel 15:1-35 (35 verses)),
+##  (0.0, 1 Samuel 14:1-52 (52 verses)),
+##  (0.0, 1 Samuel 13:1-23 (23 verses)),
+##  (0.0, 1 Samuel 11:1-15 (15 verses)),
+##  (0.0, 1 Samuel 10:1-27 (27 verses)),
+##  (0.0, 1 Samuel 9:1-27 (27 verses)),
+##  (0.0, 1 Samuel 8:1-22 (22 verses)),
+##  (0.0, 1 Samuel 7:1-17 (17 verses)),
+##  (0.0, 1 Samuel 6:1-21 (21 verses)),
+##  (0.0, 1 Samuel 5:1-12 (12 verses)),
+##  (0.0, 1 Samuel 4:1-22 (22 verses)),
+##  (0.0, 1 Samuel 3:1-21 (21 verses)),
+##  (0.0, 1 Samuel 2:1-36 (36 verses)),
+##  (0.0, 1 Samuel 1:1-28 (28 verses)),
+##  (0.0, Ruth 4:1-22 (22 verses)),
+##  (0.0, Ruth 2:1-23 (23 verses)),
+##  (0.0, Ruth 1:1-22 (22 verses)),
+##  (0.0, Judges 21:1-25 (25 verses)),
+##  (0.0, Judges 20:1-48 (48 verses)),
+##  (0.0, Judges 19:1-30 (30 verses)),
+##  (0.0, Judges 18:1-31 (31 verses)),
+##  (0.0, Judges 17:1-13 (13 verses)),
+##  (0.0, Judges 16:1-31 (31 verses)),
+##  (0.0, Judges 15:1-20 (20 verses)),
+##  (0.0, Judges 14:1-20 (20 verses)),
+##  (0.0, Judges 13:1-25 (25 verses)),
+##  (0.0, Judges 12:1-15 (15 verses)),
+##  (0.0, Judges 11:1-40 (40 verses)),
+##  (0.0, Judges 10:1-18 (18 verses)),
+##  (0.0, Judges 8:1-35 (35 verses)),
+##  (0.0, Judges 7:1-25 (25 verses)),
+##  (0.0, Judges 6:1-40 (40 verses)),
+##  (0.0, Judges 5:1-31 (31 verses)),
+##  (0.0, Judges 4:1-24 (24 verses)),
+##  (0.0, Judges 3:1-31 (31 verses)),
+##  (0.0, Judges 2:1-23 (23 verses)),
+##  (0.0, Judges 1:1-36 (36 verses)),
+##  (0.0, Joshua 23:1-16 (16 verses)),
+##  (0.0, Joshua 22:1-34 (34 verses)),
+##  (0.0, Joshua 21:1-45 (45 verses)),
+##  (0.0, Joshua 20:1-9 (9 verses)),
+##  (0.0, Joshua 19:1-51 (51 verses)),
+##  (0.0, Joshua 18:1-28 (28 verses)),
+##  (0.0, Joshua 17:1-18 (18 verses)),
+##  (0.0, Joshua 16:1-10 (10 verses)),
+##  (0.0, Joshua 15:1-63 (63 verses)),
+##  (0.0, Joshua 14:1-15 (15 verses)),
+##  (0.0, Joshua 13:1-33 (33 verses)),
+##  (0.0, Joshua 12:1-24 (24 verses)),
+##  (0.0, Joshua 11:1-23 (23 verses)),
+##  (0.0, Joshua 10:1-43 (43 verses)),
+##  (0.0, Joshua 9:1-27 (27 verses)),
+##  (0.0, Joshua 8:1-35 (35 verses)),
+##  (0.0, Joshua 7:1-26 (26 verses)),
+##  (0.0, Joshua 6:1-27 (27 verses)),
+##  (0.0, Joshua 5:1-15 (15 verses)),
+##  (0.0, Joshua 4:1-24 (24 verses)),
+##  (0.0, Joshua 3:1-17 (17 verses)),
+##  (0.0, Joshua 1:1-18 (18 verses)),
+##  (0.0, Deuteronomy 34:1-12 (12 verses)),
+##  (0.0, Deuteronomy 33:1-29 (29 verses)),
+##  (0.0, Deuteronomy 31:1-30 (30 verses)),
+##  (0.0, Deuteronomy 30:1-20 (20 verses)),
+##  (0.0, Deuteronomy 29:1-29 (29 verses)),
+##  (0.0, Deuteronomy 28:1-68 (68 verses)),
+##  (0.0, Deuteronomy 27:1-26 (26 verses)),
+##  (0.0, Deuteronomy 26:1-19 (19 verses)),
+##  (0.0, Deuteronomy 25:1-19 (19 verses)),
+##  (0.0, Deuteronomy 24:1-22 (22 verses)),
+##  (0.0, Deuteronomy 23:1-25 (25 verses)),
+##  (0.0, Deuteronomy 21:1-23 (23 verses)),
+##  (0.0, Deuteronomy 20:1-20 (20 verses)),
+##  (0.0, Deuteronomy 19:1-21 (21 verses)),
+##  (0.0, Deuteronomy 18:1-22 (22 verses)),
+##  (0.0, Deuteronomy 16:1-22 (22 verses)),
+##  (0.0, Deuteronomy 15:1-23 (23 verses)),
+##  (0.0, Deuteronomy 12:1-32 (32 verses)),
+##  (0.0, Deuteronomy 11:1-32 (32 verses)),
+##  (0.0, Deuteronomy 10:1-22 (22 verses)),
+##  (0.0, Deuteronomy 9:1-29 (29 verses)),
+##  (0.0, Deuteronomy 8:1-20 (20 verses)),
+##  (0.0, Deuteronomy 7:1-26 (26 verses)),
+##  (0.0, Deuteronomy 6:1-25 (25 verses)),
+##  (0.0, Deuteronomy 5:1-33 (33 verses)),
+##  (0.0, Deuteronomy 4:1-49 (49 verses)),
+##  (0.0, Deuteronomy 3:1-29 (29 verses)),
+##  (0.0, Deuteronomy 2:1-37 (37 verses)),
+##  (0.0, Deuteronomy 1:1-46 (46 verses)),
+##  (0.0, Numbers 36:1-13 (13 verses)),
+##  (0.0, Numbers 35:1-34 (34 verses)),
+##  (0.0, Numbers 34:1-29 (29 verses)),
+##  (0.0, Numbers 33:1-56 (56 verses)),
+##  (0.0, Numbers 32:1-42 (42 verses)),
+##  (0.0, Numbers 31:1-54 (54 verses)),
+##  (0.0, Numbers 30:1-16 (16 verses)),
+##  (0.0, Numbers 29:1-40 (40 verses)),
+##  (0.0, Numbers 28:1-31 (31 verses)),
+##  (0.0, Numbers 27:1-23 (23 verses)),
+##  (0.0, Numbers 26:1-65 (65 verses)),
+##  (0.0, Numbers 25:1-18 (18 verses)),
+##  (0.0, Numbers 24:1-25 (25 verses)),
+##  (0.0, Numbers 23:1-30 (30 verses)),
+##  (0.0, Numbers 22:1-41 (41 verses)),
+##  (0.0, Numbers 21:1-35 (35 verses)),
+##  (0.0, Numbers 20:1-29 (29 verses)),
+##  (0.0, Numbers 19:1-22 (22 verses)),
+##  (0.0, Numbers 18:1-32 (32 verses)),
+##  (0.0, Numbers 17:1-13 (13 verses)),
+##  (0.0, Numbers 16:1-50 (50 verses)),
+##  (0.0, Numbers 15:1-41 (41 verses)),
+##  (0.0, Numbers 13:1-33 (33 verses)),
+##  (0.0, Numbers 12:1-16 (16 verses)),
+##  (0.0, Numbers 11:1-35 (35 verses)),
+##  (0.0, Numbers 10:1-36 (36 verses)),
+##  (0.0, Numbers 9:1-23 (23 verses)),
+##  (0.0, Numbers 8:1-26 (26 verses)),
+##  (0.0, Numbers 7:1-89 (89 verses)),
+##  (0.0, Numbers 6:1-27 (27 verses)),
+##  (0.0, Numbers 5:1-31 (31 verses)),
+##  (0.0, Numbers 4:1-49 (49 verses)),
+##  (0.0, Numbers 3:1-51 (51 verses)),
+##  (0.0, Numbers 2:1-34 (34 verses)),
+##  (0.0, Numbers 1:1-54 (54 verses)),
+##  (0.0, Leviticus 27:1-34 (34 verses)),
+##  (0.0, Leviticus 26:1-46 (46 verses)),
+##  (0.0, Leviticus 25:1-55 (55 verses)),
+##  (0.0, Leviticus 24:1-23 (23 verses)),
+##  (0.0, Leviticus 23:1-44 (44 verses)),
+##  (0.0, Leviticus 22:1-33 (33 verses)),
+##  (0.0, Leviticus 21:1-24 (24 verses)),
+##  (0.0, Leviticus 20:1-27 (27 verses)),
+##  (0.0, Leviticus 19:1-37 (37 verses)),
+##  (0.0, Leviticus 18:1-30 (30 verses)),
+##  (0.0, Leviticus 17:1-16 (16 verses)),
+##  (0.0, Leviticus 16:1-34 (34 verses)),
+##  (0.0, Leviticus 15:1-33 (33 verses)),
+##  (0.0, Leviticus 14:1-57 (57 verses)),
+##  (0.0, Leviticus 13:1-59 (59 verses)),
+##  (0.0, Leviticus 12:1-8 (8 verses)),
+##  (0.0, Leviticus 11:1-47 (47 verses)),
+##  (0.0, Leviticus 10:1-20 (20 verses)),
+##  (0.0, Leviticus 9:1-24 (24 verses)),
+##  (0.0, Leviticus 8:1-36 (36 verses)),
+##  (0.0, Leviticus 7:1-38 (38 verses)),
+##  (0.0, Leviticus 6:1-30 (30 verses)),
+##  (0.0, Leviticus 5:1-19 (19 verses)),
+##  (0.0, Leviticus 4:1-35 (35 verses)),
+##  (0.0, Leviticus 3:1-17 (17 verses)),
+##  (0.0, Leviticus 2:1-16 (16 verses)),
+##  (0.0, Leviticus 1:1-17 (17 verses)),
+##  (0.0, Exodus 40:1-38 (38 verses)),
+##  (0.0, Exodus 39:1-43 (43 verses)),
+##  (0.0, Exodus 38:1-31 (31 verses)),
+##  (0.0, Exodus 37:1-29 (29 verses)),
+##  (0.0, Exodus 36:1-38 (38 verses)),
+##  (0.0, Exodus 35:1-35 (35 verses)),
+##  (0.0, Exodus 33:1-23 (23 verses)),
+##  (0.0, Exodus 32:1-35 (35 verses)),
+##  (0.0, Exodus 31:1-18 (18 verses)),
+##  (0.0, Exodus 30:1-38 (38 verses)),
+##  (0.0, Exodus 29:1-46 (46 verses)),
+##  (0.0, Exodus 28:1-43 (43 verses)),
+##  (0.0, Exodus 27:1-21 (21 verses)),
+##  (0.0, Exodus 26:1-37 (37 verses)),
+##  (0.0, Exodus 25:1-40 (40 verses)),
+##  (0.0, Exodus 24:1-18 (18 verses)),
+##  (0.0, Exodus 23:1-33 (33 verses)),
+##  (0.0, Exodus 22:1-31 (31 verses)),
+##  (0.0, Exodus 21:1-36 (36 verses)),
+##  (0.0, Exodus 20:1-26 (26 verses)),
+##  (0.0, Exodus 19:1-25 (25 verses)),
+##  (0.0, Exodus 17:1-16 (16 verses)),
+##  (0.0, Exodus 16:1-36 (36 verses)),
+##  (0.0, Exodus 15:1-27 (27 verses)),
+##  (0.0, Exodus 14:1-31 (31 verses)),
+##  (0.0, Exodus 13:1-22 (22 verses)),
+##  (0.0, Exodus 12:1-51 (51 verses)),
+##  (0.0, Exodus 11:1-10 (10 verses)),
+##  (0.0, Exodus 10:1-29 (29 verses)),
+##  (0.0, Exodus 9:1-35 (35 verses)),
+##  (0.0, Exodus 8:1-32 (32 verses)),
+##  (0.0, Exodus 7:1-25 (25 verses)),
+##  (0.0, Exodus 6:1-30 (30 verses)),
+##  (0.0, Exodus 5:1-23 (23 verses)),
+##  (0.0, Exodus 4:1-31 (31 verses)),
+##  (0.0, Exodus 3:1-22 (22 verses)),
+##  (0.0, Exodus 2:1-25 (25 verses)),
+##  (0.0, Exodus 1:1-22 (22 verses)),
+##  (0.0, Genesis 50:1-26 (26 verses)),
+##  (0.0, Genesis 49:1-33 (33 verses)),
+##  (0.0, Genesis 46:1-34 (34 verses)),
+##  (0.0, Genesis 45:1-28 (28 verses)),
+##  (0.0, Genesis 44:1-34 (34 verses)),
+##  (0.0, Genesis 43:1-34 (34 verses)),
+##  (0.0, Genesis 41:1-57 (57 verses)),
+##  (0.0, Genesis 40:1-23 (23 verses)),
+##  (0.0, Genesis 39:1-23 (23 verses)),
+##  (0.0, Genesis 38:1-30 (30 verses)),
+##  (0.0, Genesis 37:1-36 (36 verses)),
+##  (0.0, Genesis 36:1-43 (43 verses)),
+##  (0.0, Genesis 35:1-29 (29 verses)),
+##  (0.0, Genesis 34:1-31 (31 verses)),
+##  (0.0, Genesis 33:1-20 (20 verses)),
+##  (0.0, Genesis 31:1-55 (55 verses)),
+##  (0.0, Genesis 30:1-43 (43 verses)),
+##  (0.0, Genesis 29:1-35 (35 verses)),
+##  (0.0, Genesis 28:1-22 (22 verses)),
+##  (0.0, Genesis 27:1-46 (46 verses)),
+##  (0.0, Genesis 26:1-35 (35 verses)),
+##  (0.0, Genesis 25:1-34 (34 verses)),
+##  (0.0, Genesis 23:1-20 (20 verses)),
+##  (0.0, Genesis 22:1-24 (24 verses)),
+##  (0.0, Genesis 21:1-34 (34 verses)),
+##  (0.0, Genesis 20:1-18 (18 verses)),
+##  (0.0, Genesis 19:1-38 (38 verses)),
+##  (0.0, Genesis 18:1-33 (33 verses)),
+##  (0.0, Genesis 17:1-27 (27 verses)),
+##  (0.0, Genesis 16:1-16 (16 verses)),
+##  (0.0, Genesis 15:1-21 (21 verses)),
+##  (0.0, Genesis 14:1-24 (24 verses)),
+##  (0.0, Genesis 13:1-18 (18 verses)),
+##  (0.0, Genesis 12:1-20 (20 verses)),
+##  (0.0, Genesis 11:1-32 (32 verses)),
+##  (0.0, Genesis 10:1-32 (32 verses)),
+##  (0.0, Genesis 9:1-29 (29 verses)),
+##  (0.0, Genesis 8:1-22 (22 verses)),
+##  (0.0, Genesis 7:1-24 (24 verses)),
+##  (0.0, Genesis 6:1-22 (22 verses)),
+##  (0.0, Genesis 5:1-32 (32 verses)),
+##  (0.0, Genesis 3:1-24 (24 verses)),
+##  (0.0, Genesis 2:1-25 (25 verses)),
+##  (0.0, Genesis 1:1-31 (31 verses))]
+# >>> 
+# >>> 
+# >>> 
+# >>> [(b.count('truth')+b.count('truly')+b.count('true'))/b.vc()*100*F(int) for b in b.books()]
+# [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1, 0, 0, 0, 5, 0, 2, 0, 4, 3, 4, 2, 2, 2, 6, 5, 7, 6, 0, 1, 2, 1, 4, 15, 38, 50, 0, 2]
+# >>> 
+# >>> pn(595)
+# 4357
+# >>> sos(_)
+# [[(1, 1), (66, 66)]]
+# >>> 1123
+# 1123
+# >>> 66*66
+# 4356
+# >>> 
+# >>> ns(3245)
+# [5, 11, 59] [3, 5, 17]
+# >>> 16470*ns
+# [2, 3, 3, 3, 5, 61] [1, 2, 2, 2, 3, 18]
+# >>> tells('true')
+#  t  r   u  e  =
+#  1  1   1  1  4
+#  20 18  21 5  64
+# 200 90 300 5 595
+# >>> b[64]
+# 3 John 1:1-14 (14 verses)
+# >>> b.chapter(595)
+# Psalms 117:1 O praise the LORD, all ye nations: praise him, all ye people.
+# Psalms 117:2 For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
+# >>> 

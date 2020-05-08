@@ -35,7 +35,7 @@ T+
 # >>> 
 # >>> 
 # >>> method.join
-# functools.partial(<function callmethod at 0xb6439ed0>, 'join')
+# Func(functools.partial(<function callmethod at 0xb6519db0>, 'join'))
 # >>> method.join(',','abc')
 # 'a,b,c'
 # >>> 
@@ -45,15 +45,15 @@ T+
 # >>> p.abc
 # abc
 # >>> pairs('abcdefg')
-# <generator object windows at 0xb5b53f70>
+# <generator object windows at 0xb659f1f0>
 # >>> list(_)
-# [('a', 'b'), ('b', 'c'), ('c', 'd'), ('d', 'e'), ('e', 'f'), ('f', 'g')]
+# ['ab', 'bc', 'cd', 'de', 'ef', 'fg']
 # >>> 
 # >>> l(1,2,3)
 # [1, 2, 3]
 # >>> 
 # >>> F(list)
-# F(<class 'list'>)
+# Func(<class 'list'>)
 # >>> _([1,2,3])
 # [1, 2, 3]
 # >>> 
@@ -61,9 +61,9 @@ T+
 # >>> from auto import *
 # >>> from func import *
 # >>> unicodedata.name(chr(0))
-# <console>:1: ValueError: no such name
+# <28>:1: ValueError: no such name
 # >>> failas(unicodedata.name,'')
-# functools.partial(<function failas.<locals>.failsafe2 at 0xb5872f60>, <built-in function name>, '')
+# Func(functools.partial(<function failas.<locals>.failsafe2 at 0xb67ec7c8>, <built-in function name>, ''))
 # >>> _(chr(0))
 # ''
 # >>> [(i,s) for i,s in enumerate([failas(unicodedata.name,'')(chr(i)) for i in range(90000)]) if s.find('HEBREW')>=0]
@@ -208,6 +208,9 @@ T+
 # >>> unicodedata.name
 # <built-in function name>
 # >>> 
+# >>> tell(אב)
+# א ב ג ד ה ו ז ח ט י  כ  ל  מ  נ  ס  ע  פ  צ  ק  ר  ש  ת   =
+# 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 253
 # >>> 
 # >>> 
 # >>> '%x' % 1468

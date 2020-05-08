@@ -182,4 +182,3 @@ names=withoutrepeats(re.findall(r'(?:name|begat) ([A-Z]\w*)',Genesis[11:10:25].t
 # 43 And fields shall be bought in this land, whereof ye say, It is desolate without man or beast; it is given into the hand of the Chaldeans.
 # 44 Men shall buy fields for money, and subscribe evidences, and seal them, and take witnesses in the land of Benjamin, and in the places about Jerusalem, and in the cities of Judah, and in the cities of the mountains, and in the cities of the valley, and in the cities of the south: for I will cause their captivity to return, saith the LORD.
 # >>> 
-# >>>   

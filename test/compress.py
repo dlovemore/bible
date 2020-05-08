@@ -69,28 +69,22 @@ def unshorten(shortwordlist,compressed):
 # >>> t=shorten(text)
 # >>> wl, st=t
 # >>> 
-# >>> wl, st = shorten('The cat sat on the mat.')
-# >>> st
-# 'Ă ă Ć ą ć Ą.'
-# >>> shorten('cat',wl)
-# ([' ', '.', 'The', 'cat', 'mat', 'on', 'sat', 'the'], 'ă')
-# >>> _,ss=_
-# >>> _
-# [' ', '.', 'The', 'cat', 'mat', 'on', 'sat', 'the']
-# >>> st.find(ss)
-# 2
-# >>> st,ss
-# ('Ă ă Ć ą ć Ą.', 'ă')
+# >>> wl[:10],st[:10]
+# (['\n', ' ', '!', "'", '(', ')', ',', '.', ':', ';'], 'Ȫ \u0a46 Х ǯ ԇ ')
+# >>> 
 # >>> 
 # >>> 
 # >>> 
 # >>> 
 # >>> 
 # >>> len(text),len(wl),len(st), len(st.replace(' ',''))
-# (196806, 8, 12, 7)
+# (196806, 2676, 82978, 46247)
 # >>> 
 # >>> st.__sizeof__()
-# 62
+# 165994
+# >>> st[:3]
+# 'Ȫ \u0a46'
+# >>> 
 # >>> 
 # >>> 
 # >>> 
@@ -99,20 +93,33 @@ def unshorten(shortwordlist,compressed):
 # >>> 
 # >>> 
 # >>> unt=unshorten(*t)
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-#   File "/home/pi/bible/compress.py", line 61, in unshorten
-#     wordlist=[chr(i) for i in range(256)]+unshortenwordlist(shortwordlist)
-#   File "/home/pi/bible/func.py", line 21, in tolist
-#     return list(f(*args))
-#   File "/home/pi/bible/compress.py", line 48, in unshortenwordlist
-#     k=int(ks)
-# ValueError: invalid literal for int() with base 10: ''
+# <27>:1: ValueError: invalid literal for int() with base 10: ''
+# /home/pi/python/bible/test/compress.py:61: ValueError: invalid literal for int() with base 10: ''
+#   unshorten(
+#     shortwordlist=['\n', ' ', '!', "'", '(', ')', ',', '.', ':', ';',...
+#     compressed=Ȫ ੆ Х ǯ ԇ ੆ ۂ ϋ ੆ ֒.
+#     ĳ ੆ ֒ ૨ ି ذ, ϋ ૗; ϋ Ԡ ૨ ઺ ੆ ׍ ࠷ ੆ Բ. ...
+#   )
+# /home/pi/python/parle/func.py:12: ValueError: invalid literal for int() with base 10: ''
+#   __call__(
+#     self=Func(functools.partial(<function aslist.<locals>.tolist at 0...
+#   )
+#     args=(['\n', ' ', '!', "'", '(', ')', ',', '.', ':', ';', '?', 'A...
+#     kwargs={}
+# /home/pi/python/parle/func.py:296: ValueError: invalid literal for int() with base 10: ''
+#   tolist(f=<function unshortenwordlist at 0xb5803468>)
+#     args=(['\n', ' ', '!', "'", '(', ')', ',', '.', ':', ';', '?', 'A...
+# /home/pi/python/bible/test/compress.py:48: ValueError: invalid literal for int() with base 10: ''
+#   unshortenwordlist(
+#     wl=['\n', ' ', '!', "'", '(', ')', ',', '.', ':', ';', '?', 'A', ...
+#   )
+#     w=
+#     v=
+#     
+#     ks=
 # >>> 
 # >>> unt==text
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# NameError: name 'unt' is not defined
+# <29>:1: NameError: name 'unt' is not defined
 # >>> [''.join(g) for x,g in itertools.groupby('a,b,c.sdfhjsfh--x',key=method.isalpha)]
 # ['a', ',', 'b', ',', 'c', '.', 'sdfhjsfh', '--', 'x']
 # >>> wl=sortu(Genesis[1].words())
@@ -134,23 +141,17 @@ def unshorten(shortwordlist,compressed):
 # >>> 0x2028
 # 8232
 # >>> p(chr(_))
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# TypeError: an integer is required (got type list)
+#  # 
 # >>> 0x2029
 # 8233
 # >>> p(chr(_))
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# TypeError: an integer is required (got type list)
+#  # 
 # >>> 0x202a
 # 8234
 # >>> p(chr(_))
-# Traceback (most recent call last):
-#   File "<console>", line 1, in <module>
-# TypeError: an integer is required (got type list)
+# ‪
 # >>> ''.join(set('abcdef'))
-# 'bdcaef'
+# 'dcbafe'
 # >>> pp=pprint.pprint
 # >>> 
 
@@ -159,7 +160,7 @@ def unshorten(shortwordlist,compressed):
 # '.'
 # >>> punc=[nonalpha(w) for w in sws]
 # >>> set(punc)
-# {'', ';', '.)', '?)', ',)', "'?", ')', "'.", '(', ':)', ',', '?', "';", '),', "':)", "',", '-.', '-', '-:', '--;', '!)', '!', "'", '-,', '(,', "':", ').', ';)', ':', '.'}
+# {'', ';)', '-:', ',', '.', "'.", '!)', '),', "',", "':", ')', '.)', "';", '?)', ':', "'", '-', "'?", '(,', ').', "':)", '!', ':)', '(', '--;', '-.', '?', ',)', ';', '-,'}
 # >>> puncchrs=''.join(sorted(''.join(set(''.join(_)))))
 # >>> puncchrs
 # ' .Tacehmnost'

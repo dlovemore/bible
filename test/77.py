@@ -21,18 +21,18 @@ Genesis 29:1 Then Jacob went on his journey, and came into the land of the peopl
 Genesis 31:14 And Rachel and Leah answered and said unto him, Is there yet any portion or inheritance for us in our father's house?
 >>> 
 >>> tell('Christ')
-C h  r i  s  t
-3+8+18+9+19+20 = 77
+C h r  i s  t  =
+3 8 18 9 19 20 77
 >>> tell('stars')
- s  t a  r  s
-19+20+1+18+19 = 77
+s  t  a r  s  =
+19 20 1 18 19 77
 >>> p(b/'number'/'stars')
 Genesis 15:5 And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.
 Deuteronomy 28:62 And ye shall be left few in number, whereas ye were as the stars of heaven for multitude; because thou wouldest not obey the voice of the LORD thy God.
 1 Chronicles 27:23 But David took not the number of them from twenty years old and under: because the LORD had said he would increase Israel like to the stars of the heavens.
 Psalms 147:4 He telleth the number of the stars; he calleth them all by their names.
 >>> b/'Orion'
-Job 9:9...Amos 5:8 (3 verses)
+Job 9:9;38:31;Amos 5:8 (3 verses)
 >>> p(_)
 Job 9:9 Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south.
 Job 38:31 Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?
@@ -41,15 +41,15 @@ Amos 5:8 Seek him that maketh the seven stars and Orion, and turneth the shadow 
 Job 38:31 Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?
 Job 38:32 Canst thou bring forth Mazzaroth in his season? or canst thou guide Arcturus with his sons?
 >>> _.tell()
-38:31 Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?
-    0+   57+  64+  29+ 33+   72+       108+21+       71+33+   66+ 33+   40+21+    71 = 719
-38:32 Canst thou bring forth Mazzaroth in his season? or canst thou guide Arcturus with his sons?
-    0+   57+  64+   50+   67+      128+23+ 36+     73+33+   57+  64+   46+     121+  60+ 36+   67 = 982
+Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?  =
+  57   64   29   33   72     108     21     71    33   66   33   40  21   71   719
+Canst thou bring forth Mazzaroth in his season? or canst thou guide Arcturus with his sons?  =
+  57   64    50    67     128    23  36    73   33   57   64    46    121     60   36   67  982
 >>> _.tell(ssum)
-38:31 Canst thou bind the sweet influences of Pleiades,  or loose the bands of Orion?
-    0+  354+ 568+  65+213+  810+       558+66+      224+150+  255+213+  157+66+   269 = 3968
-38:32 Canst thou bring forth Mazzaroth in his season?  or canst thou guide Arcturus with his sons?
-    0+  354+ 568+  158+  364+     2000+59+117+    316+150+  354+ 568+  325+    1084+ 717+117+  310 = 7561
+Canst thou bind the sweet influences of Pleiades,  or loose the bands of Orion?  =
+ 354  568   65  213  810     558     66    224    150  255  213  157  66  269   3968
+Canst thou bring forth Mazzaroth in his season?  or canst thou guide Arcturus with his sons?  =
+ 354  568   158   364     2000   59 117   316   150  354  568   325    1084   717  117  310  7561
 >>> 
 >>> tell('Orion')
  O  r i  o  n

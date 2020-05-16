@@ -7,19 +7,23 @@ import unicodedata
 c=299792458
 
 ab='abcdefghijklmnopqrstuvwxyz'
-αβ='αβγδεϝζηθικλμνξοπϙρστυφχψωϡ'
-אב='אבגדהוזחטיכלמנסעפצקרשת'
+alphabeta=αβ='αβγδεϝζηθικλμνξοπϙρστυφχψωϡ'
+alephbeth=אב='אבגדהוזחטיכלמנסעפצקרשת'
 аб='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-
+hira=あい='あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもやゆよらりるれろわゐゑをんゔ'
+hirasmall={'ぁ': 'あ', 'ぃ': 'い', 'ぅ': 'う', 'ぇ': 'え', 'ぉ': 'お', 'っ': 'つ', 'ゃ': 'や', 'ゅ': 'ゆ', 'ょ': 'よ', 'ゎ': 'わ', 'ゕ': 'か', 'ゖ': 'け'}
 nn='0123456789'
 pos={c:i for i,c in enumerate(ab,start=1)}
 pos.update({c:i for i,c in enumerate(αβ,start=1)})
 pos.update({c:i for i,c in enumerate(אב,start=1)})
 pos.update({c:i for i,c in enumerate(аб,start=1)})
+pos.update({c:i for i,c in enumerate(あい,start=1)})
+pos.update({small:pos[c] for small,c in hirasmall.items()})
 pos.update({c:i for i,c in enumerate(nn)})
 
 characters={a:a for a in pos.keys()}
-vowels=set('aeiou' + 'αεηιουω' + 'аеёийоуыьэюя')
+vowels=set('aeiou' + 'αεηιουω' + 'аеёийоуыьэюя'+'аеёийоуъ?ыь?эюя'+
+    ''.join(hirasmall))
 
 def begin():
     eqss=['αάἀἁἂἃἄἅἆἇὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷ','εέἐἑἒἓἔἕὲέ','ηήἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇ',
@@ -629,176 +633,6 @@ def sos(n):
 #  ('HEBREW PUNCTUATION GERSHAYIM', 1524)]
 # >>> 
 # >>> 
-# >>> help(unicodedata)
-# Help on built-in module unicodedata:
-# 
-# NAME
-#     unicodedata
-# 
-# DESCRIPTION
-#     This module provides access to the Unicode Character Database which
-#     defines character properties for all Unicode characters. The data in
-#     this database is based on the UnicodeData.txt file version
-#     11.0.0 which is publicly available from ftp://ftp.unicode.org/.
-#     
-#     The module uses the same names and symbols as defined by the
-#     UnicodeData File Format 11.0.0.
-# 
-# CLASSES
-#     builtins.object
-#         UCD
-#     
-#     class UCD(builtins.object)
-#      |  Methods defined here:
-#      |  
-#      |  __getattribute__(self, name, /)
-#      |      Return getattr(self, name).
-#      |  
-#      |  bidirectional(self, chr, /)
-#      |      Returns the bidirectional class assigned to the character chr as string.
-#      |      
-#      |      If no such value is defined, an empty string is returned.
-#      |  
-#      |  category(self, chr, /)
-#      |      Returns the general category assigned to the character chr as string.
-#      |  
-#      |  combining(self, chr, /)
-#      |      Returns the canonical combining class assigned to the character chr as integer.
-#      |      
-#      |      Returns 0 if no combining class is defined.
-#      |  
-#      |  decimal(self, chr, default=None, /)
-#      |      Converts a Unicode character into its equivalent decimal value.
-#      |      
-#      |      Returns the decimal value assigned to the character chr as integer.
-#      |      If no such value is defined, default is returned, or, if not given,
-#      |      ValueError is raised.
-#      |  
-#      |  decomposition(self, chr, /)
-#      |      Returns the character decomposition mapping assigned to the character chr as string.
-#      |      
-#      |      An empty string is returned in case no such mapping is defined.
-#      |  
-#      |  digit(self, chr, default=None, /)
-#      |      Converts a Unicode character into its equivalent digit value.
-#      |      
-#      |      Returns the digit value assigned to the character chr as integer.
-#      |      If no such value is defined, default is returned, or, if not given,
-#      |      ValueError is raised.
-#      |  
-#      |  east_asian_width(self, chr, /)
-#      |      Returns the east asian width assigned to the character chr as string.
-#      |  
-#      |  lookup(self, name, /)
-#      |      Look up character by name.
-#      |      
-#      |      If a character with the given name is found, return the
-#      |      corresponding character.  If not found, KeyError is raised.
-#      |  
-#      |  mirrored(self, chr, /)
-#      |      Returns the mirrored property assigned to the character chr as integer.
-#      |      
-#      |      Returns 1 if the character has been identified as a "mirrored"
-#      |      character in bidirectional text, 0 otherwise.
-#      |  
-#      |  name(self, chr, default=None, /)
-#      |      Returns the name assigned to the character chr as a string.
-#      |      
-#      |      If no name is defined, default is returned, or, if not given,
-#      |      ValueError is raised.
-#      |  
-#      |  normalize(self, form, unistr, /)
-#      |      Return the normal form 'form' for the Unicode string unistr.
-#      |      
-#      |      Valid values for form are 'NFC', 'NFKC', 'NFD', and 'NFKD'.
-#      |  
-#      |  numeric(self, chr, default=None, /)
-#      |      Converts a Unicode character into its equivalent numeric value.
-#      |      
-#      |      Returns the numeric value assigned to the character chr as float.
-#      |      If no such value is defined, default is returned, or, if not given,
-#      |      ValueError is raised.
-#      |  
-#      |  ----------------------------------------------------------------------
-#      |  Data descriptors defined here:
-#      |  
-#      |  unidata_version
-# 
-# FUNCTIONS
-#     bidirectional(chr, /)
-#         Returns the bidirectional class assigned to the character chr as string.
-#         
-#         If no such value is defined, an empty string is returned.
-#     
-#     category(chr, /)
-#         Returns the general category assigned to the character chr as string.
-#     
-#     combining(chr, /)
-#         Returns the canonical combining class assigned to the character chr as integer.
-#         
-#         Returns 0 if no combining class is defined.
-#     
-#     decimal(chr, default=None, /)
-#         Converts a Unicode character into its equivalent decimal value.
-#         
-#         Returns the decimal value assigned to the character chr as integer.
-#         If no such value is defined, default is returned, or, if not given,
-#         ValueError is raised.
-#     
-#     decomposition(chr, /)
-#         Returns the character decomposition mapping assigned to the character chr as string.
-#         
-#         An empty string is returned in case no such mapping is defined.
-#     
-#     digit(chr, default=None, /)
-#         Converts a Unicode character into its equivalent digit value.
-#         
-#         Returns the digit value assigned to the character chr as integer.
-#         If no such value is defined, default is returned, or, if not given,
-#         ValueError is raised.
-#     
-#     east_asian_width(chr, /)
-#         Returns the east asian width assigned to the character chr as string.
-#     
-#     lookup(name, /)
-#         Look up character by name.
-#         
-#         If a character with the given name is found, return the
-#         corresponding character.  If not found, KeyError is raised.
-#     
-#     mirrored(chr, /)
-#         Returns the mirrored property assigned to the character chr as integer.
-#         
-#         Returns 1 if the character has been identified as a "mirrored"
-#         character in bidirectional text, 0 otherwise.
-#     
-#     name(chr, default=None, /)
-#         Returns the name assigned to the character chr as a string.
-#         
-#         If no name is defined, default is returned, or, if not given,
-#         ValueError is raised.
-#     
-#     normalize(form, unistr, /)
-#         Return the normal form 'form' for the Unicode string unistr.
-#         
-#         Valid values for form are 'NFC', 'NFKC', 'NFD', and 'NFKD'.
-#     
-#     numeric(chr, default=None, /)
-#         Converts a Unicode character into its equivalent numeric value.
-#         
-#         Returns the numeric value assigned to the character chr as float.
-#         If no such value is defined, default is returned, or, if not given,
-#         ValueError is raised.
-# 
-# DATA
-#     ucd_3_2_0 = <unicodedata.UCD object>
-#     ucnhash_CAPI = <capsule object "unicodedata.ucnhash_CAPI">
-#     unidata_version = '11.0.0'
-# 
-# FILE
-#     (built-in)
-# 
-# 
 # >>> dir(unicodedata)
 # ['UCD', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'bidirectional', 'category', 'combining', 'decimal', 'decomposition', 'digit', 'east_asian_width', 'lookup', 'mirrored', 'name', 'normalize', 'numeric', 'ucd_3_2_0', 'ucnhash_CAPI', 'unidata_version']
 # >>> 
@@ -816,7 +650,7 @@ def sos(n):
 # 492
 # >>> 
 # >>> print(mdtable(Table([list(AB),Row(AB)@osum])))
-# <220>:1: NameError: name 'AB' is not defined
+# <219>:1: NameError: name 'AB' is not defined
 # >>> tellmd('יְהֹוָה'[::-1])
 # |הָ|וֹ|הְ|י|=
 # |-|-|-|-|-
@@ -840,3 +674,120 @@ def sos(n):
 # >>> tell(аб)
 # а б в г д е ё ж з и  й  к  л  м  н  о  п  р  с  т  у  ф  х  ц  ч  ш  щ  ъ  ы  ь  э  ю  я   =
 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 561
+# >>> span('\u3041','\u3096')
+# 'ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ'
+# >>> hira=_
+# >>> 
+# >>> 'あ'*F(unicodedata.name)*Binop(op.contains)*'SMALL'*op.not_
+# True
+# >>> notsmall=F(unicodedata.name)*(Binop(op.contains)*'SMALL')*op.not_
+# >>> 'あ'*notsmall
+# True
+# >>> 'ぁ'*notsmall
+# False
+# >>> hira
+# 'ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ'
+# >>> hira/notsmall
+# 'あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもやゆよらりるれろわゐゑをんゔ'
+# >>> len(_),len(hira)
+# (74, 86)
+# >>> 
+# >>> あい
+# 'あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもやゆよらりるれろわゐゑをんゔ'
+# >>> showalphas(_)
+# あ い う え お か が き ぎ く  ぐ  け  げ  こ  ご  さ  ざ  し  じ  す  ず  せ  ぜ  そ  ぞ  た  だ  ち  ぢ  つ  づ  て  で  と  ど  な  に  ぬ  ね  の  は  ば  ぱ  ひ  び  ぴ  ふ  ぶ  ぷ  へ  べ  ぺ  ほ  ぼ  ぽ  ま  み  む  め  も  や  ゆ  よ  ら  り  る  れ  ろ  わ  ゐ  ゑ  を  ん  ゔ 
+# 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+# >>> import htmldraw
+# >>> dr(htmldraw)
+# 'Attr' 'Binop' 'DataRow' 'Dict' 'F' 'FR' 'Fun' 'Func' 'FuncRow' 'GetItem' 'I' 'K' 'L' 'LeftOp' 'Lookup' 'RightOp' 'TAG' 'Unique' 'X' 'add' 'apply' 'aslist' 'builtins' 'callmethod' 'compose' 'const' 'delay' 'divide' 'dmap' 'draw' 'e' 'escape' 'failas' 'fggf' 'filter' 'first' 'firstn' 'floordiv' 'fun' 'functools' 'getitem' 'getprop' 'html' 'htmltable' 'inks' 'l' 'li' 'lmap' 'meth' 'method' 'mod' 'mul' 'op' 'operator' 'orr' 'p' 'pairs' 'partial' 'perm' 'permargs' 'plain' 'pmap' 'positions' 'pow' 'prop' 'push' 'q' 'qstr' 'redparts' 'reduce' 'rowtype' 'scale' 'show' 'showfile' 'showt' 'span' 'splitat' 'star' 'sub' 'subprocess' 'svg' 'swap' 'swapargs' 'table' 'th' 'threes' 'translate' 'trrow' 'truediv' 'trystr' 'twos' 'unstar' 'webbrowser' 'windows' 'withoutrepeats'
+# >>> htmldraw.table(あい@+osum)
+# ['table', ['tr', ['td', 'あ'], ['td', 1]], ['tr', ['td', 'い'], ['td', 2]], ['tr', ['td', 'う'], ['td', 3]], ['tr', ['td', 'え'], ['td', 4]], ['tr', ['td', 'お'], ['td', 5]], ['tr', ['td', 'か'], ['td', 6]], ['tr', ['td', 'が'], ['td', 7]], ['tr', ['td', 'き'], ['td', 8]], ['tr', ['td', 'ぎ'], ['td', 9]], ['tr', ['td', 'く'], ['td', 10]], ['tr', ['td', 'ぐ'], ['td', 11]], ['tr', ['td', 'け'], ['td', 12]], ['tr', ['td', 'げ'], ['td', 13]], ['tr', ['td', 'こ'], ['td', 14]], ['tr', ['td', 'ご'], ['td', 15]], ['tr', ['td', 'さ'], ['td', 16]], ['tr', ['td', 'ざ'], ['td', 17]], ['tr', ['td', 'し'], ['td', 18]], ['tr', ['td', 'じ'], ['td', 19]], ['tr', ['td', 'す'], ['td', 20]], ['tr', ['td', 'ず'], ['td', 21]], ['tr', ['td', 'せ'], ['td', 22]], ['tr', ['td', 'ぜ'], ['td', 23]], ['tr', ['td', 'そ'], ['td', 24]], ['tr', ['td', 'ぞ'], ['td', 25]], ['tr', ['td', 'た'], ['td', 26]], ['tr', ['td', 'だ'], ['td', 27]], ['tr', ['td', 'ち'], ['td', 28]], ['tr', ['td', 'ぢ'], ['td', 29]], ['tr', ['td', 'つ'], ['td', 30]], ['tr', ['td', 'づ'], ['td', 31]], ['tr', ['td', 'て'], ['td', 32]], ['tr', ['td', 'で'], ['td', 33]], ['tr', ['td', 'と'], ['td', 34]], ['tr', ['td', 'ど'], ['td', 35]], ['tr', ['td', 'な'], ['td', 36]], ['tr', ['td', 'に'], ['td', 37]], ['tr', ['td', 'ぬ'], ['td', 38]], ['tr', ['td', 'ね'], ['td', 39]], ['tr', ['td', 'の'], ['td', 40]], ['tr', ['td', 'は'], ['td', 41]], ['tr', ['td', 'ば'], ['td', 42]], ['tr', ['td', 'ぱ'], ['td', 43]], ['tr', ['td', 'ひ'], ['td', 44]], ['tr', ['td', 'び'], ['td', 45]], ['tr', ['td', 'ぴ'], ['td', 46]], ['tr', ['td', 'ふ'], ['td', 47]], ['tr', ['td', 'ぶ'], ['td', 48]], ['tr', ['td', 'ぷ'], ['td', 49]], ['tr', ['td', 'へ'], ['td', 50]], ['tr', ['td', 'べ'], ['td', 51]], ['tr', ['td', 'ぺ'], ['td', 52]], ['tr', ['td', 'ほ'], ['td', 53]], ['tr', ['td', 'ぼ'], ['td', 54]], ['tr', ['td', 'ぽ'], ['td', 55]], ['tr', ['td', 'ま'], ['td', 56]], ['tr', ['td', 'み'], ['td', 57]], ['tr', ['td', 'む'], ['td', 58]], ['tr', ['td', 'め'], ['td', 59]], ['tr', ['td', 'も'], ['td', 60]], ['tr', ['td', 'や'], ['td', 61]], ['tr', ['td', 'ゆ'], ['td', 62]], ['tr', ['td', 'よ'], ['td', 63]], ['tr', ['td', 'ら'], ['td', 64]], ['tr', ['td', 'り'], ['td', 65]], ['tr', ['td', 'る'], ['td', 66]], ['tr', ['td', 'れ'], ['td', 67]], ['tr', ['td', 'ろ'], ['td', 68]], ['tr', ['td', 'わ'], ['td', 69]], ['tr', ['td', 'ゐ'], ['td', 70]], ['tr', ['td', 'ゑ'], ['td', 71]], ['tr', ['td', 'を'], ['td', 72]], ['tr', ['td', 'ん'], ['td', 73]], ['tr', ['td', 'ゔ'], ['td', 74]]]
+# >>> # htmldraw.show(_)
+# >>> texttable(あい@+osum)
+# 'あ 1\nい 2\nう 3\nえ 4\nお 5\nか 6\nが 7\nき 8\nぎ 9\nく 10\nぐ 11\nけ 12\nげ 13\nこ 14\nご 15\nさ 16\nざ 17\nし 18\nじ 19\nす 20\nず 21\nせ 22\nぜ 23\nそ 24\nぞ 25\nた 26\nだ 27\nち 28\nぢ 29\nつ 30\nづ 31\nて 32\nで 33\nと 34\nど 35\nな 36\nに 37\nぬ 38\nね 39\nの 40\nは 41\nば 42\nぱ 43\nひ 44\nび 45\nぴ 46\nふ 47\nぶ 48\nぷ 49\nへ 50\nべ 51\nぺ 52\nほ 53\nぼ 54\nぽ 55\nま 56\nみ 57\nむ 58\nめ 59\nも 60\nや 61\nゆ 62\nよ 63\nら 64\nり 65\nる 66\nれ 67\nろ 68\nわ 69\nゐ 70\nゑ 71\nを 72\nん 73\nゔ 74'
+# >>> p(_)
+# あ 1
+# い 2
+# う 3
+# え 4
+# お 5
+# か 6
+# が 7
+# き 8
+# ぎ 9
+# く 10
+# ぐ 11
+# け 12
+# げ 13
+# こ 14
+# ご 15
+# さ 16
+# ざ 17
+# し 18
+# じ 19
+# す 20
+# ず 21
+# せ 22
+# ぜ 23
+# そ 24
+# ぞ 25
+# た 26
+# だ 27
+# ち 28
+# ぢ 29
+# つ 30
+# づ 31
+# て 32
+# で 33
+# と 34
+# ど 35
+# な 36
+# に 37
+# ぬ 38
+# ね 39
+# の 40
+# は 41
+# ば 42
+# ぱ 43
+# ひ 44
+# び 45
+# ぴ 46
+# ふ 47
+# ぶ 48
+# ぷ 49
+# へ 50
+# べ 51
+# ぺ 52
+# ほ 53
+# ぼ 54
+# ぽ 55
+# ま 56
+# み 57
+# む 58
+# め 59
+# も 60
+# や 61
+# ゆ 62
+# よ 63
+# ら 64
+# り 65
+# る 66
+# れ 67
+# ろ 68
+# わ 69
+# ゐ 70
+# ゑ 71
+# を 72
+# ん 73
+# ゔ 74
+# >>> 
+# >>> span('\u3041','\u3096')
+# 'ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ'
+# >>> span('\u3041','\u3096')*L
+# ['ぁ', 'あ', 'ぃ', 'い', 'ぅ', 'う', 'ぇ', 'え', 'ぉ', 'お', 'か', 'が', 'き', 'ぎ', 'く', 'ぐ', 'け', 'げ', 'こ', 'ご', 'さ', 'ざ', 'し', 'じ', 'す', 'ず', 'せ', 'ぜ', 'そ', 'ぞ', 'た', 'だ', 'ち', 'ぢ', 'っ', 'つ', 'づ', 'て', 'で', 'と', 'ど', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ば', 'ぱ', 'ひ', 'び', 'ぴ', 'ふ', 'ぶ', 'ぷ', 'へ', 'べ', 'ぺ', 'ほ', 'ぼ', 'ぽ', 'ま', 'み', 'む', 'め', 'も', 'ゃ', 'や', 'ゅ', 'ゆ', 'ょ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'ゎ', 'わ', 'ゐ', 'ゑ', 'を', 'ん', 'ゔ', 'ゕ', 'ゖ']
+# >>> span('\u3041','\u3096')*L@F(unicodedata.name)
+# ['HIRAGANA LETTER SMALL A', 'HIRAGANA LETTER A', 'HIRAGANA LETTER SMALL I', 'HIRAGANA LETTER I', 'HIRAGANA LETTER SMALL U', 'HIRAGANA LETTER U', 'HIRAGANA LETTER SMALL E', 'HIRAGANA LETTER E', 'HIRAGANA LETTER SMALL O', 'HIRAGANA LETTER O', 'HIRAGANA LETTER KA', 'HIRAGANA LETTER GA', 'HIRAGANA LETTER KI', 'HIRAGANA LETTER GI', 'HIRAGANA LETTER KU', 'HIRAGANA LETTER GU', 'HIRAGANA LETTER KE', 'HIRAGANA LETTER GE', 'HIRAGANA LETTER KO', 'HIRAGANA LETTER GO', 'HIRAGANA LETTER SA', 'HIRAGANA LETTER ZA', 'HIRAGANA LETTER SI', 'HIRAGANA LETTER ZI', 'HIRAGANA LETTER SU', 'HIRAGANA LETTER ZU', 'HIRAGANA LETTER SE', 'HIRAGANA LETTER ZE', 'HIRAGANA LETTER SO', 'HIRAGANA LETTER ZO', 'HIRAGANA LETTER TA', 'HIRAGANA LETTER DA', 'HIRAGANA LETTER TI', 'HIRAGANA LETTER DI', 'HIRAGANA LETTER SMALL TU', 'HIRAGANA LETTER TU', 'HIRAGANA LETTER DU', 'HIRAGANA LETTER TE', 'HIRAGANA LETTER DE', 'HIRAGANA LETTER TO', 'HIRAGANA LETTER DO', 'HIRAGANA LETTER NA', 'HIRAGANA LETTER NI', 'HIRAGANA LETTER NU', 'HIRAGANA LETTER NE', 'HIRAGANA LETTER NO', 'HIRAGANA LETTER HA', 'HIRAGANA LETTER BA', 'HIRAGANA LETTER PA', 'HIRAGANA LETTER HI', 'HIRAGANA LETTER BI', 'HIRAGANA LETTER PI', 'HIRAGANA LETTER HU', 'HIRAGANA LETTER BU', 'HIRAGANA LETTER PU', 'HIRAGANA LETTER HE', 'HIRAGANA LETTER BE', 'HIRAGANA LETTER PE', 'HIRAGANA LETTER HO', 'HIRAGANA LETTER BO', 'HIRAGANA LETTER PO', 'HIRAGANA LETTER MA', 'HIRAGANA LETTER MI', 'HIRAGANA LETTER MU', 'HIRAGANA LETTER ME', 'HIRAGANA LETTER MO', 'HIRAGANA LETTER SMALL YA', 'HIRAGANA LETTER YA', 'HIRAGANA LETTER SMALL YU', 'HIRAGANA LETTER YU', 'HIRAGANA LETTER SMALL YO', 'HIRAGANA LETTER YO', 'HIRAGANA LETTER RA', 'HIRAGANA LETTER RI', 'HIRAGANA LETTER RU', 'HIRAGANA LETTER RE', 'HIRAGANA LETTER RO', 'HIRAGANA LETTER SMALL WA', 'HIRAGANA LETTER WA', 'HIRAGANA LETTER WI', 'HIRAGANA LETTER WE', 'HIRAGANA LETTER WO', 'HIRAGANA LETTER N', 'HIRAGANA LETTER VU', 'HIRAGANA LETTER SMALL KA', 'HIRAGANA LETTER SMALL KE']
+# >>> 
+# >>> span('\u3041','\u3096')/(F(unicodedata.name)*(Binop(op.contains)*'SMALL'))
+# 'ぁぃぅぇぉっゃゅょゎゕゖ'
+# >>> 

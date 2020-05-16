@@ -125,6 +125,7 @@ class Sel:
     def vi(self, i,j=None):
         j=i if j is None else j
         return Sel(self,self.ix[i-1:j])
+    def ch(self, i=None,j=None): return self.chapter(i,j)
     def chapter(self, i=None,j=None):
         if i is None:
             return self.doc[self.ix[0]][1]
@@ -352,6 +353,8 @@ def verselist(bible):
 # >>> b.chapter(595)
 # Psalms 117:1 O praise the LORD, all ye nations: praise him, all ye people.
 # Psalms 117:2 For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
+# >>> b.ch(595,599)
+# Psalms 117:1-121:8 (222 verses)
 # >>> Psalm[103].chn()
 # 581
 # >>> 
@@ -486,6 +489,8 @@ def verselist(bible):
 # >>> 
 # >>> 
 # >>> Psalm[118:8].chapter()
+# 118
+# >>> Psalm[118:8].ch()
 # 118
 # >>> Psalm[118:8].verse()
 # 8
